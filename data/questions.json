@@ -1,0 +1,6393 @@
+{
+  "meta": {
+    "source": "nazonazo.nihonsimondai.com",
+    "url": "https://nazonazo.nihonsimondai.com/",
+    "count": 300,
+    "license_note": "教育・私的利用向けにゲーム内で利用。出典サイトを参照。",
+    "hints_style": "hints_by_no_v1",
+    "reconciled": true
+  },
+  "questions": [
+    {
+      "id": "web_001",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "どんなに走っても、飛んでいっても、見えているのに着かないのは何?",
+      "options": [
+        "占いの本",
+        "地平線",
+        "手紙",
+        "カナダ",
+        "優勝",
+        "ポスト"
+      ],
+      "answer_index": 1,
+      "hint": "空 と 海 の はてに 見える すみ。近づこうと すると にげていく よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第1問。\n正答: 「地平線」。\nパターン: 動き・時間の比喩（針・影・地平線など、見えているのに追いつけない／戻るもの）。\n意図: 「どんなに走っても、飛んでいっても、見えているのに着かないのは何？」→「地平線」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 1
+    },
+    {
+      "id": "web_002",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "どんどん進んでも元のところに戻ってきてしまうものは何?",
+      "options": [
+        "餃子",
+        "洗濯バサミ",
+        "ダイス",
+        "時計の針",
+        "水",
+        "食事"
+      ],
+      "answer_index": 3,
+      "hint": "同じ 文字盤の 上を ぐるぐる まわる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第2問。\n正答: 「時計の針」。\nパターン: 動き・時間の比喩（針・影・地平線など、見えているのに追いつけない／戻るもの）。\n意図: 「どんどん進んでも元のところに戻ってきてしまうものは何？」→「時計の針」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 2
+    },
+    {
+      "id": "web_003",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "どこまでもどこまでも自分にくっついてくる友達といえば?",
+      "options": [
+        "シラカバ",
+        "年齢",
+        "自分の影",
+        "ろうそく",
+        "ワサビ",
+        "恋愛"
+      ],
+      "answer_index": 2,
+      "hint": "日さん の 光 で 地面 に できる 黒い 仲間 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第3問。\n正答: 「自分の影」。\nパターン: 擬人化。常についてくる自然現象・影などを「友達」に例える。\n意図: 「どこまでもどこまでも自分にくっついてくる友達といえば？」→「自分の影」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 3
+    },
+    {
+      "id": "web_004",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "外出していてもいつもおうちにいるものは何?",
+      "options": [
+        "カイロ",
+        "左手",
+        "スリッパ",
+        "かたつむり",
+        "鯉",
+        "スパイク"
+      ],
+      "answer_index": 3,
+      "hint": "背中 に おうち（殻）を 背負って 歩く 生き物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第4問。\n正答: 「かたつむり」。\nパターン: 家・室内と屋外、または身体・持ち物など「いつもそこにある／いない」対比の比喩。\n意図: 「外出していてもいつもおうちにいるものは何？」→「かたつむり」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 4
+    },
+    {
+      "id": "web_005",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "家の前を通り過ぎるだけで絶対に家の中に入ってこないものは?",
+      "options": [
+        "サイコロ",
+        "道路",
+        "星",
+        "きも",
+        "パン",
+        "ニセ札"
+      ],
+      "answer_index": 1,
+      "hint": "家の まえを ずっと 通る けど お部屋 の 中には 絶対 入れない よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第5問。\n正答: 「道路」。\nパターン: 家・室内と屋外、または身体・持ち物など「いつもそこにある／いない」対比の比喩。\n意図: 「家の前を通り過ぎるだけで絶対に家の中に入ってこないものは？」→「道路」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 5
+    },
+    {
+      "id": "web_006",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "夏はぶらさがり冬には飛んでいくものといえば?",
+      "options": [
+        "左手",
+        "木の葉",
+        "植木",
+        "晴天",
+        "ろうそく",
+        "雪だるま"
+      ],
+      "answer_index": 1,
+      "hint": "夏 下がって 冬 空 へ 行く 緑 や 黄色い もの",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第6問。\n正答: 「木の葉」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「夏はぶらさがり冬には飛んでいくものといえば？」→「木の葉」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 6
+    },
+    {
+      "id": "web_007",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "羽もはしごもプロペラもないのに空にのぼっていくのは何?",
+      "options": [
+        "結婚指輪",
+        "ストライク",
+        "図書館",
+        "信号無視",
+        "年齢",
+        "けむり"
+      ],
+      "answer_index": 5,
+      "hint": "温かい もの から 空 に のぼる 白い もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第7問。\n正答: 「けむり」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「羽もはしごもプロペラもないのに空にのぼっていくのは何？」→「けむり」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 7
+    },
+    {
+      "id": "web_008",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "大きな木に登れるのに一滴の水を越えられないのは?",
+      "options": [
+        "ランドセル",
+        "昼食や夕食",
+        "木の葉",
+        "まばたき",
+        "ダイス",
+        "あり"
+      ],
+      "answer_index": 5,
+      "hint": "木 より 高く 登れる 小さな 虫 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第8問。\n正答: 「あり」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「大きな木に登れるのに一滴の水を越えられないのは？」→「あり」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 8
+    },
+    {
+      "id": "web_009",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "足がないけどやってきて、舌がないけどお話できるものは何?",
+      "options": [
+        "信号無視",
+        "地平線",
+        "手紙",
+        "ブラックバス",
+        "ワサビ",
+        "こしょう"
+      ],
+      "answer_index": 2,
+      "hint": "届けて くれる 文 だよ。足 は ない けど やって くる",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第9問。\n正答: 「手紙」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「足がないけどやってきて、舌がないけどお話できるものは何？」→「手紙」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 9
+    },
+    {
+      "id": "web_010",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "夜になるとやってきて、朝になると自然にいなくなってしまうのは?",
+      "options": [
+        "うめぼし",
+        "やっきょく",
+        "星",
+        "ぞうきん",
+        "手紙",
+        "押し出し"
+      ],
+      "answer_index": 2,
+      "hint": "夜 来て 朝 いなく なる 空 の 光",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第10問。\n正答: 「星」。\nパターン: 昼夜で現れ方が変わるもの（星・月・露など）。\n意図: 「夜になるとやってきて、朝になると自然にいなくなってしまうのは？」→「星」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 10
+    },
+    {
+      "id": "web_011",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "窓が閉まっているのにガラスを割らないでも部屋の中に入ってくるものは何?",
+      "options": [
+        "カメレオン",
+        "光",
+        "カンナ",
+        "きも",
+        "めんたいこ",
+        "野球"
+      ],
+      "answer_index": 1,
+      "hint": "窓 閉まって ても 部屋 に 入って くる",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第11問。\n正答: 「光」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「窓が閉まっているのにガラスを割らないでも部屋の中に入ってくるものは何？」→「光」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 11
+    },
+    {
+      "id": "web_012",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "うまれたけれどまだうまれていないものといえば?",
+      "options": [
+        "サイダー",
+        "たまご",
+        "病院",
+        "自分の影",
+        "ゴーカート",
+        "天の川"
+      ],
+      "answer_index": 1,
+      "hint": "中 に ひな が いる けど まだ 外 に 出て きていない 食べ物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第12問。\n正答: 「たまご」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「うまれたけれどまだうまれていないものといえば？」→「たまご」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 12
+    },
+    {
+      "id": "web_013",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "生きていると増えていくものは何?",
+      "options": [
+        "時計の針",
+        "やまびこ",
+        "カナダ",
+        "年齢",
+        "ストライク",
+        "ゴミ袋"
+      ],
+      "answer_index": 3,
+      "hint": "生まれた けど まだ 生まれて ない 時間",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第13問。\n正答: 「年齢」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「生きていると増えていくものは何？」→「年齢」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 13
+    },
+    {
+      "id": "web_014",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "おてんとうさまをみると冷や汗かいて小さくなるのは何?",
+      "options": [
+        "トラクター",
+        "道路",
+        "雪だるま",
+        "餃子",
+        "かたつむり",
+        "空"
+      ],
+      "answer_index": 2,
+      "hint": "冬 作った 白い 体 が 日さん で とけて 小さく なる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第14問。\n正答: 「雪だるま」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「おてんとうさまをみると冷や汗かいて小さくなるのは何？」→「雪だるま」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 14
+    },
+    {
+      "id": "web_015",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "食べ物があるとなきだして、食べ物がないとだまっているのは何?",
+      "options": [
+        "はさみ",
+        "キャンドル",
+        "ウグイス",
+        "目薬",
+        "ドーナツ",
+        "フライパン"
+      ],
+      "answer_index": 5,
+      "hint": "油 を 熱い と ちーちー 鳴る キッチン の 道具 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第15問。\n正答: 「フライパン」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「食べ物があるとなきだして、食べ物がないとだまっているのは何？」→「フライパン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 15
+    },
+    {
+      "id": "web_016",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "耳も口もないのに聞こえるし話す。どんな言葉でも使いこなせるのは何?",
+      "options": [
+        "タマゴ",
+        "やまびこ",
+        "カンナ",
+        "床屋",
+        "おかず",
+        "豆腐"
+      ],
+      "answer_index": 1,
+      "hint": "山 で 声 を 出す と 返って くる 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第16問。\n正答: 「やまびこ」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「耳も口もないのに聞こえるし話す。どんな言葉でも使いこなせるのは何？」→「やまびこ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 16
+    },
+    {
+      "id": "web_017",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "名前を呼ぶといなくなってしまうのは何?",
+      "options": [
+        "カイロ",
+        "マカオ",
+        "バラ",
+        "土手",
+        "ゴミ袋",
+        "沈黙"
+      ],
+      "answer_index": 5,
+      "hint": "静か に している 状態。名前 を 呼んだら その 静けさ が こわれる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第17問。\n正答: 「沈黙」。\nパターン: 「名前を呼ぶと消える」→ こだま、エコーなど。\n意図: 「名前を呼ぶといなくなってしまうのは何？」→「沈黙」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 17
+    },
+    {
+      "id": "web_018",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "赤い服を着ていつも紙を食べているのは何?",
+      "options": [
+        "ハゲタカ",
+        "野球",
+        "ポスト",
+        "ススキ",
+        "もくじ",
+        "時計の針"
+      ],
+      "answer_index": 2,
+      "hint": "赤い 体 紙 ばっか 食べて る 役所 の 仲間",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第18問。\n正答: 「ポスト」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「赤い服を着ていつも紙を食べているのは何？」→「ポスト」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 18
+    },
+    {
+      "id": "web_019",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "お腹がいっぱいになると体が軽くなり、お腹がすくと重くなって動きにくくなるのは何?",
+      "options": [
+        "風船",
+        "ポケット",
+        "コマ",
+        "げんしじん",
+        "ボタン",
+        "やまびこ"
+      ],
+      "answer_index": 0,
+      "hint": "お腹 いっぱい だと 軽く すく と 重い",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第19問。\n正答: 「風船」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「お腹がいっぱいになると体が軽くなり、お腹がすくと重くなって動きにくくなるのは何？」→「風船」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 19
+    },
+    {
+      "id": "web_020",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "口からだして耳からのみこむものは何?",
+      "options": [
+        "うめぼし",
+        "発見",
+        "ことば",
+        "綱引き",
+        "いかりをしずめる",
+        "わかめ"
+      ],
+      "answer_index": 2,
+      "hint": "声 に 出して 聞く 言葉 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第20問。\n正答: 「ことば」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「口からだして耳からのみこむものは何？」→「ことば」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 20
+    },
+    {
+      "id": "web_021",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "いろんなものを飲み込むけど、水を飲み込むとなくなってしまうものは何?",
+      "options": [
+        "ハガキ",
+        "やまびこ",
+        "悪魔",
+        "火",
+        "ピーターパン",
+        "メドレー"
+      ],
+      "answer_index": 3,
+      "hint": "水 を かける と 消えちゃう あたたかい 力 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第21問。\n正答: 「火」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「いろんなものを飲み込むけど、水を飲み込むとなくなってしまうものは何？」→「火」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 21
+    },
+    {
+      "id": "web_022",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "赤い帽子をかぶると背が低くなっていくのは何?",
+      "options": [
+        "大関",
+        "ろうそく",
+        "おしろい",
+        "腹",
+        "自分の影",
+        "植木"
+      ],
+      "answer_index": 1,
+      "hint": "火 を つける と だんだん 短く なっていく 赤い 帽子 みたい な もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第22問。\n正答: 「ろうそく」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「赤い帽子をかぶると背が低くなっていくのは何？」→「ろうそく」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 22
+    },
+    {
+      "id": "web_023",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "よろいかぶとを着てるのに腰が曲がっているのは何?",
+      "options": [
+        "ジャマイカ",
+        "エビ",
+        "コトリ",
+        "腹",
+        "えり足",
+        "カイロ"
+      ],
+      "answer_index": 1,
+      "hint": "背中 が 丸く 曲がった 海 の 生き物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第23問。\n正答: 「エビ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「よろいかぶとを着てるのに腰が曲がっているのは何？」→「エビ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 23
+    },
+    {
+      "id": "web_024",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "裸は白くて茶色の皮を身につけているのは何?",
+      "options": [
+        "会社",
+        "おしろい",
+        "パン",
+        "カタール",
+        "恥",
+        "きも"
+      ],
+      "answer_index": 2,
+      "hint": "焼く 前 は 白くて 焼いたら 茶色い 皮 が つく 食べ物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第24問。\n正答: 「パン」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「裸は白くて茶色の皮を身につけているのは何？」→「パン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 24
+    },
+    {
+      "id": "web_025",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "服を脱がずに服をとりかえるのは何?",
+      "options": [
+        "ススキ",
+        "めんたいこ",
+        "信号無視",
+        "おかず",
+        "カメレオン",
+        "風船"
+      ],
+      "answer_index": 4,
+      "hint": "色 を 変えられる 生き物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第25問。\n正答: 「カメレオン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「服を脱がずに服をとりかえるのは何？」→「カメレオン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 25
+    },
+    {
+      "id": "web_026",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "子供のときは服を着ていて大人になると裸になるのは何?",
+      "options": [
+        "竹",
+        "げんしじん",
+        "クレヨン",
+        "こだま",
+        "弱虫",
+        "なべぶた"
+      ],
+      "answer_index": 0,
+      "hint": "子ども の とき 服 みたい な 皮、大人 で むき出し になる 植物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第26問。\n正答: 「竹」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「子供のときは服を着ていて大人になると裸になるのは何？」→「竹」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 26
+    },
+    {
+      "id": "web_027",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "作った人は黙っていて持っている人は知らない、知っている人はほしがらないものは何?",
+      "options": [
+        "こま",
+        "豆腐",
+        "ニセ札",
+        "リス",
+        "マカオ",
+        "雑煮"
+      ],
+      "answer_index": 2,
+      "hint": "本物 じゃ ない お金。知ってる 人 は 欲しく ない よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第27問。\n正答: 「ニセ札」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「作った人は黙っていて持っている人は知らない、知っている人はほしがらないものは何？」→「ニセ札」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 27
+    },
+    {
+      "id": "web_028",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "あらゆる形になれるのにつかめないものは何?",
+      "options": [
+        "人間",
+        "自分自身",
+        "目薬",
+        "スズキ",
+        "水",
+        "ろうそく"
+      ],
+      "answer_index": 4,
+      "hint": "形 を 自由 に 変えられる 液体 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第28問。\n正答: 「水」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「あらゆる形になれるのにつかめないものは何？」→「水」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 28
+    },
+    {
+      "id": "web_029",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "かわいた服を脱いでぬれた服を着るのは何?",
+      "options": [
+        "逮捕",
+        "弱虫",
+        "奈良時代",
+        "包丁",
+        "物干し竿",
+        "会社"
+      ],
+      "answer_index": 4,
+      "hint": "外 で 洗った ふく を ひっかける とき の 長い 棒 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第29問。\n正答: 「物干し竿」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「かわいた服を脱いでぬれた服を着るのは何？」→「物干し竿」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 29
+    },
+    {
+      "id": "web_030",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "ふたりで一人前でいろんなものをまっぷたつにするのは何?",
+      "options": [
+        "医者",
+        "はさみ",
+        "あまやどり",
+        "すし詰め",
+        "雪だるま",
+        "さんぽ"
+      ],
+      "answer_index": 1,
+      "hint": "ふたり で 使う と 物 を 切れる 道具 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第30問。\n正答: 「はさみ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ふたりで一人前でいろんなものをまっぷたつにするのは何？」→「はさみ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 30
+    },
+    {
+      "id": "web_031",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "小さい家に住んでいて頭を焼かれてしまうのは何?",
+      "options": [
+        "目薬",
+        "マッチ",
+        "扇風機",
+        "ニセ札",
+        "結婚指輪",
+        "カナダ"
+      ],
+      "answer_index": 1,
+      "hint": "小さな 箱 の 中 の 火 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第31問。\n正答: 「マッチ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「小さい家に住んでいて頭を焼かれてしまうのは何？」→「マッチ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 31
+    },
+    {
+      "id": "web_032",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "火がないのに燃えるものは何?",
+      "options": [
+        "えんどう豆",
+        "方向音痴",
+        "恋愛",
+        "ツクシ",
+        "悪魔",
+        "なめくじ"
+      ],
+      "answer_index": 2,
+      "hint": "胸 が ドキドキ する 気持ち だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第32問。\n正答: 「恋愛」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「火がないのに燃えるものは何？」→「恋愛」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 32
+    },
+    {
+      "id": "web_033",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "一人だけが触っているのに二人をしばるのは何?",
+      "options": [
+        "ウグイス",
+        "結婚指輪",
+        "バター",
+        "スカイ",
+        "目やに",
+        "ワサビ"
+      ],
+      "answer_index": 1,
+      "hint": "指 に つける 丸い 装飾 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第33問。\n正答: 「結婚指輪」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「一人だけが触っているのに二人をしばるのは何？」→「結婚指輪」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 33
+    },
+    {
+      "id": "web_034",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "ものは同じなのに見る人によって違うものが見えるものは何?",
+      "options": [
+        "鏡",
+        "コトリ",
+        "床屋",
+        "えんどう豆",
+        "ナメコ",
+        "恋愛"
+      ],
+      "answer_index": 0,
+      "hint": "自分 の 顔 が うつる 道具 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第34問。\n正答: 「鏡」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ものは同じなのに見る人によって違うものが見えるものは何？」→「鏡」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 34
+    },
+    {
+      "id": "web_035",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "毎日見ているのに絶対さわれないものは何?",
+      "options": [
+        "えり足",
+        "手紙",
+        "マジック",
+        "空",
+        "晴天",
+        "占いの本"
+      ],
+      "answer_index": 3,
+      "hint": "上 を 見上げる と 広がっている 青い もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第35問。\n正答: 「空」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「毎日見ているのに絶対さわれないものは何？」→「空」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 35
+    },
+    {
+      "id": "web_036",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "入り口はひとつ、部屋が五つあるものは何?",
+      "options": [
+        "扇風機",
+        "トランク",
+        "ジャマイカ",
+        "手袋",
+        "こま",
+        "マッチ"
+      ],
+      "answer_index": 3,
+      "hint": "指 が 五つ ある 部屋 の ような もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第36問。\n正答: 「手袋」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「入り口はひとつ、部屋が五つあるものは何？」→「手袋」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 36
+    },
+    {
+      "id": "web_037",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "毎日握手するものは何?",
+      "options": [
+        "マイカー",
+        "ドアノブ",
+        "シラカバ",
+        "ニジマス",
+        "エビ",
+        "ススキ"
+      ],
+      "answer_index": 1,
+      "hint": "毎日 その 金属 を 握って あいさつ する よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第37問。\n正答: 「ドアノブ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「毎日握手するものは何？」→「ドアノブ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 37
+    },
+    {
+      "id": "web_038",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "上は大水、下は大火事なものは何?",
+      "options": [
+        "お風呂",
+        "サイダー",
+        "自分の影",
+        "トンビ",
+        "大関",
+        "コトリ"
+      ],
+      "answer_index": 0,
+      "hint": "上 は 湯、下 は コンロ… 入浴 の しつらえ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第38問。\n正答: 「お風呂」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「上は大水、下は大火事なものは何？」→「お風呂」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 38
+    },
+    {
+      "id": "web_039",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "顔が六個、目が二十一個のものは何?",
+      "options": [
+        "サイコロ",
+        "キツネ",
+        "自分自身",
+        "鯉",
+        "包丁",
+        "ぷんぷん"
+      ],
+      "answer_index": 0,
+      "hint": "振る と 目 の 数 が 出る 遊び道具 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第39問。\n正答: 「サイコロ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「顔が六個、目が二十一個のものは何？」→「サイコロ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 39
+    },
+    {
+      "id": "web_040",
+      "levels": [
+        "easy",
+        "hard"
+      ],
+      "question": "白い歯と黒い歯で音を奏でるものは何?",
+      "options": [
+        "鯉",
+        "ツクシ",
+        "ピアノ",
+        "五本",
+        "晴天",
+        "スリッパ"
+      ],
+      "answer_index": 2,
+      "hint": "白 と 黒 の 鍵盤 で 音 を 出す 楽器 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第40問。\n正答: 「ピアノ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「白い歯と黒い歯で音を奏でるものは何？」→「ピアノ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 40
+    },
+    {
+      "id": "web_041",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "窓から顔を出すのが仕事なのは何?",
+      "options": [
+        "ホッチキス",
+        "土管",
+        "こま",
+        "ボタン",
+        "流れ星「名がレ」",
+        "鬼退治"
+      ],
+      "answer_index": 3,
+      "hint": "服 の 穴 から 顔 を 出す 小さな 丸 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第41問。\n正答: 「ボタン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「窓から顔を出すのが仕事なのは何？」→「ボタン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 41
+    },
+    {
+      "id": "web_042",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "おとうさんが嫌いなものは何?",
+      "options": [
+        "ぞうきん",
+        "トラクター",
+        "沈黙",
+        "めんたいこ",
+        "空腹",
+        "パパイヤ"
+      ],
+      "answer_index": 5,
+      "hint": "親 の 呼び名 と 聞こえる 南国 の 果物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第42問。\n正答: 「パパイヤ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「おとうさんが嫌いなものは何？」→「パパイヤ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 42
+    },
+    {
+      "id": "web_043",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "みんなくしゃみするショウは何?",
+      "options": [
+        "コンブ",
+        "こしょう",
+        "ゴーカート",
+        "食事",
+        "たまごのカラ",
+        "コトリ"
+      ],
+      "answer_index": 1,
+      "hint": "くしゃみ の 音 と 同じ 調味料 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第43問。\n正答: 「こしょう」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「みんなくしゃみするショウは何？」→「こしょう」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 43
+    },
+    {
+      "id": "web_044",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "はじめは4本、次は2本、終わりは3本のは何?",
+      "options": [
+        "人間",
+        "天の川",
+        "パパイヤ",
+        "キャンドル",
+        "ナメコ",
+        "ススキ"
+      ],
+      "answer_index": 0,
+      "hint": "赤ちゃん は 四つんばい、大人 は 二足歩行… 人 の 一生 の 話 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第44問。\n正答: 「人間」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「はじめは4本、次は2本、終わりは3本のは何？」→「人間」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 44
+    },
+    {
+      "id": "web_045",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "急いでる数字は何?",
+      "options": [
+        "シャーベット",
+        "マジック",
+        "9",
+        "豆腐",
+        "手袋",
+        "ドアノブ"
+      ],
+      "answer_index": 2,
+      "hint": "「いそぐ」と 同じ 音 に 聞こえる 数字 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第45問。\n正答: 「9」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「急いでる数字は何？」→「9」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 45
+    },
+    {
+      "id": "web_046",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "キツネがお金を使って変身したものは何?",
+      "options": [
+        "ゴミ箱",
+        "花火",
+        "えり足",
+        "コンドル",
+        "話",
+        "ワサビ"
+      ],
+      "answer_index": 3,
+      "hint": "お金（こん）+ 変身 の ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第46問。\n正答: 「コンドル」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「キツネがお金を使って変身したものは何？」→「コンドル」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 46
+    },
+    {
+      "id": "web_047",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "歌がうまくても音痴な人は何で音痴?",
+      "options": [
+        "リス",
+        "方向音痴",
+        "カイロ",
+        "大関",
+        "花火",
+        "ストライク"
+      ],
+      "answer_index": 1,
+      "hint": "歌 は 上手 なのに 道 に 迷う 人 の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第47問。\n正答: 「方向音痴」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「歌がうまくても音痴な人は何で音痴？」→「方向音痴」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 47
+    },
+    {
+      "id": "web_048",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "髪の毛がない鳥は何?",
+      "options": [
+        "ハガキ",
+        "医者",
+        "お風呂",
+        "蚊",
+        "優勝",
+        "ハゲタカ"
+      ],
+      "answer_index": 5,
+      "hint": "「はげ」と 髪 の ない 鳥 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第48問。\n正答: 「ハゲタカ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「髪の毛がない鳥は何？」→「ハゲタカ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 48
+    },
+    {
+      "id": "web_049",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "食べると倒れてしまう食べ物は何?",
+      "options": [
+        "ゴーカート",
+        "カーペット",
+        "チャーハン",
+        "バター",
+        "鏡",
+        "空腹"
+      ],
+      "answer_index": 3,
+      "hint": "パン に のせる と なめらか に なる 食べ物。名前 に 「た」が つく よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第49問。\n正答: 「バター」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「食べると倒れてしまう食べ物は何？」→「バター」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 49
+    },
+    {
+      "id": "web_050",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "イカをどけてほしいと思ってる国は何?",
+      "options": [
+        "雪だるま",
+        "スリッパ",
+        "ジャマイカ",
+        "弱虫",
+        "物干し竿",
+        "ライス"
+      ],
+      "answer_index": 2,
+      "hint": "「じゃま」が 聞こえる 国 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第50問。\n正答: 「ジャマイカ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「イカをどけてほしいと思ってる国は何？」→「ジャマイカ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 50
+    },
+    {
+      "id": "web_051",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "ポットに毛がはえると何?",
+      "options": [
+        "コンドル",
+        "コンブ",
+        "晴天",
+        "ポケット",
+        "鯉",
+        "年齢"
+      ],
+      "answer_index": 3,
+      "hint": "なべ に 毛が はえたら できあがる 服 の ちいさな 袋 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第51問。\n正答: 「ポケット」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ポットに毛がはえると何？」→「ポケット」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 51
+    },
+    {
+      "id": "web_052",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "暑くなると涼しいところに移動してしまう職業は何?",
+      "options": [
+        "秘書",
+        "カタール",
+        "うちわ",
+        "カイロ",
+        "やっきょく",
+        "ブラックバス"
+      ],
+      "answer_index": 0,
+      "hint": "暑い・大きい など、別の 言葉 に 聞こえる 仕事 か 人 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第52問。\n正答: 「秘書」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「暑くなると涼しいところに移動してしまう職業は何？」→「秘書」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 52
+    },
+    {
+      "id": "web_053",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "かりにいってかられてしまうのは何処?",
+      "options": [
+        "床屋",
+        "方向音痴",
+        "耕運機",
+        "食事",
+        "あくび",
+        "木の葉"
+      ],
+      "answer_index": 0,
+      "hint": "「かり」に 行って 「から」れる 場所 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第53問。\n正答: 「床屋」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「かりにいってかられてしまうのは何処？」→「床屋」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 53
+    },
+    {
+      "id": "web_054",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "警察にいる大きい人は何?",
+      "options": [
+        "野球",
+        "おかず",
+        "刑事",
+        "時計の針",
+        "ランドセル",
+        "耕運機"
+      ],
+      "answer_index": 2,
+      "hint": "暑い・大きい など、別の 言葉 に 聞こえる 仕事 か 人 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第54問。\n正答: 「刑事」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「警察にいる大きい人は何？」→「刑事」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 54
+    },
+    {
+      "id": "web_055",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "毎日たたいているものは何?",
+      "options": [
+        "まばたき",
+        "えんどう豆",
+        "晴天",
+        "逮捕",
+        "ろうそく",
+        "きも"
+      ],
+      "answer_index": 0,
+      "hint": "目 を 閉じる とき パチン と 音 が する よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第55問。\n正答: 「まばたき」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「毎日たたいているものは何？」→「まばたき」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 55
+    },
+    {
+      "id": "web_056",
+      "levels": [
+        "easy",
+        "hard"
+      ],
+      "question": "「15」あつまっている生物は何?",
+      "options": [
+        "カメレオン",
+        "サンゴ",
+        "尻餅",
+        "恥",
+        "地平線",
+        "こま"
+      ],
+      "answer_index": 1,
+      "hint": "3 かける 5 は 15。15 と 読める 海 の 生き物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第56問。\n正答: 「サンゴ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「「15」あつまっている生物は何？」→「サンゴ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 56
+    },
+    {
+      "id": "web_057",
+      "levels": [
+        "easy",
+        "hard"
+      ],
+      "question": "飲み物で中のものがなくなると「1」になるのは何?",
+      "options": [
+        "トンビ",
+        "地平線",
+        "マカオ",
+        "ワイン（中の",
+        "リス",
+        "チャーハン"
+      ],
+      "answer_index": 3,
+      "hint": "中の 文字 が なくなる と 別の 言葉 に なる 飲み物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第57問。\n正答: 「ワイン（中の」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「飲み物で中のものがなくなると「1」になるのは何？」→「ワイン（中の」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 57
+    },
+    {
+      "id": "web_058",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "荷物を運んでくれる船は何?",
+      "options": [
+        "タマゴ",
+        "土手",
+        "ボタン",
+        "箱舟",
+        "影",
+        "こしょう"
+      ],
+      "answer_index": 3,
+      "hint": "荷物 を はこぶ + 船 の 言葉 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第58問。\n正答: 「箱舟」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「荷物を運んでくれる船は何？」→「箱舟」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 58
+    },
+    {
+      "id": "web_059",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "クモが逆立ちするのは何曜日?",
+      "options": [
+        "こま",
+        "ドアノブ",
+        "キツネ",
+        "木曜日",
+        "手袋",
+        "ハガキ"
+      ],
+      "answer_index": 3,
+      "hint": "「木」曜日 と クモ が 逆さ に… 言葉 の ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第59問。\n正答: 「木曜日」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「クモが逆立ちするのは何曜日？」→「木曜日」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 59
+    },
+    {
+      "id": "web_060",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ねずみの体の下にある料理は何?",
+      "options": [
+        "目薬",
+        "ガン",
+        "押し出し",
+        "胃炎",
+        "中華料理",
+        "ことば"
+      ],
+      "answer_index": 4,
+      "hint": "「チュウ」の 下 に ねずみ… 言葉 の ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第60問。\n正答: 「中華料理」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ねずみの体の下にある料理は何？」→「中華料理」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 60
+    },
+    {
+      "id": "web_061",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "出来たばかりなのに腐ってるパンは何?",
+      "options": [
+        "道路",
+        "サイン",
+        "時計の針",
+        "フランスパン",
+        "おまけ",
+        "スカイ"
+      ],
+      "answer_index": 3,
+      "hint": "「腐（ふ）」と 聞こえる パンの 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第61問。\n正答: 「フランスパン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「出来たばかりなのに腐ってるパンは何？」→「フランスパン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 61
+    },
+    {
+      "id": "web_062",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "お腹から食べて背中から吐き出すのは何?",
+      "options": [
+        "物干し竿",
+        "カンナ",
+        "自分自身",
+        "蚊",
+        "たまごのカラ",
+        "昼食や夕食"
+      ],
+      "answer_index": 1,
+      "hint": "木材 を 削る 道具。前 から 食べて 後ろ から 出す よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第62問。\n正答: 「カンナ」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「お腹から食べて背中から吐き出すのは何？」→「カンナ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 62
+    },
+    {
+      "id": "web_063",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "お菓子で出来た浮き輪は何?",
+      "options": [
+        "ドーナツ",
+        "クレーン",
+        "通帳",
+        "コーラス",
+        "雪だるま",
+        "図書館"
+      ],
+      "answer_index": 0,
+      "hint": "穴 が あいて 甘い 輪っか 形 の お菓子 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第63問。\n正答: 「ドーナツ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「お菓子で出来た浮き輪は何？」→「ドーナツ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 63
+    },
+    {
+      "id": "web_064",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "邪魔なのに動いてくれないものは何?",
+      "options": [
+        "消しゴムのカス",
+        "コショウ",
+        "時計の針",
+        "土管",
+        "話",
+        "大晦日"
+      ],
+      "answer_index": 3,
+      "hint": "でかい 円筒 で 動か ない 道路 下 の 丸い もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第64問。\n正答: 「土管」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「邪魔なのに動いてくれないものは何？」→「土管」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 64
+    },
+    {
+      "id": "web_065",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "トイレの神様は何歳?",
+      "options": [
+        "ドアノブ",
+        "しりとり",
+        "物干し竿",
+        "9歳",
+        "スパイク",
+        "恥"
+      ],
+      "answer_index": 3,
+      "hint": "「くさい」に 聞こえる 年齢 の ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第65問。\n正答: 「9歳」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「トイレの神様は何歳？」→「9歳」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 65
+    },
+    {
+      "id": "web_066",
+      "levels": [
+        "easy",
+        "hard"
+      ],
+      "question": "「1010」という看板がかかっているお店は何のお店?",
+      "options": [
+        "銭湯",
+        "豆腐",
+        "目薬",
+        "なめくじ",
+        "トランク",
+        "鬼退治"
+      ],
+      "answer_index": 0,
+      "hint": "千 と 十 を 並べた 看板 の 入浴 施設 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第66問。\n正答: 「銭湯」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「「1010」という看板がかかっているお店は何のお店？」→「銭湯」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 66
+    },
+    {
+      "id": "web_067",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "手品がうまい文房具は何?",
+      "options": [
+        "かつおぶし",
+        "マカオ",
+        "マジック",
+        "星",
+        "ウグイス",
+        "はし"
+      ],
+      "answer_index": 2,
+      "hint": "手品 の 名前 も 文房具 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第67問。\n正答: 「マジック」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「手品がうまい文房具は何？」→「マジック」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 67
+    },
+    {
+      "id": "web_068",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "いつも燃えている花は何?",
+      "options": [
+        "信号機",
+        "ハガキ",
+        "こっくり",
+        "沈黙",
+        "恋愛",
+        "花火"
+      ],
+      "answer_index": 5,
+      "hint": "夏 夜空 で 咲く 赤 や 青 の 光 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第68問。\n正答: 「花火」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「いつも燃えている花は何？」→「花火」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 68
+    },
+    {
+      "id": "web_069",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "いつもものを欲しがっている文房具は何?",
+      "options": [
+        "目やに",
+        "キツネ",
+        "方向音痴",
+        "ヒヨコ",
+        "クレヨン",
+        "ホッチキス"
+      ],
+      "answer_index": 4,
+      "hint": "いろいろ 欲しがる 蜡筆 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第69問。\n正答: 「クレヨン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「いつもものを欲しがっている文房具は何？」→「クレヨン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 69
+    },
+    {
+      "id": "web_070",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "こねこを逆さにするとこねこ、子犬を逆さにすると何?",
+      "options": [
+        "コマ",
+        "バラ",
+        "植木",
+        "子犬",
+        "耕運機",
+        "バター"
+      ],
+      "answer_index": 3,
+      "hint": "上下 逆さ に しても 答えが 変わらない 小犬 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第70問。\n正答: 「子犬」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「こねこを逆さにするとこねこ、子犬を逆さにすると何？」→「子犬」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 70
+    },
+    {
+      "id": "web_071",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "目の前に置いてあるのに置いていないというものは何?",
+      "options": [
+        "マカオ",
+        "時計の針",
+        "つっぱり",
+        "トンビ",
+        "おかず",
+        "スズキ"
+      ],
+      "answer_index": 4,
+      "hint": "ごはん の そば に ある 料理。『置く』と 『いて』を 分けて 考えてみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第71問。\n正答: 「おかず」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「目の前に置いてあるのに置いていないというものは何？」→「おかず」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 71
+    },
+    {
+      "id": "web_072",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "金髪の人でも茶髪の人でも黒い毛なのは何?",
+      "options": [
+        "コンブ",
+        "赤ん坊",
+        "影",
+        "奈良時代",
+        "けむり",
+        "スリッパ"
+      ],
+      "answer_index": 2,
+      "hint": "光 と いっしょ に 動く 黒い 仲間",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第72問。\n正答: 「影」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「金髪の人でも茶髪の人でも黒い毛なのは何？」→「影」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 72
+    },
+    {
+      "id": "web_073",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "家の入り口にあるカンは何?",
+      "options": [
+        "玄関",
+        "つめ",
+        "クレヨン",
+        "昼食や夕食",
+        "ゴーカート",
+        "スリッパ"
+      ],
+      "answer_index": 0,
+      "hint": "入り口 の 名前 に 「関」が くっつく よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第73問。\n正答: 「玄関」。\nパターン: 家・室内と屋外、または身体・持ち物など「いつもそこにある／いない」対比の比喩。\n意図: 「家の入り口にあるカンは何？」→「玄関」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 73
+    },
+    {
+      "id": "web_074",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "話をするのが好きな国は何?",
+      "options": [
+        "晴天",
+        "スパイク",
+        "パン",
+        "こま",
+        "カタール",
+        "トランク"
+      ],
+      "answer_index": 4,
+      "hint": "「話す」と 読める 国 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第74問。\n正答: 「カタール」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「話をするのが好きな国は何？」→「カタール」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 74
+    },
+    {
+      "id": "web_075",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "大きく勝った時代は何時代?",
+      "options": [
+        "あり",
+        "つなひき",
+        "野球",
+        "押し出し",
+        "ぞうきん",
+        "大正時代"
+      ],
+      "answer_index": 5,
+      "hint": "歴史 の 教科書 で 見る 男 の 名前 が ヒント だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第75問。\n正答: 「大正時代」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「大きく勝った時代は何時代？」→「大正時代」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 75
+    },
+    {
+      "id": "web_076",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "秘密にされる病気は何?",
+      "options": [
+        "奈良時代",
+        "かたつむり",
+        "おしろい",
+        "胃炎",
+        "自分の影",
+        "昼食や夕食"
+      ],
+      "answer_index": 3,
+      "hint": "「ひみつ」と 読める 病気 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第76問。\n正答: 「胃炎」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「秘密にされる病気は何？」→「胃炎」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 76
+    },
+    {
+      "id": "web_077",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "黒くないのに黒いバスは何?",
+      "options": [
+        "話",
+        "ヒヨコ",
+        "野球",
+        "スパイク",
+        "地平線",
+        "ブラックバス"
+      ],
+      "answer_index": 5,
+      "hint": "黒い 魚 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第77問。\n正答: 「ブラックバス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「黒くないのに黒いバスは何？」→「ブラックバス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 77
+    },
+    {
+      "id": "web_078",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "丁寧になると臭くなる時代は?",
+      "options": [
+        "奈良時代",
+        "タマゴ",
+        "土管",
+        "クレーン",
+        "空腹",
+        "きも"
+      ],
+      "answer_index": 0,
+      "hint": "丁寧語 が 「臭い」に 変わる 時代 ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第78問。\n正答: 「奈良時代」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「丁寧になると臭くなる時代は？」→「奈良時代」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 78
+    },
+    {
+      "id": "web_079",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ありがとうと何回も言いました。さて何回言った?",
+      "options": [
+        "カーペット",
+        "優勝",
+        "カイロ",
+        "27回",
+        "ステッキ",
+        "洗濯バサミ"
+      ],
+      "answer_index": 3,
+      "hint": "英語 の 感謝 が 掛け算 に なる 回数 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第79問。\n正答: 「27回」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ありがとうと何回も言いました。さて何回言った？」→「27回」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 79
+    },
+    {
+      "id": "web_080",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ブラジャーは誰あての届けもの?",
+      "options": [
+        "エビ",
+        "ツクシ",
+        "父",
+        "三輪車",
+        "扇風機",
+        "大関"
+      ],
+      "answer_index": 2,
+      "hint": "下着 の 届け先 が 家族 に 聞こえる ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第80問。\n正答: 「父」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ブラジャーは誰あての届けもの？」→「父」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 80
+    },
+    {
+      "id": "web_081",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "夜にだけ使われる道具は何?",
+      "options": [
+        "五本",
+        "アイス",
+        "火",
+        "けむり",
+        "ヤカン",
+        "医者"
+      ],
+      "answer_index": 4,
+      "hint": "夜 だけ 使う と 読める やかん だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第81問。\n正答: 「ヤカン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「夜にだけ使われる道具は何？」→「ヤカン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 81
+    },
+    {
+      "id": "web_082",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "クマの中で一番悪いというクマといえば何?",
+      "options": [
+        "土管",
+        "うちわ",
+        "悪魔",
+        "カステラ",
+        "影",
+        "トンビ"
+      ],
+      "answer_index": 2,
+      "hint": "「くま」が 入った いちばん ワルい 存在 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第82問。\n正答: 「悪魔」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「クマの中で一番悪いというクマといえば何？」→「悪魔」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 82
+    },
+    {
+      "id": "web_083",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "落語を聴きながら食べるなべといえば何?",
+      "options": [
+        "寄せ鍋",
+        "ハンドル",
+        "ライス",
+        "つめ",
+        "土管",
+        "ハゲタカ"
+      ],
+      "answer_index": 0,
+      "hint": "落語 を 聞く 席 の 音 が 鍋 の 名前 に なる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第83問。\n正答: 「寄せ鍋」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「落語を聴きながら食べるなべといえば何？」→「寄せ鍋」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 83
+    },
+    {
+      "id": "web_084",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "運が良くなる乗り物といえば何?",
+      "options": [
+        "ナス",
+        "耕運機",
+        "キツネ",
+        "ニジマス",
+        "マジック",
+        "メドレー"
+      ],
+      "answer_index": 1,
+      "hint": "「こううん」が 隠れた 農業 機械 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第84問。\n正答: 「耕運機」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「運が良くなる乗り物といえば何？」→「耕運機」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 84
+    },
+    {
+      "id": "web_085",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "トラを疲れさせる乗り物といえば何?",
+      "options": [
+        "トラクター",
+        "晴天",
+        "ブラックバス",
+        "ぷんぷん",
+        "コーラス",
+        "発見"
+      ],
+      "answer_index": 0,
+      "hint": "ねこ科 の 動物 を つかれさせる 農業 機械 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第85問。\n正答: 「トラクター」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「トラを疲れさせる乗り物といえば何？」→「トラクター」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 85
+    },
+    {
+      "id": "web_086",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "床屋さんに鉄砲が打ち込まれました。何発打ち込まれた?",
+      "options": [
+        "ことば",
+        "カンナ",
+        "赤ん坊",
+        "3発",
+        "逮捕",
+        "マスカット"
+      ],
+      "answer_index": 3,
+      "hint": "床屋 で 鉄砲 → 散る の 音 掛け だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第86問。\n正答: 「3発」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「床屋さんに鉄砲が打ち込まれました。何発打ち込まれた？」→「3発」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 86
+    },
+    {
+      "id": "web_087",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "64個あるものといえば何?",
+      "options": [
+        "ピアノ",
+        "天気",
+        "耕運機",
+        "葉っぱ",
+        "リス",
+        "晴天"
+      ],
+      "answer_index": 3,
+      "hint": "6×4 の 枚数 と 読める 緑 の 部分 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第87問。\n正答: 「葉っぱ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「64個あるものといえば何？」→「葉っぱ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 87
+    },
+    {
+      "id": "web_088",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "味噌汁の中にいるカメといえば何?",
+      "options": [
+        "肩車",
+        "占いの本",
+        "わかめ",
+        "まばたき",
+        "すな",
+        "大晦日"
+      ],
+      "answer_index": 2,
+      "hint": "汁 の 中の 「カメ」は 海草 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第88問。\n正答: 「わかめ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「味噌汁の中にいるカメといえば何？」→「わかめ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 88
+    },
+    {
+      "id": "web_089",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "逆立ちすると泥棒になる動物といえば何?",
+      "options": [
+        "つっぱり",
+        "リス",
+        "ダンボール",
+        "鏡",
+        "左手",
+        "押し出し"
+      ],
+      "answer_index": 1,
+      "hint": "逆さ に すると 泥棒 に 聞こえる 木の実 好き の 動物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第89問。\n正答: 「リス」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「逆立ちすると泥棒になる動物といえば何？」→「リス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 89
+    },
+    {
+      "id": "web_090",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "「3」と「10」が好きな人は何?",
+      "options": [
+        "父さん",
+        "かたつむり",
+        "食事",
+        "ストライク",
+        "かつおぶし",
+        "おかず"
+      ],
+      "answer_index": 0,
+      "hint": "3 と 10 を 並べたら パパ の 音 になる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第90問。\n正答: 「父さん」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「「3」と「10」が好きな人は何？」→「父さん」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 90
+    },
+    {
+      "id": "web_091",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "川の近くにある転んでしまう場所は?",
+      "options": [
+        "こしょう",
+        "左手",
+        "ぷんぷん",
+        "恥",
+        "逮捕",
+        "土手"
+      ],
+      "answer_index": 5,
+      "hint": "川 そば で 転ぶ 場所 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第91問。\n正答: 「土手」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「川の近くにある転んでしまう場所は？」→「土手」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 91
+    },
+    {
+      "id": "web_092",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "探し物を見つける犬は何けん?",
+      "options": [
+        "コガネムシ",
+        "発見",
+        "あまやどり",
+        "やまびこ",
+        "リス",
+        "ランドセル"
+      ],
+      "answer_index": 1,
+      "hint": "「見つける」が 犬 の 数 に なる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第92問。\n正答: 「発見」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「探し物を見つける犬は何けん？」→「発見」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 92
+    },
+    {
+      "id": "web_093",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ねずみがびっくり食事は何?",
+      "options": [
+        "カメレオン",
+        "手紙",
+        "ニセ札",
+        "けむり",
+        "昼食",
+        "パジャマ"
+      ],
+      "answer_index": 4,
+      "hint": "「チュウ」の 下… 言葉 の 位置 で 考えてみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第93問。\n正答: 「昼食」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ねずみがびっくり食事は何？」→「昼食」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 93
+    },
+    {
+      "id": "web_094",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "人に話しかけられても相手せずに食べるパンは何?",
+      "options": [
+        "たまご",
+        "お風呂",
+        "大晦日",
+        "蒸しパン",
+        "ホッチキス",
+        "かたつむり"
+      ],
+      "answer_index": 3,
+      "hint": "ふかしい パン が 人 を 無視 する 音 の ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第94問。\n正答: 「蒸しパン」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「人に話しかけられても相手せずに食べるパンは何？」→「蒸しパン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 94
+    },
+    {
+      "id": "web_095",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "子供をなめるキノコは何?",
+      "options": [
+        "ろうそく",
+        "左手",
+        "晴天",
+        "ナメコ",
+        "結婚指輪",
+        "トキ"
+      ],
+      "answer_index": 3,
+      "hint": "子ども を なめる 名前 の きのこ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第95問。\n正答: 「ナメコ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「子供をなめるキノコは何？」→「ナメコ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 95
+    },
+    {
+      "id": "web_096",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "うえのうえにあるものは何?",
+      "options": [
+        "ダンボール",
+        "あい（あい",
+        "ボタン",
+        "ワサビ",
+        "こま",
+        "フライパン"
+      ],
+      "answer_index": 1,
+      "hint": "「うえ」の さらに 上… 文字 の 位置 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第96問。\n正答: 「あい（あい」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「うえのうえにあるものは何？」→「あい（あい」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 96
+    },
+    {
+      "id": "web_097",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "フライを食べずに捕るものは何?",
+      "options": [
+        "コショウ",
+        "ストライク",
+        "野球",
+        "サイコロ",
+        "キジ",
+        "水"
+      ],
+      "answer_index": 2,
+      "hint": "揚げ物 じゃなく 球 で 捕る スポーツ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第97問。\n正答: 「野球」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「フライを食べずに捕るものは何？」→「野球」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 97
+    },
+    {
+      "id": "web_098",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "いろいろ教えてもらえる電話は何?",
+      "options": [
+        "公衆電話",
+        "綱引き",
+        "つっぱり",
+        "五本",
+        "パン",
+        "キジ"
+      ],
+      "answer_index": 0,
+      "hint": "みんな が 使う 電話 が 講習 に 聞こえる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第98問。\n正答: 「公衆電話」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「いろいろ教えてもらえる電話は何？」→「公衆電話」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 98
+    },
+    {
+      "id": "web_099",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "いつも踏みつけられるペットは何?",
+      "options": [
+        "わかめ",
+        "フクロウ",
+        "カーペット",
+        "クレーン",
+        "ススキ",
+        "ボタン"
+      ],
+      "answer_index": 2,
+      "hint": "踏まれる ペット は 部屋 の 敷物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第99問。\n正答: 「カーペット」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「いつも踏みつけられるペットは何？」→「カーペット」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 99
+    },
+    {
+      "id": "web_100",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "一年の一番最後にあらわれる蚊は何?",
+      "options": [
+        "めんたいこ",
+        "ゴーカート",
+        "大晦日",
+        "通帳",
+        "えんどう豆",
+        "トキ"
+      ],
+      "answer_index": 2,
+      "hint": "一年 の 最後 の 日 に 蚊 が 出る ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第100問。\n正答: 「大晦日」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「一年の一番最後にあらわれる蚊は何？」→「大晦日」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 100
+    },
+    {
+      "id": "web_101",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ソファの下にあるのは何?",
+      "options": [
+        "ミ",
+        "サイダー",
+        "昼食や夕食",
+        "肩車",
+        "奈良時代",
+        "ステッキ"
+      ],
+      "answer_index": 0,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第101問。\n正答: 「ミ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ソファの下にあるのは何？」→「ミ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 101
+    },
+    {
+      "id": "web_102",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "お腹がすいているときに着る服は何?",
+      "options": [
+        "空腹",
+        "ボタン",
+        "豆腐",
+        "カンナ",
+        "コマ",
+        "ピアノ"
+      ],
+      "answer_index": 0,
+      "hint": "お腹 が すいている 状態 の ことば。服 じゃ なく 気持ち の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第102問。\n正答: 「空腹」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「お腹がすいているときに着る服は何？」→「空腹」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 102
+    },
+    {
+      "id": "web_103",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "「リンリンリン」と音を鳴らして走るのは何?",
+      "options": [
+        "三輪車",
+        "ろうそく",
+        "カイロ",
+        "傍聴席",
+        "メドレー",
+        "ナメコ"
+      ],
+      "answer_index": 0,
+      "hint": "見た目 や 動き の イメージ から 考えてみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第103問。\n正答: 「三輪車」。\nパターン: 動き・時間の比喩（針・影・地平線など、見えているのに追いつけない／戻るもの）。\n意図: 「「リンリンリン」と音を鳴らして走るのは何？」→「三輪車」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 103
+    },
+    {
+      "id": "web_104",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "火の横にいつもいるのは何?",
+      "options": [
+        "クレヨン",
+        "ぞうきん",
+        "うちわ",
+        "ヒヨコ",
+        "地平線",
+        "包丁"
+      ],
+      "answer_index": 3,
+      "hint": "「火」の 横 に 書く と 読める 小鳥 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第104問。\n正答: 「ヒヨコ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「火の横にいつもいるのは何？」→「ヒヨコ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 104
+    },
+    {
+      "id": "web_105",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "歯が黄なのは何?",
+      "options": [
+        "ハガキ",
+        "木の葉",
+        "トラクター",
+        "尻餅",
+        "サイダー",
+        "ダイス"
+      ],
+      "answer_index": 0,
+      "hint": "「歯」が 黄色い… 郵便 で 使う 紙 の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第105問。\n正答: 「ハガキ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「歯が黄なのは何？」→「ハガキ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 105
+    },
+    {
+      "id": "web_106",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "自分の家でのむジュースといえば何?",
+      "options": [
+        "雪だるま",
+        "道路",
+        "オレンジジュース",
+        "おかず",
+        "バター",
+        "優勝"
+      ],
+      "answer_index": 2,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第106問。\n正答: 「オレンジジュース」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「自分の家でのむジュースといえば何？」→「オレンジジュース」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 106
+    },
+    {
+      "id": "web_107",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "名前が「レ」の星は何?",
+      "options": [
+        "流れ星",
+        "サイコロ",
+        "物干し竿",
+        "五本",
+        "コンドル",
+        "さんぽ"
+      ],
+      "answer_index": 0,
+      "hint": "流れ星 の 名前 の 音 と 「レ」が 関係 する 星 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第107問。\n正答: 「流れ星」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「名前が「レ」の星は何？」→「流れ星」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 107
+    },
+    {
+      "id": "web_108",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "強いと後ろにさがるのは何?",
+      "options": [
+        "えんどう豆",
+        "綱引き",
+        "ワサビ",
+        "ゴミ袋",
+        "カナダ",
+        "カンナ"
+      ],
+      "answer_index": 1,
+      "hint": "強い チーム が 引っ張る と 後ろ に 下がる 運動会 の 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第108問。\n正答: 「綱引き」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「強いと後ろにさがるのは何？」→「綱引き」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 108
+    },
+    {
+      "id": "web_109",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "目が三つで足がひとつのものは何?",
+      "options": [
+        "白菜",
+        "信号機",
+        "カナダ",
+        "ストライク",
+        "赤ん坊",
+        "綱引き"
+      ],
+      "answer_index": 1,
+      "hint": "赤 黄 青 の 目 が 三つ ある 道 の ルール だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第109問。\n正答: 「信号機」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「目が三つで足がひとつのものは何？」→「信号機」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 109
+    },
+    {
+      "id": "web_110",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "ラーメン屋さんにある星座は何?",
+      "options": [
+        "ホッチキス",
+        "餃子",
+        "自分自身",
+        "天気",
+        "ゴーカート",
+        "ろうそく"
+      ],
+      "answer_index": 1,
+      "hint": "ラーメン屋 に ある 具。星座 の 名前 に 聞こえる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第110問。\n正答: 「餃子」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ラーメン屋さんにある星座は何？」→「餃子」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 110
+    },
+    {
+      "id": "web_111",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "骨と皮しかなくて暑い時に活躍するものといえば何?",
+      "options": [
+        "うちわ",
+        "ぷんぷん",
+        "ダイス",
+        "沈黙",
+        "こっくり",
+        "キツネ"
+      ],
+      "answer_index": 0,
+      "hint": "骨 と 皮 だけ の 扇。暑い 日 に 風 を 送る よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第111問。\n正答: 「うちわ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「骨と皮しかなくて暑い時に活躍するものといえば何？」→「うちわ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 111
+    },
+    {
+      "id": "web_112",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "目を探しながら歌うものは何?",
+      "options": [
+        "ハゲタカ",
+        "ブラックバス",
+        "メドレー",
+        "こっくり",
+        "ダイス",
+        "チャーハン"
+      ],
+      "answer_index": 2,
+      "hint": "目 を 探す… 歌 を つなげて 歌う こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第112問。\n正答: 「メドレー」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「目を探しながら歌うものは何？」→「メドレー」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 112
+    },
+    {
+      "id": "web_113",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "たばこはある本数以上すうと風邪をひきます。何本から?",
+      "options": [
+        "たまごのカラ",
+        "会社",
+        "食事",
+        "占いの本",
+        "包丁",
+        "五本"
+      ],
+      "answer_index": 5,
+      "hint": "「すう」と 吸う が 同じ 音。風邪 の 本数 は 五本 から だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第113問。\n正答: 「五本」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「たばこはある本数以上すうと風邪をひきます。何本から？」→「五本」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 113
+    },
+    {
+      "id": "web_114",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "捨てるものなのに集めておくものは何?",
+      "options": [
+        "ニセ札",
+        "悪魔",
+        "ゴミ箱",
+        "すな",
+        "ススキ",
+        "けむり"
+      ],
+      "answer_index": 2,
+      "hint": "捨て物 を ためる 箱 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第114問。\n正答: 「ゴミ箱」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「捨てるものなのに集めておくものは何？」→「ゴミ箱」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 114
+    },
+    {
+      "id": "web_115",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "押したりかけたりしてつかうものは何?",
+      "options": [
+        "ボタン",
+        "アイス",
+        "飴玉",
+        "天の川",
+        "病院",
+        "空腹"
+      ],
+      "answer_index": 0,
+      "hint": "服 の 穴 から 顔 を 出す 小さな 丸 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第115問。\n正答: 「ボタン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「押したりかけたりしてつかうものは何？」→「ボタン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 115
+    },
+    {
+      "id": "web_116",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "必ず帰ってくるたまといえばどんなたま?",
+      "options": [
+        "こだま",
+        "あまやどり",
+        "手紙",
+        "自分の影",
+        "耕運機",
+        "クレヨン"
+      ],
+      "answer_index": 0,
+      "hint": "名前 呼ぶ と 消えちゃう 山 の 返事",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第116問。\n正答: 「こだま」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「必ず帰ってくるたまといえばどんなたま？」→「こだま」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 116
+    },
+    {
+      "id": "web_117",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "逆立ちすると野菜になる海にあるものは何?",
+      "options": [
+        "すな",
+        "ナメコ",
+        "雪だるま",
+        "トラクター",
+        "コガネムシ",
+        "扇風機"
+      ],
+      "answer_index": 0,
+      "hint": "海 の 中。逆さ に すると 野菜 の 名前 に なる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第117問。\n正答: 「すな」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「逆立ちすると野菜になる海にあるものは何？」→「すな」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 117
+    },
+    {
+      "id": "web_118",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "あたたかいいろは何いろ?",
+      "options": [
+        "おかず",
+        "クレヨン",
+        "げんしじん",
+        "けむり",
+        "カイロ",
+        "鏡"
+      ],
+      "answer_index": 4,
+      "hint": "「あたたかい」＋「いろ」で 聞こえる カイロ の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第118問。\n正答: 「カイロ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「あたたかいいろは何いろ？」→「カイロ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 118
+    },
+    {
+      "id": "web_119",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "木が10本で出来る果物は何?",
+      "options": [
+        "弱虫",
+        "えんどう豆",
+        "空",
+        "蚊",
+        "リンゴ",
+        "ニジマス"
+      ],
+      "answer_index": 4,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第119問。\n正答: 「リンゴ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「木が10本で出来る果物は何？」→「リンゴ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 119
+    },
+    {
+      "id": "web_120",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "怖がりな虫はどんな虫?",
+      "options": [
+        "コンドル",
+        "弱虫",
+        "星",
+        "蚊",
+        "あまやどり",
+        "フライパン"
+      ],
+      "answer_index": 1,
+      "hint": "弱い 虫… 怖がり の 人 を そう 呼ぶ よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第120問。\n正答: 「弱虫」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「怖がりな虫はどんな虫？」→「弱虫」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 120
+    },
+    {
+      "id": "web_121",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "よく食べているイスは何?",
+      "options": [
+        "腹",
+        "ライス",
+        "あり",
+        "蚊",
+        "たまごのカラ",
+        "道路"
+      ],
+      "answer_index": 1,
+      "hint": "「よく 食べる」イス → ごはん の 英語 みたい な 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第121問。\n正答: 「ライス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「よく食べているイスは何？」→「ライス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 121
+    },
+    {
+      "id": "web_122",
+      "levels": [
+        "normal"
+      ],
+      "question": "太鼓をたたきながらめんを食べるものは?",
+      "options": [
+        "カタール",
+        "ニセ札",
+        "奈良時代",
+        "白菜",
+        "めんたいこ",
+        "昼食や夕食"
+      ],
+      "answer_index": 4,
+      "hint": "太鼓 を たたき ながら 食べる めん の 仲間 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第122問。\n正答: 「めんたいこ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「太鼓をたたきながらめんを食べるものは？」→「めんたいこ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 122
+    },
+    {
+      "id": "web_123",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "どんなにお願いしてももらえない機械は何?",
+      "options": [
+        "鯉",
+        "手紙",
+        "バラ",
+        "クレーン",
+        "めんたいこ",
+        "優勝"
+      ],
+      "answer_index": 3,
+      "hint": "お願い しても 景品 が 落ちない ゲームセンター の 機械 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第123問。\n正答: 「クレーン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「どんなにお願いしてももらえない機械は何？」→「クレーン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 123
+    },
+    {
+      "id": "web_124",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "冷たいいすはどんないす?",
+      "options": [
+        "五本",
+        "鯉",
+        "アイス",
+        "ドアノブ",
+        "コマ",
+        "給食"
+      ],
+      "answer_index": 2,
+      "hint": "「冷たい」イス → 冷たい 甘い 食べ物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第124問。\n正答: 「アイス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「冷たいいすはどんないす？」→「アイス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 124
+    },
+    {
+      "id": "web_125",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "壊れている調味料は何?",
+      "options": [
+        "すな",
+        "沈黙",
+        "きも",
+        "コショウ",
+        "ホッチキス",
+        "トラクター"
+      ],
+      "answer_index": 3,
+      "hint": "「壊れている」→ こしょう が 効かない 調味料 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第125問。\n正答: 「コショウ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「壊れている調味料は何？」→「コショウ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 125
+    },
+    {
+      "id": "web_126",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "立派な履物といえば何?",
+      "options": [
+        "目薬",
+        "病院",
+        "スリッパ",
+        "ダイス",
+        "人間",
+        "土管"
+      ],
+      "answer_index": 2,
+      "hint": "「立派な」履物 → 家 で はく スリッパ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第126問。\n正答: 「スリッパ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「立派な履物といえば何？」→「スリッパ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 126
+    },
+    {
+      "id": "web_127",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "空にいる虫は何?",
+      "options": [
+        "病院",
+        "ハエ（",
+        "あまやどり",
+        "ステッキ",
+        "コショウ",
+        "ワサビ"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第127問。\n正答: 「ハエ（」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「空にいる虫は何？」→「ハエ（」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 127
+    },
+    {
+      "id": "web_128",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "頭に袋がある鳥は何?",
+      "options": [
+        "あくび",
+        "こっくり",
+        "フクロウ",
+        "えり足",
+        "キジ",
+        "目薬"
+      ],
+      "answer_index": 2,
+      "hint": "頭 に 袋 みたい な 模様 の 夜 の 鳥 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第128問。\n正答: 「フクロウ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「頭に袋がある鳥は何？」→「フクロウ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 128
+    },
+    {
+      "id": "web_129",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "月の初めにあらわれる動物は何?",
+      "options": [
+        "物干し竿",
+        "時間",
+        "ハガキ",
+        "いたち",
+        "チャーハン",
+        "火"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第129問。\n正答: 「いたち」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「月の初めにあらわれる動物は何？」→「いたち」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 129
+    },
+    {
+      "id": "web_130",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "豚の尻尾が好きな鳥は何?",
+      "options": [
+        "ストライク",
+        "トラクター",
+        "扇風機",
+        "地平線",
+        "火",
+        "トンビ"
+      ],
+      "answer_index": 5,
+      "hint": "豚 の しっぽ が 好き… 豚 と 鳥 の 名前 が くっついた よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第130問。\n正答: 「トンビ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「豚の尻尾が好きな鳥は何？」→「トンビ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 130
+    },
+    {
+      "id": "web_131",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "虫歯を治す仕事をしている動物は何?",
+      "options": [
+        "けむり",
+        "ナメコ",
+        "自分の影",
+        "すし詰め",
+        "シカ",
+        "カイロ"
+      ],
+      "answer_index": 4,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第131問。\n正答: 「シカ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「虫歯を治す仕事をしている動物は何？」→「シカ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 131
+    },
+    {
+      "id": "web_132",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "交通ルールをまもらないむしは何?",
+      "options": [
+        "おかず",
+        "はし",
+        "カタール",
+        "ゴミ箱",
+        "雪だるま",
+        "信号無視"
+      ],
+      "answer_index": 5,
+      "hint": "交通 ルール を 守らない… 信号 を 無視 する 虫 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第132問。\n正答: 「信号無視」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「交通ルールをまもらないむしは何？」→「信号無視」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 132
+    },
+    {
+      "id": "web_133",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "ものすごくびっくりしたときにつく餅は何?",
+      "options": [
+        "かつおぶし",
+        "こだま",
+        "飴玉",
+        "尻餅",
+        "キャンドル",
+        "ぷんぷん"
+      ],
+      "answer_index": 3,
+      "hint": "びっくり して お尻 から ついた 餅 の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第133問。\n正答: 「尻餅」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ものすごくびっくりしたときにつく餅は何？」→「尻餅」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 133
+    },
+    {
+      "id": "web_134",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "まわっていると立つものは何?",
+      "options": [
+        "スピード",
+        "コマ",
+        "ポスト",
+        "会社",
+        "かさ",
+        "アイス"
+      ],
+      "answer_index": 1,
+      "hint": "まわす と 立つ 昔 の おもちゃ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第134問。\n正答: 「コマ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「まわっていると立つものは何？」→「コマ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 134
+    },
+    {
+      "id": "web_135",
+      "levels": [
+        "normal"
+      ],
+      "question": "食べると気持ちがすっきりする果物は何?",
+      "options": [
+        "マスカット",
+        "まぶた",
+        "バラ",
+        "物干し竿",
+        "綱引き",
+        "クレヨン"
+      ],
+      "answer_index": 0,
+      "hint": "食べる と すっきり… マス かっと 聞こえる 果物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第135問。\n正答: 「マスカット」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「食べると気持ちがすっきりする果物は何？」→「マスカット」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 135
+    },
+    {
+      "id": "web_136",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "冷凍庫がすきな音楽は何?",
+      "options": [
+        "コーラス",
+        "信号無視",
+        "竹",
+        "トキ",
+        "土手",
+        "悪魔"
+      ],
+      "answer_index": 0,
+      "hint": "冷凍庫 が 好き… コーラ と 合唱 が 似た 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第136問。\n正答: 「コーラス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「冷凍庫がすきな音楽は何？」→「コーラス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 136
+    },
+    {
+      "id": "web_137",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "空を飛び回るパンといえば何?",
+      "options": [
+        "白菜",
+        "空腹",
+        "ピーターパン",
+        "手紙",
+        "通帳",
+        "赤ん坊"
+      ],
+      "answer_index": 2,
+      "hint": "空 を 飛ぶ パン… 有名な おとぎ話 の 少年 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第137問。\n正答: 「ピーターパン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「空を飛び回るパンといえば何？」→「ピーターパン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 137
+    },
+    {
+      "id": "web_138",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "お酢が大好きという魚は何?",
+      "options": [
+        "いかりをしずめる",
+        "結婚指輪",
+        "スズキ",
+        "ブラックバス",
+        "パパイヤ",
+        "飴玉"
+      ],
+      "answer_index": 2,
+      "hint": "お酢 が 好き… 魚 の 名前 と 聞こえる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第138問。\n正答: 「スズキ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「お酢が大好きという魚は何？」→「スズキ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 138
+    },
+    {
+      "id": "web_139",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "席が膨らんでしまう席はどんな席?",
+      "options": [
+        "ホッチキス",
+        "優勝",
+        "図書館",
+        "ドアノブ",
+        "傍聴席",
+        "カタール"
+      ],
+      "answer_index": 4,
+      "hint": "席 が 膨らむ… 傍 に 聞こえる 席 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第139問。\n正答: 「傍聴席」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「席が膨らんでしまう席はどんな席？」→「傍聴席」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 139
+    },
+    {
+      "id": "web_140",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "表しかない本は何の本?",
+      "options": [
+        "コショウ",
+        "優勝",
+        "地平線",
+        "占いの本",
+        "扇風機",
+        "ボタン"
+      ],
+      "answer_index": 3,
+      "hint": "表 しか ない → 未来 を 占う 本 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第140問。\n正答: 「占いの本」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「表しかない本は何の本？」→「占いの本」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 140
+    },
+    {
+      "id": "web_141",
+      "levels": [
+        "normal"
+      ],
+      "question": "小銭を無視している虫は?",
+      "options": [
+        "アイス",
+        "スズキ",
+        "パン",
+        "話",
+        "お風呂",
+        "コガネムシ"
+      ],
+      "answer_index": 5,
+      "hint": "小銭 を 無視… コガネ より ムシ の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第141問。\n正答: 「コガネムシ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「小銭を無視している虫は？」→「コガネムシ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 141
+    },
+    {
+      "id": "web_142",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "目がたくさんあって振られるイスといえば何?",
+      "options": [
+        "ダイス",
+        "昼食や夕食",
+        "占いの本",
+        "ことば",
+        "たまご",
+        "マッチ"
+      ],
+      "answer_index": 0,
+      "hint": "目 が たくさん 振られる… サイコロ の 英語 みたい な 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第142問。\n正答: 「ダイス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「目がたくさんあって振られるイスといえば何？」→「ダイス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 142
+    },
+    {
+      "id": "web_143",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "50セントの車の部品といえば何?",
+      "options": [
+        "大関",
+        "ススキ",
+        "ハンドル",
+        "ホッチキス",
+        "スピード",
+        "おしろい"
+      ],
+      "answer_index": 2,
+      "hint": "50セント… 車 を 操る 丸い 部品 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第143問。\n正答: 「ハンドル」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「50セントの車の部品といえば何？」→「ハンドル」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 143
+    },
+    {
+      "id": "web_144",
+      "levels": [
+        "normal"
+      ],
+      "question": "切るのには使われず、干すときに利用されるはさみといえば何?",
+      "options": [
+        "信号無視",
+        "五本",
+        "洗濯バサミ",
+        "トラクター",
+        "天の川",
+        "ピーターパン"
+      ],
+      "answer_index": 2,
+      "hint": "切ら ず に 干す とき の はさみ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第144問。\n正答: 「洗濯バサミ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「切るのには使われず、干すときに利用されるはさみといえば何？」→「洗濯バサミ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 144
+    },
+    {
+      "id": "web_145",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "出すときには入れるものといえば何?",
+      "options": [
+        "手紙",
+        "流れ星「名がレ」",
+        "鬼退治",
+        "まぶた",
+        "通帳",
+        "ランドセル"
+      ],
+      "answer_index": 0,
+      "hint": "届けて くれる 文 だよ。足 は ない けど やって くる",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第145問。\n正答: 「手紙」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「出すときには入れるものといえば何？」→「手紙」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 145
+    },
+    {
+      "id": "web_146",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "お寺のごみとして捨てられた食べ物といえば何?",
+      "options": [
+        "ナメコ",
+        "マイカー",
+        "カステラ",
+        "すし詰め",
+        "豆腐",
+        "床屋"
+      ],
+      "answer_index": 2,
+      "hint": "お寺 の ごみ… カステラ の 音 が 関係 する よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第146問。\n正答: 「カステラ」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「お寺のごみとして捨てられた食べ物といえば何？」→「カステラ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 146
+    },
+    {
+      "id": "web_147",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "5本も歯が痛い人が遊ぶ遊びといえば何?",
+      "options": [
+        "カステラ",
+        "バラ",
+        "方向音痴",
+        "羽子板",
+        "ゴミ箱",
+        "洗濯バサミ"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第147問。\n正答: 「羽子板」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「5本も歯が痛い人が遊ぶ遊びといえば何？」→「羽子板」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 147
+    },
+    {
+      "id": "web_148",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "かんはかんでも本がたくさんあるかんといえば何?",
+      "options": [
+        "パジャマ",
+        "はし",
+        "きも",
+        "カステラ",
+        "図書館",
+        "結婚指輪"
+      ],
+      "answer_index": 4,
+      "hint": "かん でも 本 が たくさん… 読み物 が ある 建物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第148問。\n正答: 「図書館」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「かんはかんでも本がたくさんあるかんといえば何？」→「図書館」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 148
+    },
+    {
+      "id": "web_149",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "一個でも十個あるという「ふ」は何?",
+      "options": [
+        "シャーベット",
+        "沈黙",
+        "ストライク",
+        "豆腐",
+        "耕運機",
+        "マスカット"
+      ],
+      "answer_index": 3,
+      "hint": "「ふ」と 聞こえる パン の 名前 かも",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第149問。\n正答: 「豆腐」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「一個でも十個あるという「ふ」は何？」→「豆腐」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 149
+    },
+    {
+      "id": "web_150",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "ヤニはヤニでも体についてしまうヤニは何?",
+      "options": [
+        "奈良時代",
+        "ぞうきん",
+        "左手",
+        "目やに",
+        "竹",
+        "たまごのカラ"
+      ],
+      "answer_index": 3,
+      "hint": "タバコ の ヤニ じゃ ない。目 の まわり の もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第150問。\n正答: 「目やに」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ヤニはヤニでも体についてしまうヤニは何？」→「目やに」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 150
+    },
+    {
+      "id": "web_151",
+      "levels": [
+        "normal"
+      ],
+      "question": "お茶を半分だけ飲んで食べる食べ物は何?",
+      "options": [
+        "消しゴムのカス",
+        "チャーハン",
+        "火",
+        "トキ",
+        "三輪車",
+        "豆腐"
+      ],
+      "answer_index": 1,
+      "hint": "お茶 を 半分… チャ と ごはん の 料理 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第151問。\n正答: 「チャーハン」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「お茶を半分だけ飲んで食べる食べ物は何？」→「チャーハン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 151
+    },
+    {
+      "id": "web_152",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "頭のいい人が行く学部は何?",
+      "options": [
+        "シラカバ",
+        "キジ",
+        "スピード",
+        "奈良時代",
+        "サイコロ",
+        "理工学部"
+      ],
+      "answer_index": 5,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第152問。\n正答: 「理工学部」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「頭のいい人が行く学部は何？」→「理工学部」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 152
+    },
+    {
+      "id": "web_153",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "小さい靴箱にぎっちり入ってる靴は何足?",
+      "options": [
+        "人間",
+        "年齢",
+        "天の川",
+        "9足",
+        "タマゴ",
+        "さんぽ"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第153問。\n正答: 「9足」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「小さい靴箱にぎっちり入ってる靴は何足？」→「9足」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 153
+    },
+    {
+      "id": "web_154",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "山より高いところにある川は何?",
+      "options": [
+        "めんたいこ",
+        "綱引き",
+        "通帳",
+        "マッチ",
+        "鬼退治",
+        "天の川"
+      ],
+      "answer_index": 5,
+      "hint": "山 より 高い 川 → 夜 空 に かかる 川 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第154問。\n正答: 「天の川」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「山より高いところにある川は何？」→「天の川」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 154
+    },
+    {
+      "id": "web_155",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "新聞にいる鳥は何?",
+      "options": [
+        "カーペット",
+        "飴玉",
+        "マッチ",
+        "コーラス",
+        "シャーベット",
+        "キジ"
+      ],
+      "answer_index": 5,
+      "hint": "新聞 に いる 鳥… きじ 鳥 の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第155問。\n正答: 「キジ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「新聞にいる鳥は何？」→「キジ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 155
+    },
+    {
+      "id": "web_156",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "門の鍵を持っている動物は何?",
+      "options": [
+        "鏡",
+        "耕運機",
+        "サル",
+        "やまびこ",
+        "赤ん坊",
+        "鬼退治"
+      ],
+      "answer_index": 2,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第156問。\n正答: 「サル」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「門の鍵を持っている動物は何？」→「サル」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 156
+    },
+    {
+      "id": "web_157",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "右手で持てて左手でもてないものは何?",
+      "options": [
+        "左手",
+        "こま",
+        "えんどう豆",
+        "カーペット",
+        "白菜",
+        "人間"
+      ],
+      "answer_index": 0,
+      "hint": "右手 だけ では できない 体 の 一部 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第157問。\n正答: 「左手」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「右手で持てて左手でもてないものは何？」→「左手」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 157
+    },
+    {
+      "id": "web_158",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "食べると混乱してしまう果物は何?",
+      "options": [
+        "光",
+        "サクランボウ",
+        "天の川",
+        "ピアノ",
+        "逮捕",
+        "手紙"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第158問。\n正答: 「サクランボウ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「食べると混乱してしまう果物は何？」→「サクランボウ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 158
+    },
+    {
+      "id": "web_159",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "クシふたつと同じ価値の植物は何?",
+      "options": [
+        "白菜",
+        "ハガキ",
+        "ヒヨコ",
+        "ツクシ",
+        "アイス",
+        "ポスト"
+      ],
+      "answer_index": 3,
+      "hint": "クシ が 二つ… ツクシ と 同じ 値段 の 植物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第159問。\n正答: 「ツクシ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「クシふたつと同じ価値の植物は何？」→「ツクシ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 159
+    },
+    {
+      "id": "web_160",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "9回も食べてしまうものは何?",
+      "options": [
+        "エビ",
+        "風船",
+        "給食",
+        "肩車",
+        "スズキ",
+        "カステラ"
+      ],
+      "answer_index": 2,
+      "hint": "9回 食べる… 給食 の 音 が 九回 に 聞こえる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第160問。\n正答: 「給食」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「9回も食べてしまうものは何？」→「給食」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 160
+    },
+    {
+      "id": "web_161",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "小さな鳥が落ちるとどんな音がするでしょう?",
+      "options": [
+        "年齢",
+        "ゴーカート",
+        "コトリ",
+        "はさみ",
+        "かさ",
+        "左手"
+      ],
+      "answer_index": 2,
+      "hint": "小鳥 が 落ちる 音… とり と 小さい が くっついた よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第161問。\n正答: 「コトリ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「小さな鳥が落ちるとどんな音がするでしょう？」→「コトリ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 161
+    },
+    {
+      "id": "web_162",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "口の中に入れると消えてしまう玉は何?",
+      "options": [
+        "医者",
+        "はさみ",
+        "飴玉",
+        "カナダ",
+        "影",
+        "水"
+      ],
+      "answer_index": 2,
+      "hint": "口 に 入れる と なくなる 丸い あめ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第162問。\n正答: 「飴玉」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「口の中に入れると消えてしまう玉は何？」→「飴玉」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 162
+    },
+    {
+      "id": "web_163",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "尻に「ん」をつけるとこちらにくる鳥は何?",
+      "options": [
+        "カーペット",
+        "沈黙",
+        "手紙",
+        "おまけ",
+        "かも",
+        "コマ"
+      ],
+      "answer_index": 4,
+      "hint": "しりの うしろに 『来い』と 足すと 水辺 の 鳥 になる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第163問。\n正答: 「かも」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「尻に「ん」をつけるとこちらにくる鳥は何？」→「かも」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 163
+    },
+    {
+      "id": "web_164",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "アリ・キリギリス、お母さんが化粧しないのはどっち?",
+      "options": [
+        "こっくり",
+        "なべぶた",
+        "アリ",
+        "はさみ",
+        "スカイ",
+        "耕運機"
+      ],
+      "answer_index": 2,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第164問。\n正答: 「アリ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「アリ・キリギリス、お母さんが化粧しないのはどっち？」→「アリ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 164
+    },
+    {
+      "id": "web_165",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "七色の体をもつ魚は何?",
+      "options": [
+        "ポスト",
+        "ニジマス",
+        "年齢",
+        "天の川",
+        "ろうそく",
+        "床屋"
+      ],
+      "answer_index": 1,
+      "hint": "七色 の 体… 虹 と マス が 入った 魚 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第165問。\n正答: 「ニジマス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「七色の体をもつ魚は何？」→「ニジマス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 165
+    },
+    {
+      "id": "web_166",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "棒をとるとハンバーガーは何になる?",
+      "options": [
+        "流れ星「名がレ」",
+        "つめ",
+        "ハンガー",
+        "カンナ",
+        "ドーナツ",
+        "時計の針"
+      ],
+      "answer_index": 2,
+      "hint": "棒（バー）を 取る と 別の 言葉 に なる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第166問。\n正答: 「ハンガー」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「棒をとるとハンバーガーは何になる？」→「ハンガー」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 166
+    },
+    {
+      "id": "web_167",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "三羽の鳥がいます。何色でしょう?",
+      "options": [
+        "ミドリ",
+        "包丁",
+        "サイダー",
+        "結婚指輪",
+        "豚",
+        "パジャマ"
+      ],
+      "answer_index": 0,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第167問。\n正答: 「ミドリ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「三羽の鳥がいます。何色でしょう？」→「ミドリ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 167
+    },
+    {
+      "id": "web_168",
+      "levels": [
+        "normal"
+      ],
+      "question": "アメリカで売っているろうそくは何ドル?",
+      "options": [
+        "ゴーカート",
+        "影",
+        "ススキ",
+        "キャンドル",
+        "金魚すくいの金魚",
+        "スカイ"
+      ],
+      "answer_index": 3,
+      "hint": "アメリカ の ろうそく… 英語 で ろうそく と 読める よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第168問。\n正答: 「キャンドル」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「アメリカで売っているろうそくは何ドル？」→「キャンドル」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 168
+    },
+    {
+      "id": "web_169",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "いしゃはいしゃでも病気になったらいかないいしゃは何?",
+      "options": [
+        "わかめ",
+        "扇風機",
+        "ゴミ箱",
+        "ダイス",
+        "ランドセル",
+        "会社"
+      ],
+      "answer_index": 5,
+      "hint": "病気 の とき 休む 場所。会社 に は 行かない よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第169問。\n正答: 「会社」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「いしゃはいしゃでも病気になったらいかないいしゃは何？」→「会社」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 169
+    },
+    {
+      "id": "web_170",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "寝るときに使う邪魔なものは何?",
+      "options": [
+        "腹",
+        "あり",
+        "時計の針",
+        "もくじ",
+        "パジャマ",
+        "豆腐"
+      ],
+      "answer_index": 4,
+      "hint": "寝るとき 着る けど 邪魔 に 感じる こと も ある よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第170問。\n正答: 「パジャマ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「寝るときに使う邪魔なものは何？」→「パジャマ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 170
+    },
+    {
+      "id": "web_171",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "いつも人を呼んでいる魚は何?",
+      "options": [
+        "餃子",
+        "マスカット",
+        "鯉",
+        "スズキ",
+        "ドアノブ",
+        "竹"
+      ],
+      "answer_index": 2,
+      "hint": "人 を 呼ぶ 魚… こい の 読み が 関係 する よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第171問。\n正答: 「鯉」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「いつも人を呼んでいる魚は何？」→「鯉」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 171
+    },
+    {
+      "id": "web_172",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ひだりとみぎよく喋るのはどっち何?",
+      "options": [
+        "メドレー",
+        "右",
+        "まぶた",
+        "弱虫",
+        "腹",
+        "ドアノブ"
+      ],
+      "answer_index": 1,
+      "hint": "漢字の どちら側 に 「口」がある か 考えてみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第172問。\n正答: 「右」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ひだりとみぎよく喋るのはどっち何？」→「右」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 172
+    },
+    {
+      "id": "web_173",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "寝るときに使うふたは何?",
+      "options": [
+        "竹",
+        "雪だるま",
+        "カステラ",
+        "あくび",
+        "風船",
+        "まぶた"
+      ],
+      "answer_index": 5,
+      "hint": "寝る とき そっと 閉じる 目 の 上 の 部分 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第173問。\n正答: 「まぶた」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「寝るときに使うふたは何？」→「まぶた」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 173
+    },
+    {
+      "id": "web_174",
+      "levels": [
+        "normal"
+      ],
+      "question": "晴れの時には絶対あらわれない鳥は何?",
+      "options": [
+        "あまやどり",
+        "トラクター",
+        "発見",
+        "ナメコ",
+        "おかず",
+        "ぞうきん"
+      ],
+      "answer_index": 0,
+      "hint": "晴れ の 日 に は 出ない… 雨宿り の 鳥 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第174問。\n正答: 「あまやどり」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「晴れの時には絶対あらわれない鳥は何？」→「あまやどり」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 174
+    },
+    {
+      "id": "web_175",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "車を持っているイカは何?",
+      "options": [
+        "めんたいこ",
+        "ダンボール",
+        "傍聴席",
+        "ブラックバス",
+        "コーラス",
+        "マイカー"
+      ],
+      "answer_index": 5,
+      "hint": "イカ + 車 の 言葉 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第175問。\n正答: 「マイカー」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「車を持っているイカは何？」→「マイカー」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 175
+    },
+    {
+      "id": "web_176",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "庭にあるえきは何?",
+      "options": [
+        "えんどう豆",
+        "豚",
+        "シャーベット",
+        "ゴミ袋",
+        "植木",
+        "肉まん"
+      ],
+      "answer_index": 4,
+      "hint": "「えき」と 読める 庭 の もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第176問。\n正答: 「植木」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「庭にあるえきは何？」→「植木」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 176
+    },
+    {
+      "id": "web_177",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "食べると歯が臭くなる野菜は何?",
+      "options": [
+        "豚",
+        "トンビ",
+        "ジャマイカ",
+        "大晦日",
+        "サイン",
+        "白菜"
+      ],
+      "answer_index": 5,
+      "hint": "食べる と 歯 が 臭い… はくさい の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第177問。\n正答: 「白菜」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「食べると歯が臭くなる野菜は何？」→「白菜」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 177
+    },
+    {
+      "id": "web_178",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "鍋のうえにあって食べられないぶたは何?",
+      "options": [
+        "おしろい",
+        "自分の影",
+        "ゴーカート",
+        "ツクシ",
+        "恥",
+        "なべぶた"
+      ],
+      "answer_index": 5,
+      "hint": "鍋 の ふた の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第178問。\n正答: 「なべぶた」。\nパターン: 「XはXでも、たべられないX」型。同じ読み・似た語の別意味（道具・飾り・動物名など）を当てるダジャレ。\n意図: 「鍋のうえにあって食べられないぶたは何？」→「なべぶた」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 178
+    },
+    {
+      "id": "web_179",
+      "levels": [
+        "easy",
+        "normal"
+      ],
+      "question": "よごれをふき取るのに使うきんは何?",
+      "options": [
+        "ウグイス",
+        "スリッパ",
+        "ぞうきん",
+        "サイコロ",
+        "白菜",
+        "ライス"
+      ],
+      "answer_index": 2,
+      "hint": "よごれ を ふく 布 の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第179問。\n正答: 「ぞうきん」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「よごれをふき取るのに使うきんは何？」→「ぞうきん」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 179
+    },
+    {
+      "id": "web_180",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "何本あっても束にならない花は何?",
+      "options": [
+        "ろうそく",
+        "やまびこ",
+        "大関",
+        "バラ",
+        "おまけ",
+        "豚"
+      ],
+      "answer_index": 3,
+      "hint": "束 に ならない 花… バラ バラ と 読める よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第180問。\n正答: 「バラ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「何本あっても束にならない花は何？」→「バラ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 180
+    },
+    {
+      "id": "web_181",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "元暴走族の力士が得意とする技は何?",
+      "options": [
+        "会社",
+        "もくじ",
+        "シラカバ",
+        "ニジマス",
+        "つっぱり",
+        "ゴミ箱"
+      ],
+      "answer_index": 4,
+      "hint": "見た目 や 動き の イメージ から 考えてみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第181問。\n正答: 「つっぱり」。\nパターン: 動き・時間の比喩（針・影・地平線など、見えているのに追いつけない／戻るもの）。\n意図: 「元暴走族の力士が得意とする技は何？」→「つっぱり」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 181
+    },
+    {
+      "id": "web_182",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "動物園から動物が逃げたので皆あらゆるところを探している。なにが逃げた?",
+      "options": [
+        "カタール",
+        "コーラス",
+        "ガン",
+        "あり",
+        "会社",
+        "熊"
+      ],
+      "answer_index": 5,
+      "hint": "「くまなく」探す と 同じ 音 の 動物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第182問。\n正答: 「熊」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「動物園から動物が逃げたので皆あらゆるところを探している。なにが逃げた？」→「熊」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 182
+    },
+    {
+      "id": "web_183",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "キツネが食べるとおならをする食べ物は何?",
+      "options": [
+        "あまやどり",
+        "通帳",
+        "コンブ",
+        "けむり",
+        "結婚指輪",
+        "年齢"
+      ],
+      "answer_index": 2,
+      "hint": "昆布 + おなら の ダジャレ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第183問。\n正答: 「コンブ」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「キツネが食べるとおならをする食べ物は何？」→「コンブ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 183
+    },
+    {
+      "id": "web_184",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "そらの上には何がある?",
+      "options": [
+        "風船",
+        "ツクシ",
+        "光",
+        "シド",
+        "スリッパ",
+        "扇風機"
+      ],
+      "answer_index": 3,
+      "hint": "音階 の 最後 の 音 に 関係 する よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第184問。\n正答: 「シド」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「そらの上には何がある？」→「シド」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 184
+    },
+    {
+      "id": "web_185",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "漢字で書けない国は何?",
+      "options": [
+        "影",
+        "白菜",
+        "カナダ",
+        "大関",
+        "通帳",
+        "キジ"
+      ],
+      "answer_index": 2,
+      "hint": "漢字で 書けない 国 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第185問。\n正答: 「カナダ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「漢字で書けない国は何？」→「カナダ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 185
+    },
+    {
+      "id": "web_186",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "黙って食べてもうらまれない食べ物は何?",
+      "options": [
+        "カタール",
+        "肉まん",
+        "バター",
+        "あまやどり",
+        "空腹",
+        "ポスト"
+      ],
+      "answer_index": 1,
+      "hint": "黙って 食べる 蒸した 食べ物 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第186問。\n正答: 「肉まん」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「黙って食べてもうらまれない食べ物は何？」→「肉まん」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 186
+    },
+    {
+      "id": "web_187",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ポットは男か女か?",
+      "options": [
+        "こしょう",
+        "鬼退治",
+        "信号無視",
+        "男",
+        "玄関",
+        "食事"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第187問。\n正答: 「男」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ポットは男か女か？」→「男」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 187
+    },
+    {
+      "id": "web_188",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "王様も朝には食べられないものは何?",
+      "options": [
+        "空腹",
+        "昼食や夕食",
+        "サイコロ",
+        "豚",
+        "豆腐",
+        "ナス"
+      ],
+      "answer_index": 1,
+      "hint": "朝 以外 の 食事 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第188問。\n正答: 「昼食や夕食」。\nパターン: 「XはXでも、たべられないX」型。同じ読み・似た語の別意味（道具・飾り・動物名など）を当てるダジャレ。\n意図: 「王様も朝には食べられないものは何？」→「昼食や夕食」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 188
+    },
+    {
+      "id": "web_189",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "器だけで他に何もない料理は何?",
+      "options": [
+        "まぶた",
+        "木曜日",
+        "サラダ",
+        "ニセ札",
+        "お風呂",
+        "土手"
+      ],
+      "answer_index": 2,
+      "hint": "器（さら）そのもの が 答え になる 料理 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第189問。\n正答: 「サラダ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「器だけで他に何もない料理は何？」→「サラダ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 189
+    },
+    {
+      "id": "web_190",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "見るとお金がかかるのがコンサート、みられてお金がかかるのは何?",
+      "options": [
+        "天気",
+        "医者",
+        "ナス",
+        "三輪車",
+        "ぷんぷん",
+        "ホッチキス"
+      ],
+      "answer_index": 1,
+      "hint": "見られる 側 で お金 が かかる 人 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第190問。\n正答: 「医者」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「見るとお金がかかるのがコンサート、みられてお金がかかるのは何？」→「医者」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 190
+    },
+    {
+      "id": "web_191",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "舞台の中に隠れている動物は何?",
+      "options": [
+        "豚",
+        "水",
+        "トンビ",
+        "フクロウ",
+        "ヒヨコ",
+        "玄関"
+      ],
+      "answer_index": 0,
+      "hint": "舞台 の 中… ぶた の 音 が 隠れて いる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第191問。\n正答: 「豚」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「舞台の中に隠れている動物は何？」→「豚」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 191
+    },
+    {
+      "id": "web_192",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "眠たくなると出てくるくりは何?",
+      "options": [
+        "優勝",
+        "カメレオン",
+        "こっくり",
+        "ゴミ箱",
+        "消しゴムのカス",
+        "カイロ"
+      ],
+      "answer_index": 2,
+      "hint": "眠く なる と 出る うなずき の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第192問。\n正答: 「こっくり」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「眠たくなると出てくるくりは何？」→「こっくり」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 192
+    },
+    {
+      "id": "web_193",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "右手ではかけるのに左手ではかけないのは何?",
+      "options": [
+        "れいとう",
+        "左手",
+        "リス",
+        "かつおぶし",
+        "チャーハン",
+        "傍聴席"
+      ],
+      "answer_index": 1,
+      "hint": "右手 だけ では できない 体 の 一部 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第193問。\n正答: 「左手」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「右手ではかけるのに左手ではかけないのは何？」→「左手」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 193
+    },
+    {
+      "id": "web_194",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "急に病気になった人を運ぶのにかかる時間は?",
+      "options": [
+        "わかめ",
+        "げんしじん",
+        "えり足",
+        "９秒",
+        "流れ星「名がレ」",
+        "影"
+      ],
+      "answer_index": 3,
+      "hint": "「いそぐ」と 同じ に 聞こえる 数字 かも",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第194問。\n正答: 「９秒」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「急に病気になった人を運ぶのにかかる時間は？」→「９秒」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 194
+    },
+    {
+      "id": "web_195",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "おやつは３じ では、いまはなんじ?",
+      "options": [
+        "物干し竿",
+        "ぷんぷん",
+        "ガン",
+        "２じ",
+        "キジ",
+        "えんどう豆"
+      ],
+      "answer_index": 3,
+      "hint": "「おやつ」は 二文字。今 の 時刻 も 二文字 で 答える よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第195問。\n正答: 「２じ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「おやつは３じ では、いまはなんじ？」→「２じ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 195
+    },
+    {
+      "id": "web_196",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "世界の真ん中にいる虫は?",
+      "options": [
+        "扇風機",
+        "会社",
+        "蚊",
+        "げんしじん",
+        "晴天",
+        "三輪車"
+      ],
+      "answer_index": 2,
+      "hint": "「世界」の 真ん中 の 文字 に 関係 する 虫 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第196問。\n正答: 「蚊」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「世界の真ん中にいる虫は？」→「蚊」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 196
+    },
+    {
+      "id": "web_197",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "「ピストル」とよばれる鳥はどんな鳥?",
+      "options": [
+        "メドレー",
+        "ニジマス",
+        "ぷんぷん",
+        "手紙",
+        "ガン",
+        "コンブ"
+      ],
+      "answer_index": 4,
+      "hint": "ピストル と 呼ばれる 鳥… がん の 読み が 関係 する よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第197問。\n正答: 「ガン」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「「ピストル」とよばれる鳥はどんな鳥？」→「ガン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 197
+    },
+    {
+      "id": "web_198",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "グラフを書くとあらわれる動物は何?",
+      "options": [
+        "包丁",
+        "ヒョウ",
+        "スリッパ",
+        "手紙",
+        "光",
+        "カステラ"
+      ],
+      "answer_index": 1,
+      "hint": "「表」と 読める 動物 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第198問。\n正答: 「ヒョウ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「グラフを書くとあらわれる動物は何？」→「ヒョウ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 198
+    },
+    {
+      "id": "web_199",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "怒っている人はなんぷん?",
+      "options": [
+        "ぷんぷん",
+        "カンナ",
+        "きも",
+        "豆腐",
+        "まぶた",
+        "かさ"
+      ],
+      "answer_index": 0,
+      "hint": "怒った とき の 音 に 似た 言葉 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第199問。\n正答: 「ぷんぷん」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「怒っている人はなんぷん？」→「ぷんぷん」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 199
+    },
+    {
+      "id": "web_200",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "下から見るとばからしい木は何?",
+      "options": [
+        "会社",
+        "白樺",
+        "結婚指輪",
+        "ステッキ",
+        "花火",
+        "パパイヤ"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第200問。\n正答: 「白樺」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「下から見るとばからしい木は何？」→「白樺」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 200
+    },
+    {
+      "id": "web_201",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "何でも書く書道の先生がかきたがらないものは何?",
+      "options": [
+        "自分の影",
+        "スズキ",
+        "こま",
+        "カステラ",
+        "スピード",
+        "恥"
+      ],
+      "answer_index": 5,
+      "hint": "書道 の 先生 が 書きたくない… はずかしい 気持ち だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第201問。\n正答: 「恥」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「何でも書く書道の先生がかきたがらないものは何？」→「恥」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 201
+    },
+    {
+      "id": "web_202",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "くだらないエスカレーター、上に行く？下に行く?",
+      "options": [
+        "上",
+        "やまびこ",
+        "うめぼし",
+        "恋愛",
+        "ゴミ箱",
+        "つなひき"
+      ],
+      "answer_index": 0,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第202問。\n正答: 「上」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「くだらないエスカレーター、上に行く？下に行く？」→「上」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 202
+    },
+    {
+      "id": "web_203",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "使うと捨てちゃうのに買う袋は何?",
+      "options": [
+        "時計の針",
+        "キツネ",
+        "なめくじ",
+        "ゴミ袋",
+        "サイン",
+        "方向音痴"
+      ],
+      "answer_index": 3,
+      "hint": "使う と 捨てる 袋… ごみ を 入れる 袋 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第203問。\n正答: 「ゴミ袋」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「使うと捨てちゃうのに買う袋は何？」→「ゴミ袋」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 203
+    },
+    {
+      "id": "web_204",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "死んだ人だけが招待されるイベントは何?",
+      "options": [
+        "発見",
+        "カンナ",
+        "悪魔",
+        "試写会",
+        "天の川",
+        "ワサビ"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第204問。\n正答: 「試写会」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「死んだ人だけが招待されるイベントは何？」→「試写会」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 204
+    },
+    {
+      "id": "web_205",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "野菜をいっぱい載せたトラックが急ブレーキ。落ちたのは何?",
+      "options": [
+        "扇風機",
+        "キツネ",
+        "スピード",
+        "パジャマ",
+        "木曜日",
+        "ランドセル"
+      ],
+      "answer_index": 2,
+      "hint": "野菜 トラック が 急停止… スピード が 落ちた よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第205問。\n正答: 「スピード」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「野菜をいっぱい載せたトラックが急ブレーキ。落ちたのは何？」→「スピード」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 205
+    },
+    {
+      "id": "web_206",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "いつも木をつねってばかりいる動物は?",
+      "options": [
+        "ガン",
+        "カナダ",
+        "お風呂",
+        "なべぶた",
+        "目やに",
+        "キツネ"
+      ],
+      "answer_index": 5,
+      "hint": "木 を つねる… きつね の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第206問。\n正答: 「キツネ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「いつも木をつねってばかりいる動物は？」→「キツネ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 206
+    },
+    {
+      "id": "web_207",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "素晴らしい木ってどんなもの?",
+      "options": [
+        "ステッキ",
+        "洗濯バサミ",
+        "えんどう豆",
+        "金魚すくいの金魚",
+        "自分自身",
+        "傍聴席"
+      ],
+      "answer_index": 0,
+      "hint": "素晴らしい 木… ステッキ の 英語 みたい な 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第207問。\n正答: 「ステッキ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「素晴らしい木ってどんなもの？」→「ステッキ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 207
+    },
+    {
+      "id": "web_208",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "氷の上で滑るのが得意な魚って何?",
+      "options": [
+        "地平線",
+        "トンビ",
+        "信号無視",
+        "ワサビ",
+        "ホッケ",
+        "鬼退治"
+      ],
+      "answer_index": 4,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第208問。\n正答: 「ホッケ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「氷の上で滑るのが得意な魚って何？」→「ホッケ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 208
+    },
+    {
+      "id": "web_209",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "宇宙に行くと食欲がなくなってしまうそうです。何で?",
+      "options": [
+        "おかず",
+        "パジャマ",
+        "会社",
+        "コガネムシ",
+        "スカイ",
+        "食う気がない"
+      ],
+      "answer_index": 5,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第209問。\n正答: 「食う気がない」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「宇宙に行くと食欲がなくなってしまうそうです。何で？」→「食う気がない」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 209
+    },
+    {
+      "id": "web_210",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "家から10メートル先にある家は誰のお家でしょうか?",
+      "options": [
+        "先生",
+        "消しゴムのカス",
+        "つなひき",
+        "コンドル",
+        "マスカット",
+        "洗濯バサミ"
+      ],
+      "answer_index": 0,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第210問。\n正答: 「先生」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「家から10メートル先にある家は誰のお家でしょうか？」→「先生」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 210
+    },
+    {
+      "id": "web_211",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "オカマが引っくりかえっている海外の都市はどこ?",
+      "options": [
+        "植木",
+        "マカオ",
+        "まぶた",
+        "耕運機",
+        "おしろい",
+        "チャーハン"
+      ],
+      "answer_index": 1,
+      "hint": "オカマ が ひっくり… 海外 の 町 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第211問。\n正答: 「マカオ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「オカマが引っくりかえっている海外の都市はどこ？」→「マカオ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 211
+    },
+    {
+      "id": "web_212",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "タイヤを使わないで二本足で人を運ぶ車は何?",
+      "options": [
+        "ぷんぷん",
+        "ニジマス",
+        "天気",
+        "クレーン",
+        "シラカバ",
+        "肩車"
+      ],
+      "answer_index": 5,
+      "hint": "タイヤ なし 二足… 肩 の 上 に 乗せる 車 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第212問。\n正答: 「肩車」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「タイヤを使わないで二本足で人を運ぶ車は何？」→「肩車」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 212
+    },
+    {
+      "id": "web_213",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "割ったりかけたりするのに足したり引いたりできないものは何?",
+      "options": [
+        "やっきょく",
+        "バラ",
+        "アイス",
+        "タマゴ",
+        "手紙",
+        "わかめ"
+      ],
+      "answer_index": 3,
+      "hint": "割る か かける たまご… 足し算 引き算 は できない よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第213問。\n正答: 「タマゴ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「割ったりかけたりするのに足したり引いたりできないものは何？」→「タマゴ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 213
+    },
+    {
+      "id": "web_214",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "草の下でお母さんが手に入れる果物は?",
+      "options": [
+        "カステラ",
+        "やっきょく",
+        "苺",
+        "大関",
+        "ことば",
+        "自分の影"
+      ],
+      "answer_index": 2,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第214問。\n正答: 「苺」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「草の下でお母さんが手に入れる果物は？」→「苺」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 214
+    },
+    {
+      "id": "web_215",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "骨と皮だけなのに人をすずしくする物は何?",
+      "options": [
+        "ゴミ袋",
+        "五本",
+        "空",
+        "うちわ",
+        "おかず",
+        "ドアノブ"
+      ],
+      "answer_index": 3,
+      "hint": "骨 と 皮 だけ で 涼しく する もの だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第215問。\n正答: 「うちわ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「骨と皮だけなのに人をすずしくする物は何？」→「うちわ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 215
+    },
+    {
+      "id": "web_216",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "水の中に家が入ると何になる?",
+      "options": [
+        "水泳（",
+        "ホッチキス",
+        "すし詰め",
+        "赤ん坊",
+        "しりとり",
+        "けむり"
+      ],
+      "answer_index": 0,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第216問。\n正答: 「水泳（」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「水の中に家が入ると何になる？」→「水泳（」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 216
+    },
+    {
+      "id": "web_217",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "キスをするのが大好きな人達がいる国はどこ?",
+      "options": [
+        "スカイ",
+        "サイン",
+        "うめぼし",
+        "中国",
+        "パン",
+        "奈良時代"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第217問。\n正答: 「中国」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「キスをするのが大好きな人達がいる国はどこ？」→「中国」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 217
+    },
+    {
+      "id": "web_218",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "お母さんが大事にしている「ぼう」は何?",
+      "options": [
+        "サイン",
+        "めんたいこ",
+        "チャーハン",
+        "年齢",
+        "まばたき",
+        "赤ん坊"
+      ],
+      "answer_index": 5,
+      "hint": "お母さん が 大事に する ぼう… 赤ちゃん の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第218問。\n正答: 「赤ん坊」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「お母さんが大事にしている「ぼう」は何？」→「赤ん坊」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 218
+    },
+    {
+      "id": "web_219",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "野球の選手は書いて、野球の監督は出すものといえば何?",
+      "options": [
+        "きも",
+        "鯉",
+        "悪魔",
+        "土管",
+        "サイン",
+        "いかりをしずめる"
+      ],
+      "answer_index": 4,
+      "hint": "選手 は 書いて 監督 は 出す… サイン の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第219問。\n正答: 「サイン」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「野球の選手は書いて、野球の監督は出すものといえば何？」→「サイン」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 219
+    },
+    {
+      "id": "web_220",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ボールはボールでも四角いボールは何?",
+      "options": [
+        "ダンボール",
+        "キツネ",
+        "豚",
+        "図書館",
+        "マッチ",
+        "土管"
+      ],
+      "answer_index": 0,
+      "hint": "四角い みため の 荷物 箱。丸い スポーツ用 の 玉 じゃ ない よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第220問。\n正答: 「ダンボール」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ボールはボールでも四角いボールは何？」→「ダンボール」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 220
+    },
+    {
+      "id": "web_221",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "背の高さと体の重さと目の良さ、注意深く調べないといけないのは何?",
+      "options": [
+        "風船",
+        "スパイク",
+        "スピード",
+        "背の高さ",
+        "パジャマ",
+        "肉まん"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第221問。\n正答: 「背の高さ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「背の高さと体の重さと目の良さ、注意深く調べないといけないのは何？」→「背の高さ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 221
+    },
+    {
+      "id": "web_222",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "イヌでもネコでもウサギでも負けないのにライオンだと負けるのは何?",
+      "options": [
+        "鬼退治",
+        "花火",
+        "手袋",
+        "しりとり",
+        "包丁",
+        "信号機"
+      ],
+      "answer_index": 3,
+      "hint": "最後 の 文字 を 次の 言葉 に つなぐ ことば遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第222問。\n正答: 「しりとり」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「イヌでもネコでもウサギでも負けないのにライオンだと負けるのは何？」→「しりとり」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 222
+    },
+    {
+      "id": "web_223",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "しじんはしじんでも一番古いしじんは?",
+      "options": [
+        "大関",
+        "尻餅",
+        "ブラックバス",
+        "ウグイス",
+        "げんしじん",
+        "なめくじ"
+      ],
+      "answer_index": 4,
+      "hint": "いちばん 古い 詩人… げんし じん の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第223問。\n正答: 「げんしじん」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「しじんはしじんでも一番古いしじんは？」→「げんしじん」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 223
+    },
+    {
+      "id": "web_224",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ある大会で2位の人は3勝しました。では、1位の人は何勝?",
+      "options": [
+        "めんたいこ",
+        "かたつむり",
+        "花火",
+        "優勝",
+        "人間",
+        "ろうそく"
+      ],
+      "answer_index": 3,
+      "hint": "2位 が 3勝… 優勝 の 勝ち数 は 2勝 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第224問。\n正答: 「優勝」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ある大会で2位の人は3勝しました。では、1位の人は何勝？」→「優勝」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 224
+    },
+    {
+      "id": "web_225",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "しろはしろでも、肌を白くするしろは何?",
+      "options": [
+        "植木",
+        "クレヨン",
+        "カステラ",
+        "おしろい",
+        "豚",
+        "マイカー"
+      ],
+      "answer_index": 3,
+      "hint": "肌 を 白く する しろ… おしろい だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第225問。\n正答: 「おしろい」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「しろはしろでも、肌を白くするしろは何？」→「おしろい」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 225
+    },
+    {
+      "id": "web_226",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "すしはすしでも、ぎゅうぎゅうで息苦しいすしは何?",
+      "options": [
+        "自分自身",
+        "恥",
+        "ことば",
+        "自分の影",
+        "優勝",
+        "すし詰め"
+      ],
+      "answer_index": 5,
+      "hint": "ぎゅうぎゅう の すし… すし詰め の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第226問。\n正答: 「すし詰め」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「すしはすしでも、ぎゅうぎゅうで息苦しいすしは何？」→「すし詰め」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 226
+    },
+    {
+      "id": "web_227",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "スキーで斜面を滑すべりおりるのが得意な鳥は?",
+      "options": [
+        "方向音痴",
+        "カタール",
+        "たまご",
+        "ランドセル",
+        "鬼退治",
+        "かっこう"
+      ],
+      "answer_index": 5,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第227問。\n正答: 「かっこう」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「スキーで斜面を滑すべりおりるのが得意な鳥は？」→「かっこう」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 227
+    },
+    {
+      "id": "web_228",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "いつも一番最後に食べられる豆は何?",
+      "options": [
+        "金魚すくいの金魚",
+        "うめぼし",
+        "こま",
+        "たまごのカラ",
+        "えんどう豆",
+        "サイダー"
+      ],
+      "answer_index": 4,
+      "hint": "いちばん 最後 に 食べる 豆… えんどう の 順番 の 話 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第228問。\n正答: 「えんどう豆」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「いつも一番最後に食べられる豆は何？」→「えんどう豆」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 228
+    },
+    {
+      "id": "web_229",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "いつも大きな音でゴホンゴホンとしているお相撲さんの番付は何?",
+      "options": [
+        "大関",
+        "ストライク",
+        "カーペット",
+        "手紙",
+        "病院",
+        "金魚すくいの金魚"
+      ],
+      "answer_index": 0,
+      "hint": "ゴホンゴホン… 大きな 音 の お相撲 さん の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第229問。\n正答: 「大関」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「いつも大きな音でゴホンゴホンとしているお相撲さんの番付は何？」→「大関」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 229
+    },
+    {
+      "id": "web_230",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "動物だと言い張っている飲み物は何?",
+      "options": [
+        "サイダー",
+        "結婚指輪",
+        "病院",
+        "光",
+        "うちわ",
+        "ろうそく"
+      ],
+      "answer_index": 0,
+      "hint": "動物 だ と 言い張る 飲み物… サイ と 動物 の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第230問。\n正答: 「サイダー」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「動物だと言い張っている飲み物は何？」→「サイダー」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 230
+    },
+    {
+      "id": "web_231",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ジェット機の中に隠れている鳥は何?",
+      "options": [
+        "うちわ",
+        "うめぼし",
+        "ニセ札",
+        "発見",
+        "めんたいこ",
+        "トキ"
+      ],
+      "answer_index": 5,
+      "hint": "ジェット の 中 に 隠れた 鳥… とき の 読み だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第231問。\n正答: 「トキ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ジェット機の中に隠れている鳥は何？」→「トキ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 231
+    },
+    {
+      "id": "web_232",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "戸が豪華な乗り物は何?",
+      "options": [
+        "かさ",
+        "ボタン",
+        "チャーハン",
+        "ゴーカート",
+        "ジャマイカ",
+        "ツクシ"
+      ],
+      "answer_index": 3,
+      "hint": "戸 が 豪華… ゴー カート の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第232問。\n正答: 「ゴーカート」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「戸が豪華な乗り物は何？」→「ゴーカート」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 232
+    },
+    {
+      "id": "web_233",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "冷やしたりつぶしたりするからだの部分はどこ?",
+      "options": [
+        "きも",
+        "飴玉",
+        "鬼退治",
+        "ゴミ袋",
+        "火",
+        "ダンボール"
+      ],
+      "answer_index": 0,
+      "hint": "冷やす つぶす… きも の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第233問。\n正答: 「きも」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「冷やしたりつぶしたりするからだの部分はどこ？」→「きも」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 233
+    },
+    {
+      "id": "web_234",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "イヌが9匹集まってはじめることといえば何?",
+      "options": [
+        "研究",
+        "マスカット",
+        "三輪車",
+        "晴天",
+        "コンブ",
+        "ホッチキス"
+      ],
+      "answer_index": 0,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第234問。\n正答: 「研究」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「イヌが9匹集まってはじめることといえば何？」→「研究」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 234
+    },
+    {
+      "id": "web_235",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "カバはカバでも高原や高山に立っているカバは何?",
+      "options": [
+        "飴玉",
+        "人間",
+        "シラカバ",
+        "傍聴席",
+        "カンナ",
+        "豚"
+      ],
+      "answer_index": 2,
+      "hint": "高原 に 立つ カバ… 白い 木 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第235問。\n正答: 「シラカバ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「カバはカバでも高原や高山に立っているカバは何？」→「シラカバ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 235
+    },
+    {
+      "id": "web_236",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "1000人乗っていないのに1000人乗せているみたいな乗り物は何?",
+      "options": [
+        "なべぶた",
+        "五本",
+        "客船",
+        "包丁",
+        "地平線",
+        "大関"
+      ],
+      "answer_index": 2,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第236問。\n正答: 「客船」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「1000人乗っていないのに1000人乗せているみたいな乗り物は何？」→「客船」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 236
+    },
+    {
+      "id": "web_237",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "アシなのに体の上の方にあるアシは何?",
+      "options": [
+        "えり足",
+        "キツネ",
+        "ガン",
+        "けむり",
+        "消しゴムのカス",
+        "目やに"
+      ],
+      "answer_index": 0,
+      "hint": "体 の 上 の 方 の 足… えり足 の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第237問。\n正答: 「えり足」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「アシなのに体の上の方にあるアシは何？」→「えり足」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 237
+    },
+    {
+      "id": "web_238",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "服を二枚着た人がかかる病気は何?",
+      "options": [
+        "図書館",
+        "病院",
+        "水",
+        "れいとう",
+        "腹痛",
+        "逮捕"
+      ],
+      "answer_index": 4,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第238問。\n正答: 「腹痛」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「服を二枚着た人がかかる病気は何？」→「腹痛」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 238
+    },
+    {
+      "id": "web_239",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ほうきで掃除している人がかかる病気は何?",
+      "options": [
+        "三輪車",
+        "雪だるま",
+        "マイカー",
+        "ランドセル",
+        "沈黙",
+        "歯痛"
+      ],
+      "answer_index": 5,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第239問。\n正答: 「歯痛」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ほうきで掃除している人がかかる病気は何？」→「歯痛」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 239
+    },
+    {
+      "id": "web_240",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "すぐに白旗を上げる学年は?",
+      "options": [
+        "つめ",
+        "クレヨン",
+        "ニジマス",
+        "手袋",
+        "ホッチキス",
+        "高３"
+      ],
+      "answer_index": 5,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第240問。\n正答: 「高３」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「すぐに白旗を上げる学年は？」→「高３」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 240
+    },
+    {
+      "id": "web_241",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "誰も開けたことがないもので、カラなのに中にはいっているのは何?",
+      "options": [
+        "ことば",
+        "サイコロ",
+        "たまごのカラ",
+        "カイロ",
+        "ドアノブ",
+        "発見"
+      ],
+      "answer_index": 2,
+      "hint": "誰も 開けて ない カラ… たまご の から だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第241問。\n正答: 「たまごのカラ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「誰も開けたことがないもので、カラなのに中にはいっているのは何？」→「たまごのカラ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 241
+    },
+    {
+      "id": "web_242",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "もったり、花を咲かすものは何?",
+      "options": [
+        "土管",
+        "話",
+        "図書館",
+        "結婚指輪",
+        "カナダ",
+        "金魚すくいの金魚"
+      ],
+      "answer_index": 1,
+      "hint": "もったり 花 を 咲かす… はなし の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第242問。\n正答: 「話」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「もったり、花を咲かすものは何？」→「話」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 242
+    },
+    {
+      "id": "web_243",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "風呂場の中にいる動物は何?",
+      "options": [
+        "左手",
+        "ロバ（ふ",
+        "ステッキ",
+        "ポケット",
+        "ハンドル",
+        "コンブ"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第243問。\n正答: 「ロバ（ふ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「風呂場の中にいる動物は何？」→「ロバ（ふ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 243
+    },
+    {
+      "id": "web_244",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "泳ぎ方のなかで苦しい思いをしてそうな名前の泳ぎ方は?",
+      "options": [
+        "ストライク",
+        "コンドル",
+        "シャーベット",
+        "コショウ",
+        "クロール",
+        "マスカット"
+      ],
+      "answer_index": 4,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第244問。\n正答: 「クロール」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「泳ぎ方のなかで苦しい思いをしてそうな名前の泳ぎ方は？」→「クロール」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 244
+    },
+    {
+      "id": "web_245",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "バレーボールでは手で打って、サッカーでは足に履くものは何?",
+      "options": [
+        "スパイク",
+        "ライス",
+        "ガン",
+        "五本",
+        "天の川",
+        "バター"
+      ],
+      "answer_index": 0,
+      "hint": "バレー は 手、サッカー は 足… スパイク の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第245問。\n正答: 「スパイク」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「バレーボールでは手で打って、サッカーでは足に履くものは何？」→「スパイク」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 245
+    },
+    {
+      "id": "web_246",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "カイはカイでも外で上を見るとみつかるカイは何?",
+      "options": [
+        "あくび",
+        "流れ星「名がレ」",
+        "カイロ",
+        "カメレオン",
+        "スカイ",
+        "話"
+      ],
+      "answer_index": 4,
+      "hint": "外 で 上 を 見る と 見つかる… 空 の 英語 みたい な 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第246問。\n正答: 「スカイ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「カイはカイでも外で上を見るとみつかるカイは何？」→「スカイ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 246
+    },
+    {
+      "id": "web_247",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "何を聞いても絶対に返事をしない体の部分はどこ?",
+      "options": [
+        "扁桃腺",
+        "方向音痴",
+        "ライス",
+        "カーペット",
+        "なべぶた",
+        "スパイク"
+      ],
+      "answer_index": 0,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第247問。\n正答: 「扁桃腺」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「何を聞いても絶対に返事をしない体の部分はどこ？」→「扁桃腺」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 247
+    },
+    {
+      "id": "web_248",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ぶしはぶしでも食べられるぶしは何?",
+      "options": [
+        "ゴミ箱",
+        "きも",
+        "流れ星「名がレ」",
+        "かつおぶし",
+        "マカオ",
+        "ニジマス"
+      ],
+      "answer_index": 3,
+      "hint": "将軍 の 名前 じゃなくて だし汁 に 入れる ちいさな 片 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第248問。\n正答: 「かつおぶし」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ぶしはぶしでも食べられるぶしは何？」→「かつおぶし」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 248
+    },
+    {
+      "id": "web_249",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "何百キロもするバーベルを上げられる力持ちが、絶対に上げられないバーベルより軽いものは何?",
+      "options": [
+        "昼食や夕食",
+        "恋愛",
+        "めんたいこ",
+        "蚊",
+        "自分自身",
+        "カステラ"
+      ],
+      "answer_index": 4,
+      "hint": "自分 より 軽い のに 上げられない… 自分自身 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第249問。\n正答: 「自分自身」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「何百キロもするバーベルを上げられる力持ちが、絶対に上げられないバーベルより軽いものは何？」→「自分自身」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 249
+    },
+    {
+      "id": "web_250",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "くじなのに紙ではなくヌルヌルしていて動くのは何?",
+      "options": [
+        "けむり",
+        "なめくじ",
+        "天の川",
+        "メドレー",
+        "タマゴ",
+        "コンブ"
+      ],
+      "answer_index": 1,
+      "hint": "紙 で 引く くじ とは ちがう。地面 を のびのび 進む ヌルヌル 生き物",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第250問。\n正答: 「なめくじ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「くじなのに紙ではなくヌルヌルしていて動くのは何？」→「なめくじ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 250
+    },
+    {
+      "id": "web_251",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "犬を大きくするにはどうしたらいい?",
+      "options": [
+        "コンブ",
+        "木曜日",
+        "光",
+        "点をけす",
+        "押し出し",
+        "ニセ札"
+      ],
+      "answer_index": 3,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第251問。\n正答: 「点をけす」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「犬を大きくするにはどうしたらいい？」→「点をけす」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 251
+    },
+    {
+      "id": "web_252",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "幼稚園に行く子が好きな色は?",
+      "options": [
+        "ツクシ",
+        "えんじ",
+        "かさ",
+        "綱引き",
+        "ナス",
+        "いかりをしずめる"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第252問。\n正答: 「えんじ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「幼稚園に行く子が好きな色は？」→「えんじ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 252
+    },
+    {
+      "id": "web_253",
+      "levels": [
+        "hard"
+      ],
+      "question": "「２．５」という食べ物は何?",
+      "options": [
+        "カメレオン",
+        "ご飯",
+        "ダンボール",
+        "ぷんぷん",
+        "押し出し",
+        "占いの本"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第253問。\n正答: 「ご飯」。\nパターン: 空腹・満腹や有無で性質が変わるもの（風船・文房具など）。\n意図: 「「２．５」という食べ物は何？」→「ご飯」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 253
+    },
+    {
+      "id": "web_254",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "木の実の中に隠れている虫は何?",
+      "options": [
+        "流れ星「名がレ」",
+        "ノミ（木",
+        "さんぽ",
+        "カタール",
+        "つなひき",
+        "手紙"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第254問。\n正答: 「ノミ（木」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「木の実の中に隠れている虫は何？」→「ノミ（木」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 254
+    },
+    {
+      "id": "web_255",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "お酢が大好きだという植物は何?",
+      "options": [
+        "なべぶた",
+        "きも",
+        "ガン",
+        "豚",
+        "天の川",
+        "ススキ"
+      ],
+      "answer_index": 5,
+      "hint": "お酢 が 好き な 植物… すすき の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第255問。\n正答: 「ススキ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「お酢が大好きだという植物は何？」→「ススキ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 255
+    },
+    {
+      "id": "web_256",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ベットはベットでも冷たくておいしいベットは何?",
+      "options": [
+        "会社",
+        "メドレー",
+        "恋愛",
+        "星",
+        "シャーベット",
+        "火"
+      ],
+      "answer_index": 4,
+      "hint": "冷たく おいしい ベッド… シャーベット の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第256問。\n正答: 「シャーベット」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ベットはベットでも冷たくておいしいベットは何？」→「シャーベット」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 256
+    },
+    {
+      "id": "web_257",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ハチが飛んでくる方角は?",
+      "options": [
+        "えり足",
+        "床屋",
+        "クレーン",
+        "いかりをしずめる",
+        "西",
+        "カナダ"
+      ],
+      "answer_index": 4,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第257問。\n正答: 「西」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「ハチが飛んでくる方角は？」→「西」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 257
+    },
+    {
+      "id": "web_258",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "ハネがあるのに回してばかりで空を飛ばないのは何?",
+      "options": [
+        "扇風機",
+        "道路",
+        "すな",
+        "ボタン",
+        "自分自身",
+        "コトリ"
+      ],
+      "answer_index": 0,
+      "hint": "羽 が ある のに 飛ばない… 部屋 で 回る 涼しい 機械 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第258問。\n正答: 「扇風機」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ハネがあるのに回してばかりで空を飛ばないのは何？」→「扇風機」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 258
+    },
+    {
+      "id": "web_259",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "のびると病院で働く野菜は何?",
+      "options": [
+        "雪だるま",
+        "晴天",
+        "ぞうきん",
+        "鏡",
+        "ナス",
+        "つっぱり"
+      ],
+      "answer_index": 4,
+      "hint": "のびる と 病院… ナス と 医師 の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第259問。\n正答: 「ナス」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「のびると病院で働く野菜は何？」→「ナス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 259
+    },
+    {
+      "id": "web_260",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "一日に三回引くくじは何?",
+      "options": [
+        "やまびこ",
+        "トラクター",
+        "食事",
+        "お風呂",
+        "スパイク",
+        "ゴミ箱"
+      ],
+      "answer_index": 2,
+      "hint": "一日 三回 引く くじ… 食事 の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第260問。\n正答: 「食事」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「一日に三回引くくじは何？」→「食事」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 260
+    },
+    {
+      "id": "web_261",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "タイはタイでもおまわりさんがするたいは?",
+      "options": [
+        "ゴーカート",
+        "カーペット",
+        "逮捕",
+        "恋愛",
+        "赤ん坊",
+        "物干し竿"
+      ],
+      "answer_index": 2,
+      "hint": "おまわり の タイ… 逮捕 の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第261問。\n正答: 「逮捕」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「タイはタイでもおまわりさんがするたいは？」→「逮捕」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 261
+    },
+    {
+      "id": "web_262",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "人を笑わせる話が得意なシカは何?",
+      "options": [
+        "メドレー",
+        "優勝",
+        "噺家",
+        "ポケット",
+        "地平線",
+        "包丁"
+      ],
+      "answer_index": 2,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第262問。\n正答: 「噺家」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「人を笑わせる話が得意なシカは何？」→「噺家」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 262
+    },
+    {
+      "id": "web_263",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "扇子が持ち込み禁止になっている船は何?",
+      "options": [
+        "雑煮",
+        "潜水艦",
+        "コトリ",
+        "すな",
+        "左手",
+        "ウグイス"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第263問。\n正答: 「潜水艦」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「扇子が持ち込み禁止になっている船は何？」→「潜水艦」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 263
+    },
+    {
+      "id": "web_264",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "桃太郎がでかけていったのはなんじ?",
+      "options": [
+        "消しゴムのカス",
+        "トラクター",
+        "ポケット",
+        "ゴミ箱",
+        "給食",
+        "鬼退治"
+      ],
+      "answer_index": 5,
+      "hint": "桃太郎 が でかけた 時間… 鬼退治 の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第264問。\n正答: 「鬼退治」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「桃太郎がでかけていったのはなんじ？」→「鬼退治」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 264
+    },
+    {
+      "id": "web_265",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "いつも動いているカンは何?",
+      "options": [
+        "時間",
+        "サイダー",
+        "飴玉",
+        "ぞうきん",
+        "大晦日",
+        "奈良時代"
+      ],
+      "answer_index": 0,
+      "hint": "いつも 動く 缶… 時間 の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第265問。\n正答: 「時間」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「いつも動いているカンは何？」→「時間」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 265
+    },
+    {
+      "id": "web_266",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "どんなにはれても痛くないものは何?",
+      "options": [
+        "リス",
+        "手袋",
+        "サイコロ",
+        "ポケット",
+        "マイカー",
+        "天気"
+      ],
+      "answer_index": 5,
+      "hint": "晴れても 痛くない… 天気 の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第266問。\n正答: 「天気」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「どんなにはれても痛くないものは何？」→「天気」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 266
+    },
+    {
+      "id": "web_267",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "おなかにさしても意味がないけど、目にさすと役に立つものは?",
+      "options": [
+        "晴天",
+        "流れ星「名がレ」",
+        "もくじ",
+        "水",
+        "目薬",
+        "スズキ"
+      ],
+      "answer_index": 4,
+      "hint": "お腹 より 目 に さす 薬… 目薬 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第267問。\n正答: 「目薬」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「おなかにさしても意味がないけど、目にさすと役に立つものは？」→「目薬」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 267
+    },
+    {
+      "id": "web_268",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "めはめでも、手や足についているめは何?",
+      "options": [
+        "耕運機",
+        "豚",
+        "サイン",
+        "消しゴムのカス",
+        "つめ",
+        "蚊"
+      ],
+      "answer_index": 4,
+      "hint": "手 や 足 に つく め… つめ の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第268問。\n正答: 「つめ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「めはめでも、手や足についているめは何？」→「つめ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 268
+    },
+    {
+      "id": "web_269",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "銀行に必要なチョウは何?",
+      "options": [
+        "五本",
+        "通帳",
+        "コンブ",
+        "バラ",
+        "病院",
+        "土手"
+      ],
+      "answer_index": 1,
+      "hint": "銀行 で お金 の 記録 が 書いてある 小さな ノート だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第269問。\n正答: 「通帳」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「銀行に必要なチョウは何？」→「通帳」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 269
+    },
+    {
+      "id": "web_270",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "まけなのに嬉しいまけは何?",
+      "options": [
+        "おまけ",
+        "えんどう豆",
+        "ゴミ箱",
+        "いかりをしずめる",
+        "尻餅",
+        "たまごのカラ"
+      ],
+      "answer_index": 0,
+      "hint": "まけ なのに うれしい… おまけ の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第270問。\n正答: 「おまけ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「まけなのに嬉しいまけは何？」→「おまけ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 270
+    },
+    {
+      "id": "web_271",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "紙と紙をくっつけるキスは何?",
+      "options": [
+        "光",
+        "左手",
+        "話",
+        "つめ",
+        "ホッチキス",
+        "肩車"
+      ],
+      "answer_index": 4,
+      "hint": "紙 を くっつける キス… ホッチキス だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第271問。\n正答: 「ホッチキス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「紙と紙をくっつけるキスは何？」→「ホッチキス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 271
+    },
+    {
+      "id": "web_272",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "相撲や野球にあってサッカーにないものは何?",
+      "options": [
+        "ブラックバス",
+        "ゴーカート",
+        "バター",
+        "押し出し",
+        "すし詰め",
+        "おしろい"
+      ],
+      "answer_index": 3,
+      "hint": "相撲 野球 に ある 押し… サッカー に は ない よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第272問。\n正答: 「押し出し」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「相撲や野球にあってサッカーにないものは何？」→「押し出し」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 272
+    },
+    {
+      "id": "web_273",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "大きくて点がある動物は何?",
+      "options": [
+        "カイロ",
+        "犬",
+        "植木",
+        "カメレオン",
+        "病院",
+        "つなひき"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第273問。\n正答: 「犬」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「大きくて点がある動物は何？」→「犬」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 273
+    },
+    {
+      "id": "web_274",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "金属じゃないのにサビがある野菜は何?",
+      "options": [
+        "方向音痴",
+        "パジャマ",
+        "ワサビ",
+        "ハガキ",
+        "木の葉",
+        "白菜"
+      ],
+      "answer_index": 2,
+      "hint": "金属 じゃ ない サビ… わさび の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第274問。\n正答: 「ワサビ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「金属じゃないのにサビがある野菜は何？」→「ワサビ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 274
+    },
+    {
+      "id": "web_275",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "野球やボーリングにあってテニスにないものは何?",
+      "options": [
+        "おかず",
+        "鯉",
+        "ストライク",
+        "コーラス",
+        "カイロ",
+        "リス"
+      ],
+      "answer_index": 2,
+      "hint": "野球 ボウリング に ある… テニス に は ない よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第275問。\n正答: 「ストライク」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「野球やボーリングにあってテニスにないものは何？」→「ストライク」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 275
+    },
+    {
+      "id": "web_276",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "旅行に持っていくトラといえば何?",
+      "options": [
+        "ことば",
+        "方向音痴",
+        "年齢",
+        "トランク",
+        "カンナ",
+        "空腹"
+      ],
+      "answer_index": 3,
+      "hint": "旅行 に 持つ 大きな 荷物 入れ。『とら』と 音が 似ている よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第276問。\n正答: 「トランク」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「旅行に持っていくトラといえば何？」→「トランク」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 276
+    },
+    {
+      "id": "web_277",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "本を読むときによく最初に読むのは何じ?",
+      "options": [
+        "竹",
+        "まばたき",
+        "綱引き",
+        "うちわ",
+        "もくじ",
+        "恋愛"
+      ],
+      "answer_index": 4,
+      "hint": "本 を 開いたら いちばん 前に 見る 章 の 名前 の 一覧 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第277問。\n正答: 「もくじ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「本を読むときによく最初に読むのは何じ？」→「もくじ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 277
+    },
+    {
+      "id": "web_278",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "体を刺されたり切られたりすると安心できる場所は?",
+      "options": [
+        "パパイヤ",
+        "えんどう豆",
+        "病院",
+        "カステラ",
+        "自分自身",
+        "影"
+      ],
+      "answer_index": 2,
+      "hint": "刺されたり 切られたり する と 安心… 病院 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第278問。\n正答: 「病院」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「体を刺されたり切られたりすると安心できる場所は？」→「病院」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 278
+    },
+    {
+      "id": "web_279",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "怒ると立つものは何?",
+      "options": [
+        "まぶた",
+        "ゴミ袋",
+        "肉まん",
+        "手袋",
+        "メドレー",
+        "腹"
+      ],
+      "answer_index": 5,
+      "hint": "怒る と 立つ… おなか の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第279問。\n正答: 「腹」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「怒ると立つものは何？」→「腹」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 279
+    },
+    {
+      "id": "web_280",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "最初は水の中、一回紙の上に、そして、袋に入れられるのは何?",
+      "options": [
+        "ことば",
+        "綱引き",
+        "たまご",
+        "時間",
+        "金魚すくいの金魚",
+        "影"
+      ],
+      "answer_index": 4,
+      "hint": "水→紙→袋… 金魚 すくい の 金魚 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第280問。\n正答: 「金魚すくいの金魚」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「最初は水の中、一回紙の上に、そして、袋に入れられるのは何？」→「金魚すくいの金魚」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 280
+    },
+    {
+      "id": "web_281",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "船の上で怒っている人をやめさせるには?",
+      "options": [
+        "けむり",
+        "占いの本",
+        "クレーン",
+        "マスカット",
+        "いかりをしずめる",
+        "通帳"
+      ],
+      "answer_index": 4,
+      "hint": "船 で 怒り を 静める… いかり を 下げる こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第281問。\n正答: 「いかりをしずめる」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「船の上で怒っている人をやめさせるには？」→「いかりをしずめる」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 281
+    },
+    {
+      "id": "web_282",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "冷凍庫の中にいる動物は何頭?",
+      "options": [
+        "れいとう",
+        "話",
+        "信号機",
+        "左手",
+        "マッチ",
+        "あまやどり"
+      ],
+      "answer_index": 0,
+      "hint": "冷たい 箱の 中。動物 の 頭 ではなく 音の ひっかけ だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第282問。\n正答: 「れいとう」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「冷凍庫の中にいる動物は何頭？」→「れいとう」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 282
+    },
+    {
+      "id": "web_283",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "ゲームが終わると出てくる服は?",
+      "options": [
+        "パン",
+        "フクロウ",
+        "悪魔",
+        "さんぽ",
+        "かつおぶし",
+        "オーバー"
+      ],
+      "answer_index": 5,
+      "hint": "棒（バー）を 取る と 別の 言葉 に なる よ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第283問。\n正答: 「オーバー」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「ゲームが終わると出てくる服は？」→「オーバー」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 283
+    },
+    {
+      "id": "web_284",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "お正月になるとよく食べられるウニは?",
+      "options": [
+        "雑煮",
+        "包丁",
+        "洗濯バサミ",
+        "三輪車",
+        "ボタン",
+        "トキ"
+      ],
+      "answer_index": 0,
+      "hint": "お正月 の ウニ… 雑煮 の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第284問。\n正答: 「雑煮」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「お正月になるとよく食べられるウニは？」→「雑煮」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 284
+    },
+    {
+      "id": "web_285",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "黄金のお宝がある海は近い海か遠い海か?",
+      "options": [
+        "カナダ",
+        "近い海",
+        "しりとり",
+        "胃炎",
+        "ライス",
+        "カタール"
+      ],
+      "answer_index": 1,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第285問。\n正答: 「近い海」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「黄金のお宝がある海は近い海か遠い海か？」→「近い海」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 285
+    },
+    {
+      "id": "web_286",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "くすりやさんで流れているBGMをなんという?",
+      "options": [
+        "マカオ",
+        "手紙",
+        "お風呂",
+        "スパイク",
+        "やっきょく",
+        "ツクシ"
+      ],
+      "answer_index": 4,
+      "hint": "薬屋 で 流れる 音楽 の 名前 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第286問。\n正答: 「やっきょく」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「くすりやさんで流れているBGMをなんという？」→「やっきょく」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 286
+    },
+    {
+      "id": "web_287",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "雨が降っていたりせず、曇ってもいない天気はなんてん?",
+      "options": [
+        "まばたき",
+        "土手",
+        "やっきょく",
+        "ハンドル",
+        "餃子",
+        "晴天"
+      ],
+      "answer_index": 5,
+      "hint": "雨 も 曇り も ない 天気… 晴天 の 点数 の 話 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第287問。\n正答: 「晴天」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「雨が降っていたりせず、曇ってもいない天気はなんてん？」→「晴天」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 287
+    },
+    {
+      "id": "web_288",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "雨が降っていたりせず、曇ってもいない天気はなんてん?",
+      "options": [
+        "晴天",
+        "リス",
+        "床屋",
+        "豆腐",
+        "うちわ",
+        "タマゴ"
+      ],
+      "answer_index": 0,
+      "hint": "雨 も 曇り も ない 天気… 晴天 の 点数 の 話 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第288問。\n正答: 「晴天」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「雨が降っていたりせず、曇ってもいない天気はなんてん？」→「晴天」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 288
+    },
+    {
+      "id": "web_289",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "いっぱい歩いても少ししか歩いていないようなものは何?",
+      "options": [
+        "ぞうきん",
+        "えんどう豆",
+        "弱虫",
+        "ろうそく",
+        "さんぽ",
+        "トランク"
+      ],
+      "answer_index": 4,
+      "hint": "たくさん 歩いた よう で 少し… さんぽ の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第289問。\n正答: 「さんぽ」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「いっぱい歩いても少ししか歩いていないようなものは何？」→「さんぽ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 289
+    },
+    {
+      "id": "web_290",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "イスはイスでも空を飛ぶイスは何?",
+      "options": [
+        "方向音痴",
+        "ホッチキス",
+        "シャーベット",
+        "ヒヨコ",
+        "こま",
+        "ウグイス"
+      ],
+      "answer_index": 5,
+      "hint": "空 を 飛ぶ イス… うぐいす の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第290問。\n正答: 「ウグイス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「イスはイスでも空を飛ぶイスは何？」→「ウグイス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 290
+    },
+    {
+      "id": "web_291",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "たくさんの人におんぶされて学校にいくのは何?",
+      "options": [
+        "目やに",
+        "ランドセル",
+        "扇風機",
+        "鏡",
+        "肩車",
+        "かさ"
+      ],
+      "answer_index": 1,
+      "hint": "おんぶ されて 学校… ランドセル だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第291問。\n正答: 「ランドセル」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「たくさんの人におんぶされて学校にいくのは何？」→「ランドセル」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 291
+    },
+    {
+      "id": "web_292",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "雨が降ったり日差しが強いと開き出すのは何?",
+      "options": [
+        "風船",
+        "つっぱり",
+        "ヒヨコ",
+        "植木",
+        "かさ",
+        "きも"
+      ],
+      "answer_index": 4,
+      "hint": "雨 や 日さん が 強い と 開く 道具 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第292問。\n正答: 「かさ」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「雨が降ったり日差しが強いと開き出すのは何？」→「かさ」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 292
+    },
+    {
+      "id": "web_293",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "後ろに下がると勝つものは何?",
+      "options": [
+        "図書館",
+        "フクロウ",
+        "物干し竿",
+        "つなひき",
+        "ススキ",
+        "カステラ"
+      ],
+      "answer_index": 3,
+      "hint": "後ろ に 下がる と 勝つ… つなひき の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第293問。\n正答: 「つなひき」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「後ろに下がると勝つものは何？」→「つなひき」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 293
+    },
+    {
+      "id": "web_294",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "回るとたちあがるものといえば何?",
+      "options": [
+        "ドーナツ",
+        "つっぱり",
+        "こま",
+        "胃炎",
+        "サイコロ",
+        "図書館"
+      ],
+      "answer_index": 2,
+      "hint": "回る と 立つ… コマ の こと だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第294問。\n正答: 「こま」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「回るとたちあがるものといえば何？」→「こま」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 294
+    },
+    {
+      "id": "web_295",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "とてもすっぱいほしは何?",
+      "options": [
+        "金魚すくいの金魚",
+        "チャーハン",
+        "うめぼし",
+        "逮捕",
+        "あくび",
+        "コーラス"
+      ],
+      "answer_index": 2,
+      "hint": "すっぱい 星… うめぼし の 音 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第295問。\n正答: 「うめぼし」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「とてもすっぱいほしは何？」→「うめぼし」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 295
+    },
+    {
+      "id": "web_296",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "あと一歳で百歳になる野菜は何?",
+      "options": [
+        "スズキ",
+        "ピアノ",
+        "白菜",
+        "ホッチキス",
+        "うめぼし",
+        "ろうそく"
+      ],
+      "answer_index": 2,
+      "hint": "言葉 の 音や 漢字 を くみ合わせた ダジャレ だよ。ゆっくり 声に 出してみて",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第296問。\n正答: 「白菜」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「あと一歳で百歳になる野菜は何？」→「白菜」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 296
+    },
+    {
+      "id": "web_297",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "口からでるくびは何?",
+      "options": [
+        "コーラス",
+        "あくび",
+        "けむり",
+        "ドーナツ",
+        "豚",
+        "ウグイス"
+      ],
+      "answer_index": 1,
+      "hint": "口 から 出る 首… あくび の 音 遊び だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第297問。\n正答: 「あくび」。\nパターン: 口・舌・耳の有無と、電話・こだま・言葉など「伝える」仕組みのひっかけ。\n意図: 「口からでるくびは何？」→「あくび」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 297
+    },
+    {
+      "id": "web_298",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "みんなよくつかっている二本ないとやくにたたないものは何?",
+      "options": [
+        "たまご",
+        "けむり",
+        "ハガキ",
+        "逮捕",
+        "ヒヨコ",
+        "はし"
+      ],
+      "answer_index": 5,
+      "hint": "二本 揃えない と 食べ物 を つまめない 道具 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第298問。\n正答: 「はし」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「みんなよくつかっている二本ないとやくにたたないものは何？」→「はし」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 298
+    },
+    {
+      "id": "web_299",
+      "levels": [
+        "normal",
+        "hard"
+      ],
+      "question": "消しゴムで消せば消すほど増えるのは何?",
+      "options": [
+        "消しゴムのカス",
+        "図書館",
+        "フクロウ",
+        "クレヨン",
+        "チャーハン",
+        "鯉"
+      ],
+      "answer_index": 0,
+      "hint": "消す ほど 増える… 消しゴム の かす だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第299問。\n正答: 「消しゴムのカス」。\nパターン: 問いの字面どおりではなく、連想・音・意味のずれから正答にたどり着く。\n意図: 「消しゴムで消せば消すほど増えるのは何？」→「消しゴムのカス」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 299
+    },
+    {
+      "id": "web_300",
+      "levels": [
+        "easy",
+        "normal",
+        "hard"
+      ],
+      "question": "よくまな板の上にいるちょうは何?",
+      "options": [
+        "大晦日",
+        "サイコロ",
+        "包丁",
+        "トランク",
+        "クレーン",
+        "道路"
+      ],
+      "answer_index": 2,
+      "hint": "まな板 の 上 の ちょう… 料理 で 切る 道具 だよ",
+      "dev_explanation": "出典: nazonazo.nihonsimondai.com 第300問。\n正答: 「包丁」。\nパターン: 答えが短い語（1〜2文字）。抽象名詞・自然現象系。\n意図: 「よくまな板の上にいるちょうは何？」→「包丁」になるよう読み替える。\n※ ゲーム内ヒント・UI では使わない開発者メモ。",
+      "source": "nazonazo.nihonsimondai.com",
+      "source_no": 300
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+pygame-ce>=2.5
+pykakasi>=2.2
+
+[dev]
+pytest>=8.0
+openpyxl>=3.1

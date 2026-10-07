@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kidgame"
+version = "0.1.0"
+description = "オフライン向け なぞなぞデスクトップゲーム"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pygame-ce>=2.5",
+  "pykakasi>=2.2",
+]
+
+[project.scripts]
+kidgame = "kidgame.main:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "openpyxl>=3.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

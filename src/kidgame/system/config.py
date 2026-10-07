@@ -1,0 +1,40 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+from kidgame.data.models import Difficulty
+
+CORRECT_TO_CLEAR = 10
+INITIAL_LIVES = 3
+BONUS_GAUGE_MAX = 100.0
+
+# 正解時の回答速度ボーナス（秒）
+BONUS_FAST_SEC = 5.0
+BONUS_MID_SEC = 15.0
+BONUS_FILL_FAST = 40.0
+BONUS_FILL_MID = 22.0
+BONUS_FILL_SLOW = 12.0
+
+FEEDBACK_DURATION_SEC = 1.2
+
+
+@dataclass(frozen=True, slots=True)
+class DifficultyRules:
+    time_limit_seconds: float | None
+    label: str
+
+    @property
+    def has_timer(self) -> bool:
+        return self.time_limit_seconds is not None
+
+
+RULES_BY_DIFFICULTY: dict[Difficulty, DifficultyRules] = {
+    Difficulty.EASY: DifficultyRules(time_limit_seconds=None, label="イージー"),
+    Difficulty.NORMAL: DifficultyRules(time_limit_seconds=180.0, label="ノーマル"),
+    Difficulty.HARD: DifficultyRules(time_limit_seconds=60.0, label="ハード"),
+}
+
+
+def bomb_eliminate_count(option_count: int) -> int:
+    """README_SYSTEM: 選択肢数の半分（切り捨て）だけ誤答を除外。"""
+    return option_count // 2
