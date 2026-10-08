@@ -80,11 +80,11 @@ def draw_status_sidebar(
 
     blit_outlined(surface, label_font, "正解", x, y, COLOR_TEXT)
     y += line
-    blit_outlined(
+    blit_right_outlined(
         surface,
         value_font,
         f"{session.correct_count} / {CORRECT_TO_CLEAR}",
-        x,
+        right_x,
         y,
         COLOR_TEXT,
     )

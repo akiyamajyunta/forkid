@@ -11,8 +11,6 @@ import pygame
 # 正解時: interval 秒おきに count 回（「かたかたかたっ」）
 SCORE_BURST_COUNT = 10
 SCORE_BURST_INTERVAL_SEC = 0.1
-
-
 def score_burst_duration_sec() -> float:
     return SCORE_BURST_COUNT * SCORE_BURST_INTERVAL_SEC
 
@@ -44,9 +42,13 @@ def _load_sound(path: Path) -> pygame.mixer.Sound | None:
 class GameSfx:
     cursor_move: pygame.mixer.Sound | None
     score_tick: pygame.mixer.Sound | None
+    miss: pygame.mixer.Sound | None
 
     def play_cursor_move(self) -> None:
         self._play(self.cursor_move)
+
+    def play_miss(self) -> None:
+        self._play(self.miss)
 
     def play_score_tick(self) -> None:
         """正解得点用の短いクリック音（重ね再生可）。"""
@@ -75,8 +77,9 @@ class GameSfx:
 def load_game_sfx() -> GameSfx:
     base = _sfx_dir()
     if not _ensure_mixer():
-        return GameSfx(cursor_move=None, score_tick=None)
+        return GameSfx(cursor_move=None, score_tick=None, miss=None)
     return GameSfx(
         cursor_move=_load_sound(base / "cursor_move.mp3"),
         score_tick=_load_sound(base / "score_tick.mp3"),
+        miss=_load_sound(base / "miss_punch.mp3"),
     )

@@ -326,6 +326,8 @@ class KidgameApp:
                 feedback = session.confirm_answer()
                 if feedback is not None and feedback.was_correct:
                     self._start_score_burst(session)
+                elif feedback is not None and not feedback.was_correct:
+                    self.sfx.play_miss()
 
     def _update_pause(self, actions: list[GameAction]) -> None:
         for a in actions:
