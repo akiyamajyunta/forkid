@@ -262,6 +262,42 @@ def blit_centered_outlined(
     surface.blit(surf, rect)
 
 
+def blit_right_outlined(
+    surface: pygame.Surface,
+    font: pygame.font.Font,
+    text: str,
+    right_x: int,
+    y: int,
+    color: tuple[int, int, int],
+) -> None:
+    surf = render_outlined(font, text, color)
+    rect = surf.get_rect(topright=(right_x, y))
+    surface.blit(surf, rect)
+
+
+STAR_OUTLINE_WIDTH = 3
+STAR_INNER_RATIO = 0.42
+# 枠線が隣の星と重なるピッチ（画像のような「つながった」見え方）
+STAR_ROW_GAP_OVERLAP = -(STAR_OUTLINE_WIDTH - 1)
+
+
+def star_row_gap(total: int, size: int, available_width: int) -> int:
+    """星行が available_width に収まるギャップ（px）。"""
+    if total <= 1:
+        return 0
+    extra = available_width - total * size
+    if extra <= 0:
+        return 1
+    return max(1, extra // (total - 1))
+
+
+def star_row_width(total: int, size: int, gap: int) -> int:
+    if total <= 0:
+        return 0
+    pitch = size + gap
+    return (total - 1) * pitch + size
+
+
 def draw_star_row(
     surface: pygame.Surface,
     x: int,
@@ -270,15 +306,90 @@ def draw_star_row(
     filled: int,
     total: int,
     size: int,
+    gap: int | None = None,
 ) -> None:
-    gap = max(4, size // 3)
+    if gap is None:
+        gap = max(1, size // 6)
     for i in range(total):
         cx = x + i * (size + gap) + size // 2
         cy = y + size // 2
         if i < filled:
-            _draw_star(surface, cx, cy, size // 2, (70, 130, 220), (0, 0, 0))
+            _draw_star(surface, cx, cy, size // 2, (255, 255, 255), (0, 0, 0))
         else:
-            _draw_star(surface, cx, cy, size // 2, (40, 48, 60), (0, 0, 0), hollow=True)
+            _draw_star(surface, cx, cy, size // 2, (0, 0, 0), (0, 0, 0))
+
+
+def draw_star_row_right(
+    surface: pygame.Surface,
+    right_x: int,
+    y: int,
+    *,
+    filled: int,
+    total: int,
+    size: int,
+    gap: int | None = None,
+) -> None:
+    if gap is None:
+        gap = max(1, size // 6)
+    row_w = star_row_width(total, size, gap)
+    draw_star_row(
+        surface,
+        right_x - row_w,
+        y,
+        filled=filled,
+        total=total,
+        size=size,
+        gap=gap,
+    )
+
+
+def scale_star_sprite(sprite: pygame.Surface, height: int) -> pygame.Surface:
+    w, h = sprite.get_size()
+    if h <= 0:
+        return sprite
+    scale = height / h
+    nw = max(1, int(w * scale))
+    nh = max(1, height)
+    return pygame.transform.smoothscale(sprite, (nw, nh))
+
+
+def star_sprite_row_width(total: int, sprite_width: int, gap: int) -> int:
+    pitch = sprite_width + gap
+    return (total - 1) * pitch + sprite_width
+
+
+def draw_star_row_right_sprites(
+    surface: pygame.Surface,
+    right_x: int,
+    y: int,
+    *,
+    filled: int,
+    total: int,
+    height: int,
+    star_on: pygame.Surface,
+    star_off: pygame.Surface,
+    gap: int | None = None,
+) -> None:
+    if gap is None:
+        gap = STAR_ROW_GAP_OVERLAP
+    on = scale_star_sprite(star_on, height)
+    off = scale_star_sprite(star_off, height)
+    sw = on.get_width()
+    pitch = sw + gap
+    row_w = (total - 1) * pitch + sw
+    x = right_x - row_w
+    for i in range(total):
+        surface.blit(on if i < filled else off, (x + i * pitch, y))
+
+
+def _star_vertices(cx: float, cy: float, outer_r: float) -> list[tuple[float, float]]:
+    inner_r = outer_r * STAR_INNER_RATIO
+    points: list[tuple[float, float]] = []
+    for i in range(10):
+        ang = math.radians(-90 + i * 36)
+        rad = outer_r if i % 2 == 0 else inner_r
+        points.append((cx + math.cos(ang) * rad, cy + math.sin(ang) * rad))
+    return points
 
 
 def _draw_star(
@@ -291,18 +402,23 @@ def _draw_star(
     *,
     hollow: bool = False,
 ) -> None:
-    points: list[tuple[int, int]] = []
-    for i in range(10):
-        ang = -90 + i * 36
-        rad = r if i % 2 == 0 else r // 2
-        px = cx + int(math.cos(math.radians(ang)) * rad)
-        py = cy + int(math.sin(math.radians(ang)) * rad)
-        points.append((px, py))
+    outline_w = STAR_OUTLINE_WIDTH
+    pad = outline_w + 2
+    diam = max(8, (r + pad) * 2)
+    scale = 2
+    big = diam * scale
+    tmp = pygame.Surface((big, big), pygame.SRCALPHA)
+    lcx, lcy = big / 2, big / 2
+    verts = _star_vertices(lcx, lcy, r * scale)
+    pts = [(int(round(x)), int(round(y))) for x, y in verts]
+    ow = outline_w * scale
     if hollow:
-        pygame.draw.polygon(surface, border, points, width=2)
+        pygame.draw.polygon(tmp, border, pts, width=ow)
     else:
-        pygame.draw.polygon(surface, fill, points)
-        pygame.draw.polygon(surface, border, points, width=1)
+        pygame.draw.polygon(tmp, fill, pts)
+        pygame.draw.polygon(tmp, border, pts, width=ow)
+    rendered = pygame.transform.smoothscale(tmp, (diam, diam))
+    surface.blit(rendered, (cx - diam // 2, cy - diam // 2))
 
 
 def scale_cover(surface: pygame.Surface, width: int, height: int) -> pygame.Surface:

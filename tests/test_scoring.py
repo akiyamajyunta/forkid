@@ -3,13 +3,34 @@ from __future__ import annotations
 from unittest.mock import patch
 
 from kidgame.data.models import Difficulty
-from kidgame.system.scoring import points_for_correct_answer
+from kidgame.system.scoring import points_for_correct_answer, speed_factor
 
 
 def test_faster_answers_score_higher() -> None:
     fast = points_for_correct_answer(3.0, Difficulty.EASY)
     slow = points_for_correct_answer(40.0, Difficulty.EASY)
     assert fast > slow
+
+
+def test_points_drop_each_full_second() -> None:
+    prev = points_for_correct_answer(0.0, Difficulty.EASY)
+    for sec in range(1, 20):
+        cur = points_for_correct_answer(float(sec), Difficulty.EASY)
+        assert cur < prev
+        prev = cur
+
+
+def test_sub_second_changes_score() -> None:
+    sooner = points_for_correct_answer(4.0, Difficulty.EASY)
+    later = points_for_correct_answer(4.7, Difficulty.EASY)
+    assert sooner > later
+
+
+def test_speed_factor_no_coarse_cliff_at_five_seconds() -> None:
+    """旧5段階だと5秒と6秒で大きく落ちていた境界を、なめらかにする。"""
+    at_5 = speed_factor(5.0)
+    at_6 = speed_factor(6.0)
+    assert at_5 - at_6 < 0.05
 
 
 def test_harder_difficulty_scores_higher() -> None:

@@ -58,6 +58,63 @@ def test_wrong_answer_costs_life() -> None:
     assert session.lives == 2
 
 
+def test_bomb_removals_persist_after_wrong_retry() -> None:
+    pq = _play(Difficulty.EASY)
+    session = GameSession.start(Difficulty.EASY, [pq], seed=1)
+    session.bomb_stock = 1
+    assert session.use_bomb()
+    hidden = set(session.options_view.hidden_indices if session.options_view else ())
+    assert hidden
+    wrong = 1 if pq.answer_index == 0 else 0
+    session._resolve_answer(wrong)
+    session._feedback_until = 0.0
+    session.tick(0.0)
+    assert session.options_view is not None
+    assert session.options_view.hidden_indices == hidden
+
+
+def test_wrong_answer_stays_on_same_question() -> None:
+    questions = [_play(qid=f"q{i}") for i in range(3)]
+    session = GameSession.start(Difficulty.EASY, questions, seed=1)
+    pq = session.current_question
+    assert pq is not None
+    wrong = 1 if pq.answer_index == 0 else 0
+    session._resolve_answer(wrong)
+    assert session.phase is SessionPhase.FEEDBACK
+    session._feedback_until = 0.0
+    session.tick(0.0)
+    assert session.phase is SessionPhase.PLAYING
+    assert session.question_index == 0
+    assert session.current_question is questions[0]
+
+
+def test_clear_with_lives_remaining() -> None:
+    questions = [_play(qid=f"q{i}") for i in range(10)]
+    session = GameSession.start(Difficulty.EASY, questions, seed=1)
+    pq = session.current_question
+    assert pq is not None
+    wrong = 1 if pq.answer_index == 0 else 0
+    session._resolve_answer(wrong)
+    session._feedback_until = 0.0
+    session.tick(0.0)
+    assert session.lives == 2
+    for i in range(10):
+        assert session.current_question is not None
+        entries = session.options_view.visible_entries() if session.options_view else []
+        pick = next(
+            ci for ci, (idx, _) in enumerate(entries) if idx == session.current_question.answer_index
+        )
+        session.cursor = pick
+        session.confirm_answer()
+        if session.phase is SessionPhase.WON:
+            break
+        session._feedback_until = 0.0
+        session.tick(0.0)
+    assert session.phase is SessionPhase.WON
+    assert session.lives > 0
+    assert session.correct_count == 10
+
+
 def test_playing_hint_when_half_time_elapsed() -> None:
     session = GameSession.start(Difficulty.NORMAL, [_play(Difficulty.NORMAL)], seed=1)
     session.time_remaining = 91.0
@@ -100,8 +157,14 @@ def test_bonus_fills_and_grants_bomb() -> None:
     with patch("kidgame.system.game_session.time.monotonic", side_effect=[0.0, 1.0]):
         session._question_started_at = 0.0
         session._add_bonus_for_speed()
-    assert session.bomb_stock == 1
+    assert session.bomb_stock == 2
     assert session.bonus_gauge == 0.0
+
+
+def test_session_initial_star_stats() -> None:
+    session = GameSession.start(Difficulty.EASY, [_play()], seed=1)
+    assert session.lives == 3
+    assert session.bomb_stock == 1
 
 
 def test_resolve_for_play_option_counts() -> None:

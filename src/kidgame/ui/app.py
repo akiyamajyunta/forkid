@@ -31,6 +31,7 @@ from kidgame.ui.draw_helpers import (
     layout_option_row,
     scale_cover,
 )
+from kidgame.ui.clear_credits import CREDIT_LINES, GAME_CLEAR_TITLE
 from kidgame.ui.status_sidebar import draw_status_sidebar
 from kidgame.ui.fonts import FontSet
 from kidgame.ui.input import GameAction, InputState
@@ -846,6 +847,8 @@ class KidgameApp:
             self.fonts.score_value,
             self.fonts.small,
             self.fonts.difficulty_mode,
+            star_filled=self.ui_assets.star_filled,
+            star_empty=self.ui_assets.star_empty,
         )
 
     def _draw_pause_overlay(self) -> None:
@@ -868,6 +871,60 @@ class KidgameApp:
             L.height // 2 + L.y(24),
         )
 
+    def _draw_game_clear_with_credits(self, session: GameSession) -> None:
+        L = self.layout
+        cx = L.width // 2
+        pts = session.score
+        high = self.score_store.high_score(session.difficulty)
+
+        blit_centered(
+            self.screen,
+            self.fonts.title.render(GAME_CLEAR_TITLE, True, COLOR_RIGHT),
+            cx,
+            L.y(36),
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.body.render(
+                f"{CORRECT_TO_CLEAR}問正解！　残りライフ {session.lives}",
+                True,
+                COLOR_TEXT,
+            ),
+            cx,
+            L.y(96),
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.heading.render(f"得点 {pts:,}", True, COLOR_CURSOR),
+            cx,
+            L.y(138),
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.small.render(f"最高得点 {high:,}", True, COLOR_TEXT_DIM),
+            cx,
+            L.y(172),
+        )
+
+        y = L.y(218)
+        line_h = L.y(22)
+        for line in CREDIT_LINES:
+            if line:
+                blit_centered(
+                    self.screen,
+                    self.fonts.small.render(line, True, COLOR_TEXT_DIM),
+                    cx,
+                    y,
+                )
+            y += line_h
+
+        blit_centered(
+            self.screen,
+            self.fonts.small.render("X / Enter で タイトルへ", True, COLOR_TEXT_DIM),
+            cx,
+            L.height - L.y(48),
+        )
+
     def _draw_result(self) -> None:
         session = self.session
         L = self.layout
@@ -878,6 +935,14 @@ class KidgameApp:
             if session
             else 0
         )
+        if (
+            session
+            and session.phase is SessionPhase.WON
+            and session.correct_count >= CORRECT_TO_CLEAR
+            and session.lives > 0
+        ):
+            self._draw_game_clear_with_credits(session)
+            return
         if session and session.phase is SessionPhase.WON:
             title = "クリア！"
             sub = f"{CORRECT_TO_CLEAR}問 正解 おめでとう！"

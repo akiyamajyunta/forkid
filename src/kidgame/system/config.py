@@ -6,6 +6,8 @@ from kidgame.data.models import Difficulty
 
 CORRECT_TO_CLEAR = 10
 INITIAL_LIVES = 3
+INITIAL_BOMB_STOCK = 1
+STAR_GAUGE_MAX = 7
 BONUS_GAUGE_MAX = 100.0
 
 # 正解時の回答速度ボーナス（秒）

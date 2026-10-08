@@ -17,8 +17,10 @@ from kidgame.system.config import (
     BONUS_MID_SEC,
     CORRECT_TO_CLEAR,
     FEEDBACK_DURATION_SEC,
+    INITIAL_BOMB_STOCK,
     INITIAL_LIVES,
     RULES_BY_DIFFICULTY,
+    STAR_GAUGE_MAX,
 )
 from kidgame.system.options_view import OptionsView
 
@@ -51,7 +53,7 @@ class GameSession:
     correct_count: int = 0
     score: int = 0
     last_points_gained: int = 0
-    bomb_stock: int = 0
+    bomb_stock: int = INITIAL_BOMB_STOCK
     bonus_gauge: float = 0.0
     time_remaining: float | None = None
     question_index: int = 0
@@ -196,13 +198,18 @@ class GameSession:
         self.bonus_gauge = min(BONUS_GAUGE_MAX, self.bonus_gauge + fill)
         if self.bonus_gauge >= BONUS_GAUGE_MAX:
             self.bonus_gauge = 0.0
-            self.bomb_stock += 1
+            self.bomb_stock = min(STAR_GAUGE_MAX, self.bomb_stock + 1)
 
     def _advance_after_feedback(self) -> None:
         if self.lives <= 0 and self.phase is SessionPhase.FEEDBACK:
             self._lose(LossReason.NO_LIVES)
             return
         if self.phase is SessionPhase.WON:
+            return
+        feedback = self._last_feedback
+        if feedback is not None and not feedback.was_correct:
+            self.phase = SessionPhase.PLAYING
+            self._retry_same_question()
             return
         self.question_index += 1
         if self.question_index >= len(self.questions):
@@ -222,6 +229,21 @@ class GameSession:
         self.cursor = 0
         self._question_started_at = time.monotonic()
         self.time_remaining = self.rules.time_limit_seconds
+
+    def _retry_same_question(self) -> None:
+        """不正解後の再挑戦。ボムで消した選択肢は維持し、タイマーだけリセット。"""
+        if self.options_view is None:
+            q = self.current_question
+            if q is None:
+                return
+            self.options_view = OptionsView.fresh(q)
+        self._question_started_at = time.monotonic()
+        self.time_remaining = self.rules.time_limit_seconds
+        entries = self.options_view.visible_entries()
+        if entries:
+            self.cursor = min(self.cursor, len(entries) - 1)
+        else:
+            self.cursor = 0
 
     def _lose(self, reason: LossReason) -> None:
         self.phase = SessionPhase.LOST

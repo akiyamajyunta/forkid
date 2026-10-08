@@ -20,8 +20,10 @@
 | `option_bar.png` | 選択肢バー（未選択） |
 | `option_bar_selected.png` | 選択肢バー（カーソルあり） |
 | `status_panel.png` | 右ステータス欄の背景 |
+| `star_filled.png` | 星（枠＋白塗り＝点灯） |
+| `star_half.png` | 半星（将来のゲージ用・現状未使用） |
 
-任意:
+未点灯は `star_filled.png` の枠線のみを自動生成します。
 
 - `gauge_timer.png` / `gauge_bonus.png` … ゲージの枠や塗り
 - `font/` … TTF/OTF（丸ゴ・UD教科書体など）

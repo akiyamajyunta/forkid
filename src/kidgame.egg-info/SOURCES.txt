@@ -24,6 +24,7 @@ src/kidgame/system/score_store.py
 src/kidgame/system/scoring.py
 src/kidgame/ui/__init__.py
 src/kidgame/ui/app.py
+src/kidgame/ui/clear_credits.py
 src/kidgame/ui/display_config.py
 src/kidgame/ui/draw_helpers.py
 src/kidgame/ui/fonts.py
