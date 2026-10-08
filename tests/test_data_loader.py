@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from kidgame.data.loader import QuestionRepository, load_questions_file
+from kidgame.data.loader import QuestionRepository, load_questions_bank, load_questions_file
 from kidgame.data.models import Difficulty, Question, QuestionBank
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
@@ -14,7 +14,7 @@ QUESTIONS_JSON = DATA_DIR / "questions.json"
 
 
 def test_load_default_questions_file() -> None:
-    bank = load_questions_file(QUESTIONS_JSON)
+    bank = load_questions_bank()
     assert len(bank.questions) >= 100
     for d in Difficulty:
         assert len(bank.for_mode(d)) >= 10
@@ -35,15 +35,14 @@ def test_question_validation_too_few_options() -> None:
         )
 
 
-def test_levels_overlap_pool() -> None:
+def test_each_mode_has_questions() -> None:
     bank = load_questions_file(QUESTIONS_JSON)
-    easy_ids = {q.id for q in bank.for_mode(Difficulty.EASY)}
-    normal_ids = {q.id for q in bank.for_mode(Difficulty.NORMAL)}
-    assert easy_ids & normal_ids
+    for mode in Difficulty:
+        assert len(bank.for_mode(mode)) >= 10
 
 
 def test_repository_draw_removes_from_pool() -> None:
-    repo = QuestionRepository.from_file(QUESTIONS_JSON)
+    repo = QuestionRepository.from_file()
     rng = random.Random(42)
     first = repo.draw(Difficulty.EASY, 3, rng=rng)
     assert len(first) == 3

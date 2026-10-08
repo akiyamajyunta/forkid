@@ -22,6 +22,10 @@ class PlayQuestion:
     source: str = ""
 
 
+def _filled_option_indices(question: Question) -> list[int]:
+    return [i for i, text in enumerate(question.options) if str(text).strip()]
+
+
 def resolve_for_play(
     question: Question,
     mode: Difficulty,
@@ -29,11 +33,20 @@ def resolve_for_play(
     rng: random.Random | None = None,
 ) -> PlayQuestion:
     r = rng if rng is not None else random
-    need = OPTION_COUNT_BY_DIFFICULTY[mode]
-    if len(question.options) < need:
-        raise ValueError(f"Question {question.id} needs at least {need} options")
+    active = _filled_option_indices(question)
+    if question.answer_index not in active:
+        raise ValueError(
+            f"Question {question.id}: correct option at index "
+            f"{question.answer_index} is empty or missing"
+        )
+    need = min(OPTION_COUNT_BY_DIFFICULTY[mode], len(active))
+    if len(active) < need:
+        raise ValueError(
+            f"Question {question.id} needs at least {need} non-empty options, "
+            f"got {len(active)}"
+        )
 
-    wrong_indices = [i for i in range(len(question.options)) if i != question.answer_index]
+    wrong_indices = [i for i in active if i != question.answer_index]
     pick_indices = [question.answer_index] + r.sample(wrong_indices, need - 1)
     r.shuffle(pick_indices)
 

@@ -54,6 +54,57 @@ def draw_ruby_segments(
     return cy + row_h
 
 
+def measure_text_with_furigana(
+    text: str,
+    ruby: tuple[RubySegment, ...] | None,
+    max_width: int,
+    main_font: pygame.font.Font,
+    ruby_font: pygame.font.Font,
+    furigana_font: pygame.font.Font,
+) -> int:
+    """描画高さ（px）の見積もり。レイアウト用。"""
+    segments, reading_line = segments_or_reading_line(text, ruby)
+    if segments:
+        return _measure_ruby_segments(segments, max_width, main_font, ruby_font)
+    h = 0
+    for line in wrap_text(text, main_font, max_width):
+        h += main_font.get_height() + 2
+    if reading_line:
+        for line in wrap_text(reading_line, furigana_font, max_width):
+            h += furigana_font.get_height() + 1
+        h += 4
+    return max(h, main_font.get_height())
+
+
+def _measure_ruby_segments(
+    segments: tuple[RubySegment, ...],
+    max_width: int,
+    main_font: pygame.font.Font,
+    ruby_font: pygame.font.Font,
+) -> int:
+    cx = 0
+    cy = 0
+    x = 0
+    main_h = main_font.get_height()
+    has_any_ruby = any(s.reading for s in segments)
+    ruby_band_h = ruby_font.get_height() if has_any_ruby else 0
+    main_row_y_offset = ruby_band_h + RUBY_MAIN_GAP if has_any_ruby else 0
+    row_h = main_row_y_offset + main_h + 2
+
+    for seg in segments:
+        if not seg.text:
+            continue
+        main_w = main_font.size(seg.text)[0]
+        ruby_w = ruby_font.size(seg.reading)[0] if seg.reading else 0
+        seg_w = max(main_w, ruby_w)
+        if cx + seg_w > max_width and cx > x:
+            cx = x
+            cy += row_h
+        cx += seg_w + RUBY_SEGMENT_PAD
+
+    return cy + row_h
+
+
 def draw_text_with_furigana(
     surface: pygame.Surface,
     text: str,

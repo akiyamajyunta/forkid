@@ -26,7 +26,7 @@ class ScreenLayout:
 
     @property
     def status_w(self) -> int:
-        return max(120, int(268 * self.sx))
+        return max(180, int(self.width * 0.28))
 
     @property
     def main_w(self) -> int:

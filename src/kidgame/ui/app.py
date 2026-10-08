@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import random
+import time
 from enum import StrEnum, auto
 
 import pygame
@@ -8,26 +9,42 @@ import pygame
 from kidgame.data.loader import QuestionRepository
 from kidgame.data.models import Difficulty
 from kidgame.data.question_runtime import resolve_for_play
-from kidgame.system.config import (
-    BONUS_GAUGE_MAX,
-    CORRECT_TO_CLEAR,
-    INITIAL_LIVES,
-    RULES_BY_DIFFICULTY,
-)
+from kidgame.system.config import CORRECT_TO_CLEAR, RULES_BY_DIFFICULTY
 from kidgame.system.game_session import GameSession, LossReason, SessionPhase
+from kidgame.system.score_store import ScoreStore
 from kidgame.ui.display_config import DisplaySettings
+from kidgame.ui.game_assets import load_game_ui_assets
+from kidgame.ui.game_sfx import (
+    SCORE_BURST_COUNT,
+    SCORE_BURST_INTERVAL_SEC,
+    load_game_sfx,
+    score_burst_duration_sec,
+)
 from kidgame.data.furigana import RubySegment, segments_or_reading_line
-from kidgame.ui.draw_helpers import blit_centered, draw_gauge, draw_option_bar, draw_panel
+from kidgame.ui.draw_helpers import (
+    blit_centered,
+    draw_background_red_band,
+    draw_game_container,
+    draw_game_section,
+    draw_option_bar,
+    draw_panel,
+    layout_option_row,
+    scale_cover,
+)
+from kidgame.ui.status_sidebar import draw_status_sidebar
 from kidgame.ui.fonts import FontSet
 from kidgame.ui.input import GameAction, InputState
 from kidgame.ui.layout import ScreenLayout
-from kidgame.ui.ruby_draw import RUBY_MAIN_GAP, draw_text_with_furigana
+from kidgame.ui.option_labels import option_display_letter
+from kidgame.ui.ruby_draw import (
+    RUBY_MAIN_GAP,
+    draw_text_with_furigana,
+    measure_text_with_furigana,
+)
 from kidgame.ui.theme import (
     COLOR_BG,
     COLOR_CURSOR,
     COLOR_FURIGANA,
-    COLOR_GAUGE_BONUS,
-    COLOR_GAUGE_TIMER,
     COLOR_RIGHT,
     COLOR_RUBY,
     COLOR_TEXT,
@@ -56,6 +73,7 @@ class KidgameApp:
         )
         pygame.display.set_caption("なぞなぞ大作戦")
         self.clock = pygame.time.Clock()
+        load_game_ui_assets.cache_clear()
         self.fonts = FontSet(self.layout.font_scale)
         self.input_state = InputState()
         self.input_state.attach_joystick()
@@ -68,7 +86,17 @@ class KidgameApp:
         self.session: GameSession | None = None
         self.running = True
         self.quit_modal_open = False
-        self.quit_menu = 1  # 0=終了, 1=キャンセル（誤操作防止で既定はキャンセル）
+        self.quit_menu = 0
+        self.ui_assets = load_game_ui_assets()
+        self.sfx = load_game_sfx()
+        self.score_store = ScoreStore.load()
+        self._result_score_saved = False
+        self._score_burst_start = 0.0
+        self._score_burst_hit = 0
+        self._score_countup_start = 0.0
+        self._score_countup_from = 0
+        self._score_countup_to = 0
+        self._score_shown = 0
 
     def run(self) -> None:
         while self.running:
@@ -85,12 +113,24 @@ class KidgameApp:
 
         pygame.quit()
 
+    def _quit_menu_choices(self) -> list[str]:
+        if self.current in (AppScreen.GAME, AppScreen.PAUSE):
+            return ["タイトルに戻る", "終了する", "キャンセル"]
+        return ["終了する", "キャンセル"]
+
     def _open_quit_modal(self) -> None:
         self.quit_modal_open = True
-        self.quit_menu = 1
+        self.quit_menu = len(self._quit_menu_choices()) - 1
 
     def _close_quit_modal(self) -> None:
         self.quit_modal_open = False
+
+    def _return_to_title_from_modal(self) -> None:
+        self.session = None
+        self._result_score_saved = False
+        self.current = AppScreen.TITLE
+        self.title_menu = 0
+        self._close_quit_modal()
 
     def _split_cancel_actions(
         self, actions: list[GameAction]
@@ -105,10 +145,14 @@ class KidgameApp:
             self._close_quit_modal()
             return
 
-        self.quit_menu = self._nav_vertical(actions, self.quit_menu, 2)
+        choices = self._quit_menu_choices()
+        self.quit_menu = self._nav_vertical(actions, self.quit_menu, len(choices))
         for a in actions:
             if a is GameAction.CONFIRM:
-                if self.quit_menu == 0:
+                picked = choices[self.quit_menu]
+                if picked == "タイトルに戻る":
+                    self._return_to_title_from_modal()
+                elif picked == "終了する":
                     self.running = False
                 else:
                     self._close_quit_modal()
@@ -116,11 +160,15 @@ class KidgameApp:
     def _update(self, dt: float, actions: list[GameAction]) -> None:
         if self.quit_modal_open:
             self._update_quit_modal(actions)
+            self._tick_score_burst()
+            self._tick_score_countup()
             return
 
         actions, cancelled = self._split_cancel_actions(actions)
         if cancelled:
             self._open_quit_modal()
+            self._tick_score_burst()
+            self._tick_score_countup()
             return
 
         if self.current is AppScreen.TITLE:
@@ -136,13 +184,71 @@ class KidgameApp:
         elif self.current is AppScreen.RESULT:
             self._update_result(actions)
 
+        self._tick_score_burst()
+        self._tick_score_countup()
+
     def _nav_vertical(self, actions: list[GameAction], cursor: int, count: int) -> int:
+        if count <= 1:
+            return cursor
+        prev = cursor
         for a in actions:
             if a is GameAction.UP:
                 cursor = (cursor - 1) % count
             elif a is GameAction.DOWN:
                 cursor = (cursor + 1) % count
+        if cursor != prev:
+            self.sfx.play_cursor_move()
         return cursor
+
+    def _move_game_cursor(self, session: GameSession, delta: int) -> None:
+        before = session.cursor
+        session.move_cursor(delta)
+        if session.cursor != before:
+            self.sfx.play_cursor_move()
+
+    def _start_score_burst(self, session: GameSession) -> None:
+        gained = session.last_points_gained
+        self._score_burst_start = time.monotonic()
+        self._score_burst_hit = 0
+        if gained <= 0:
+            return
+        self._score_countup_from = session.score - gained
+        self._score_countup_to = session.score
+        self._score_shown = self._score_countup_from
+        self._score_countup_start = self._score_burst_start
+
+    def _tick_score_countup(self) -> None:
+        if self._score_countup_start <= 0.0:
+            return
+        elapsed = time.monotonic() - self._score_countup_start
+        duration = score_burst_duration_sec()
+        gained = self._score_countup_to - self._score_countup_from
+        if elapsed >= duration:
+            self._score_shown = self._score_countup_to
+            self._score_countup_start = 0.0
+            return
+        cap = self._score_countup_from + int(gained * elapsed / duration)
+        cap = min(self._score_countup_to, cap)
+        while self._score_shown < cap:
+            self._score_shown += 1
+
+    def _display_session_score(self, session: GameSession) -> int:
+        if self._score_countup_start > 0.0:
+            return self._score_shown
+        return session.score
+
+    def _tick_score_burst(self) -> None:
+        if self._score_burst_start <= 0.0:
+            return
+        elapsed = time.monotonic() - self._score_burst_start
+        while self._score_burst_hit < SCORE_BURST_COUNT:
+            due = self._score_burst_hit * SCORE_BURST_INTERVAL_SEC
+            if elapsed < due:
+                break
+            self.sfx.play_score_tick()
+            self._score_burst_hit += 1
+        if self._score_burst_hit >= SCORE_BURST_COUNT:
+            self._score_burst_start = 0.0
 
     def _update_title(self, actions: list[GameAction]) -> None:
         self.title_menu = self._nav_vertical(actions, self.title_menu, 2)
@@ -182,6 +288,7 @@ class KidgameApp:
             resolve_for_play(q, difficulty, rng=rng) for q in questions
         ]
         self.session = GameSession.start(difficulty, play_questions)
+        self._result_score_saved = False
         self.current = AppScreen.GAME
 
     def _update_game(self, dt: float, actions: list[GameAction]) -> None:
@@ -193,6 +300,9 @@ class KidgameApp:
         session.tick(dt)
 
         if session.phase in (SessionPhase.WON, SessionPhase.LOST):
+            if not self._result_score_saved:
+                self.score_store.record_session(session.difficulty, session.score)
+                self._result_score_saved = True
             self.current = AppScreen.RESULT
             return
 
@@ -206,13 +316,15 @@ class KidgameApp:
 
         for a in actions:
             if a in (GameAction.UP, GameAction.LEFT):
-                session.move_cursor(-1)
+                self._move_game_cursor(session, -1)
             elif a in (GameAction.DOWN, GameAction.RIGHT):
-                session.move_cursor(1)
+                self._move_game_cursor(session, 1)
             elif a is GameAction.BOMB:
                 session.use_bomb()
             elif a is GameAction.CONFIRM:
-                session.confirm_answer()
+                feedback = session.confirm_answer()
+                if feedback is not None and feedback.was_correct:
+                    self._start_score_burst(session)
 
     def _update_pause(self, actions: list[GameAction]) -> None:
         for a in actions:
@@ -235,8 +347,10 @@ class KidgameApp:
         elif self.current is AppScreen.MODE:
             self._draw_mode()
         elif self.current is AppScreen.GAME:
+            self._draw_screen_background()
             self._draw_game()
         elif self.current is AppScreen.PAUSE:
+            self._draw_screen_background()
             self._draw_game()
             self._draw_pause_overlay()
         elif self.current is AppScreen.RESULT:
@@ -251,7 +365,8 @@ class KidgameApp:
         self.screen.blit(overlay, (0, 0))
 
         box_w = min(L.x(420), L.width - L.x(40))
-        box_h = L.y(220)
+        choices = self._quit_menu_choices()
+        box_h = L.y(110 + len(choices) * 40 + 48)
         box = pygame.Rect(0, 0, box_w, box_h)
         box.center = (L.width // 2, L.height // 2)
         draw_panel(self.screen, box, status=True)
@@ -259,17 +374,21 @@ class KidgameApp:
         cx = box.centerx
         blit_centered(
             self.screen,
-            self.fonts.heading.render("終了確認", True, COLOR_TEXT),
+            self.fonts.heading.render("メニュー", True, COLOR_TEXT),
             cx,
             box.y + L.y(28),
         )
+        subtitle = (
+            "どうしますか？"
+            if len(choices) > 2
+            else "ゲームを終了しますか？"
+        )
         blit_centered(
             self.screen,
-            self.fonts.body.render("ゲームを終了しますか？", True, COLOR_TEXT_DIM),
+            self.fonts.body.render(subtitle, True, COLOR_TEXT_DIM),
             cx,
             box.y + L.y(72),
         )
-        choices = ["終了する", "キャンセル"]
         for i, label in enumerate(choices):
             color = COLOR_CURSOR if i == self.quit_menu else COLOR_TEXT
             prefix = "▶ " if i == self.quit_menu else "  "
@@ -338,15 +457,15 @@ class KidgameApp:
             "X / Enter キー … 決定",
             "Z キー … ボム（間違い選択肢を半分消す）",
             "Shift … 一時停止",
-            "Esc … 終了（確認あり）",
+            "Esc … メニュー（タイトルへ／終了）",
             "",
             "ゲームパッドも同じ操作に対応",
             "十字キー / 左スティック … 移動",
             "A ボタン … 決定　Y ボタン … ボム",
             "",
             "10問正解でクリア！",
-            "ミスでライフ減少 / ノーマル3分・ハード1分",
-            "ノーマル・ハードは残り時間が半分になるとヒント表示",
+            "ミスでライフ減少 / 1問あたり ノーマル3分・ハード1分",
+            "ノーマル・ハードはその問題の残り時間が半分でヒント表示",
         ]
         y = L.y(120)
         for line in lines:
@@ -372,7 +491,10 @@ class KidgameApp:
         )
         for i, diff in enumerate(self.modes):
             rules = RULES_BY_DIFFICULTY[diff]
-            timer = "時間無制限" if not rules.has_timer else f"{int(rules.time_limit_seconds)}秒"
+            if not rules.has_timer:
+                timer = "時間無制限"
+            else:
+                timer = f"1問 {int(rules.time_limit_seconds)}秒"
             label = f"{rules.label}（{timer}）"
             color = COLOR_CURSOR if i == self.mode_cursor else COLOR_TEXT
             prefix = "▶ " if i == self.mode_cursor else "  "
@@ -392,6 +514,19 @@ class KidgameApp:
             cx,
             L.height - L.y(40),
         )
+
+    def _draw_screen_background(self) -> None:
+        L = self.layout
+        assets = self.ui_assets
+        if assets.bg_pattern:
+            bg = scale_cover(assets.bg_pattern, L.width, L.height)
+            self.screen.blit(bg, (0, 0))
+        else:
+            self.screen.fill(COLOR_BG)
+        if assets.bg_overlay:
+            overlay = scale_cover(assets.bg_overlay, L.width, L.height)
+            self.screen.blit(overlay, (0, 0))
+        draw_background_red_band(self.screen, L.width, L.height)
 
     def _furigana_block_height(
         self,
@@ -419,35 +554,112 @@ class KidgameApp:
             L.status_w - L.x(24),
             L.height - L.y(32),
         )
-        draw_panel(self.screen, status_rect, status=True)
+        assets = self.ui_assets
+        if assets.main_frame:
+            assets.blit_stretched(assets.main_frame, self.screen, main_rect)
+        if assets.status_panel:
+            assets.blit_stretched(assets.status_panel, self.screen, status_rect)
+        else:
+            draw_panel(self.screen, status_rect, status=True)
 
         q = session.current_question
-        rules = session.rules
 
-        inner_pad = L.x(14)
-        footer_h = L.y(28)
-        play_area = pygame.Rect(
+        inner_pad = L.x(10)
+        container_rect = pygame.Rect(
             main_rect.x + inner_pad,
             main_rect.y + inner_pad,
             main_rect.width - inner_pad * 2,
-            main_rect.height - inner_pad * 2 - footer_h,
+            main_rect.height - inner_pad * 2,
         )
-        block_gap = L.y(12)
-        question_h = int(play_area.height * 0.50)
+        draw_game_container(self.screen, container_rect)
+
+        section_pad = L.x(12)
+        section_gap = L.y(10)
+        inner = container_rect.inflate(-section_pad, -section_pad)
+
+        hint_zone_h = 0
+        row_gap = L.y(6)
+        row_h = L.y(32)
+        opt_pad = L.x(10)
+        entries: list = []
+
+        if q and session.options_view:
+            entries = session.options_view.visible_entries()
+            n = max(1, len(entries))
+            hint_visible_pre = session.show_playing_hint and bool(session.current_hint)
+            text_pad = L.x(20)
+            inner_w = inner.width - text_pad * 2
+            opt_ruby = q.options_ruby or (None,) * len(q.options)
+
+            label_reserve = L.x(18) + L.x(40) + L.x(22)
+            opt_text_w = max(60, inner.width - opt_pad * 2 - label_reserve)
+            min_row_h = L.y(28)
+            for orig_idx, text in entries:
+                ruby_seg = opt_ruby[orig_idx] if orig_idx < len(opt_ruby) else None
+                mh = measure_text_with_furigana(
+                    text,
+                    ruby_seg,
+                    opt_text_w,
+                    self.fonts.option,
+                    self.fonts.ruby,
+                    self.fonts.furigana,
+                )
+                min_row_h = max(min_row_h, mh + L.y(8))
+
+            row_gap = L.y(3) if n >= 6 else L.y(5)
+            opt_vert_pad = L.y(10)
+            options_need_h = n * min_row_h + (n - 1) * row_gap + opt_vert_pad
+            abs_min_options_h = (
+                n * L.y(24) + (n - 1) * row_gap + opt_vert_pad
+            )
+
+            if hint_visible_pre:
+                hint_prefix_w = self.fonts.small.size("ヒント: ")[0] + L.x(4)
+                hint_w = max(40, inner_w - hint_prefix_w)
+                hh = measure_text_with_furigana(
+                    q.hint,
+                    q.hint_ruby,
+                    hint_w,
+                    self.fonts.small,
+                    self.fonts.ruby,
+                    self.fonts.furigana,
+                )
+                hint_zone_h = max(L.y(36), min(hh + L.y(14), int(inner.height * 0.36)))
+
+            min_question_h = L.y(64)
+            max_options_h = inner.height - section_gap - min_question_h
+            options_h = min(max(options_need_h, abs_min_options_h), max_options_h)
+            options_h = max(options_h, int(inner.height * min(0.62, 0.36 + n * 0.04)))
+            options_h = min(options_h, inner.height - section_gap - min_question_h)
+            question_h = inner.height - section_gap - options_h
+            row_h = max(
+                L.y(22),
+                (options_h - opt_vert_pad - row_gap * (n - 1)) // n,
+            )
+            if row_h < min_row_h and options_need_h <= max_options_h:
+                options_h = min(options_need_h, max_options_h)
+                question_h = inner.height - section_gap - options_h
+                row_h = max(
+                    L.y(22),
+                    (options_h - opt_vert_pad - row_gap * (n - 1)) // n,
+                )
+        else:
+            question_h = int(inner.height * 0.40)
+
         question_rect = pygame.Rect(
-            play_area.x,
-            play_area.y,
-            play_area.width,
+            inner.x,
+            inner.y,
+            inner.width,
             question_h,
         )
         options_rect = pygame.Rect(
-            play_area.x,
-            question_rect.bottom + block_gap,
-            play_area.width,
-            play_area.bottom - question_rect.bottom - block_gap,
+            inner.x,
+            question_rect.bottom + section_gap,
+            inner.width,
+            inner.bottom - question_rect.bottom - section_gap,
         )
-
-        draw_panel(self.screen, question_rect, status=False)
+        draw_game_section(self.screen, question_rect)
+        draw_game_section(self.screen, options_rect)
 
         if q and session.options_view:
             text_pad = L.x(20)
@@ -464,13 +676,30 @@ class KidgameApp:
                 (question_rect.x + text_pad, question_rect.y + L.y(14)),
             )
 
+            hint_visible = session.show_playing_hint and bool(session.current_hint)
+            if hint_visible and hint_zone_h <= 0:
+                hint_prefix_w = self.fonts.small.size("ヒント: ")[0] + L.x(4)
+                hint_w = max(40, inner_w - hint_prefix_w)
+                hh = measure_text_with_furigana(
+                    q.hint,
+                    q.hint_ruby,
+                    hint_w,
+                    self.fonts.small,
+                    self.fonts.ruby,
+                    self.fonts.furigana,
+                )
+                hint_zone_h = max(L.y(36), min(hh + L.y(14), int(inner.height * 0.36)))
+            if not hint_visible:
+                hint_zone_h = 0
+            hint_top = question_rect.bottom - hint_zone_h - L.y(6)
+
             q_text_y = question_rect.y + L.y(48)
             clip_prev = self.screen.get_clip()
             clip_rect = pygame.Rect(
                 question_rect.x + text_pad,
                 q_text_y,
                 inner_w,
-                max(0, question_rect.bottom - L.y(56) - q_text_y),
+                max(0, (hint_top if hint_visible else question_rect.bottom - L.y(8)) - q_text_y),
             )
             self.screen.set_clip(clip_rect)
             draw_text_with_furigana(
@@ -489,21 +718,37 @@ class KidgameApp:
             )
             self.screen.set_clip(clip_prev)
 
-            if session.show_playing_hint and session.current_hint:
-                hint_label = "ヒント: "
-                hint_y = question_rect.bottom - L.y(52)
-                self.screen.blit(
-                    self.fonts.small.render(hint_label, True, COLOR_CURSOR),
-                    (question_rect.x + text_pad, hint_y),
+            if hint_visible:
+                hint_clip = pygame.Rect(
+                    question_rect.x + text_pad,
+                    hint_top,
+                    inner_w,
+                    max(0, question_rect.bottom - L.y(8) - hint_top),
                 )
-                hint_prefix_w = self.fonts.small.size(hint_label)[0]
+                self.screen.set_clip(hint_clip)
+                hint_label = "ヒント: "
+                hint_label_surf = self.fonts.small.render(hint_label, True, COLOR_CURSOR)
+                hint_prefix_w = hint_label_surf.get_width()
+                hint_segments, _ = segments_or_reading_line(q.hint, q.hint_ruby)
+                hint_has_ruby = bool(
+                    hint_segments and any(s.reading for s in hint_segments)
+                )
+                hint_text_y, hint_label_x, hint_label_y = layout_option_row(
+                    hint_clip,
+                    hint_label_surf,
+                    self.fonts.small,
+                    self.fonts.ruby,
+                    has_ruby=hint_has_ruby,
+                    pad_x=0,
+                )
+                self.screen.blit(hint_label_surf, (hint_label_x, hint_label_y))
                 draw_text_with_furigana(
                     self.screen,
                     q.hint,
                     q.hint_ruby,
-                    question_rect.x + text_pad + hint_prefix_w,
-                    hint_y,
-                    inner_w - hint_prefix_w,
+                    hint_clip.x + hint_prefix_w + L.x(4),
+                    hint_text_y,
+                    max(0, hint_clip.width - hint_prefix_w - L.x(4)),
                     self.fonts.small,
                     self.fonts.ruby,
                     self.fonts.furigana,
@@ -511,6 +756,7 @@ class KidgameApp:
                     COLOR_RUBY,
                     COLOR_FURIGANA,
                 )
+                self.screen.set_clip(clip_prev)
 
             if session.phase is SessionPhase.FEEDBACK and session.last_feedback:
                 fb = session.last_feedback
@@ -523,114 +769,83 @@ class KidgameApp:
                     question_rect.centery,
                 )
 
-            entries = session.options_view.visible_entries()
             n = max(1, len(entries))
-            row_gap = L.y(8)
-            row_h = (options_rect.height - row_gap * (n - 1)) // n
+            opt_inner = options_rect.inflate(-opt_pad, -L.y(8))
+            opt_clip = pygame.Rect(
+                opt_inner.x,
+                opt_inner.y,
+                opt_inner.width,
+                min(opt_inner.height, n * row_h + (n - 1) * row_gap),
+            )
+            clip_prev_opts = self.screen.get_clip()
+            self.screen.set_clip(opt_clip)
             for i, (orig_idx, text) in enumerate(entries):
                 bar = pygame.Rect(
-                    options_rect.x,
-                    options_rect.y + i * (row_h + row_gap),
-                    options_rect.width,
+                    opt_inner.x,
+                    opt_inner.y + i * (row_h + row_gap),
+                    opt_inner.width,
                     row_h,
                 )
                 is_cursor = i == session.cursor
-                draw_option_bar(self.screen, bar, selected=is_cursor)
+                bar_tile = None
+                if is_cursor and assets.option_bar_selected:
+                    bar_tile = assets.option_bar_selected
+                elif assets.option_bar:
+                    bar_tile = assets.option_bar
+                draw_option_bar(
+                    self.screen, bar, selected=is_cursor, tile=bar_tile
+                )
                 color = COLOR_CURSOR if is_cursor else COLOR_TEXT
-                label = f"{chr(0x41 + orig_idx)}."
+                label = f"{option_display_letter(i)}."
                 label_surf = self.fonts.option.render(label, True, color)
                 label_w = label_surf.get_width()
                 text_x = bar.x + L.x(18) + label_w + L.x(8)
                 text_w = bar.width - (text_x - bar.x) - L.x(14)
                 ruby_seg = opt_ruby[orig_idx] if orig_idx < len(opt_ruby) else None
-                block_h = self._furigana_block_height(
-                    text, ruby_seg, self.fonts.option, self.fonts.ruby
-                )
-                text_y = bar.y + max(L.y(6), (bar.height - block_h) // 2)
-                self.screen.blit(label_surf, (bar.x + L.x(18), text_y + L.y(4)))
-                draw_text_with_furigana(
-                    self.screen,
-                    text,
-                    ruby_seg,
-                    text_x,
-                    text_y,
-                    text_w,
+                segments, _ = segments_or_reading_line(text, ruby_seg)
+                has_ruby = bool(segments and any(s.reading for s in segments))
+                text_y, label_x, label_y = layout_option_row(
+                    bar,
+                    label_surf,
                     self.fonts.option,
                     self.fonts.ruby,
-                    self.fonts.furigana,
-                    color,
-                    COLOR_RUBY,
-                    COLOR_FURIGANA,
+                    has_ruby=has_ruby,
+                    pad_x=L.x(18),
                 )
+                self.screen.blit(label_surf, (label_x, label_y))
+                bar_clip = bar.clip(opt_clip)
+                if bar_clip.width > 0 and bar_clip.height > 0:
+                    prev = self.screen.get_clip()
+                    self.screen.set_clip(bar_clip)
+                    draw_text_with_furigana(
+                        self.screen,
+                        text,
+                        ruby_seg,
+                        text_x,
+                        text_y,
+                        text_w,
+                        self.fonts.option,
+                        self.fonts.ruby,
+                        self.fonts.furigana,
+                        color,
+                        COLOR_RUBY,
+                        COLOR_FURIGANA,
+                    )
+                    self.screen.set_clip(prev)
 
-        hint_bar = self.fonts.small.render(
-            "↑↓ 選択　X/Enter 決定　Z ボム　Shift ポーズ　Esc 終了",
-            True,
-            COLOR_TEXT_DIM,
-        )
-        self.screen.blit(
-            hint_bar,
-            (main_rect.x + L.x(20), main_rect.bottom - L.y(26)),
-        )
+            self.screen.set_clip(clip_prev_opts)
 
-        # --- ステータス ---
-        sx = status_rect.x + L.x(16)
-        sy = status_rect.y + L.y(20)
-        self.screen.blit(
-            self.fonts.status.render("STATUS", True, COLOR_CURSOR),
-            (sx, sy),
-        )
-        sy += L.y(36)
-
-        life_text = "♥ " * max(0, session.lives) + "♡ " * max(
-            0, INITIAL_LIVES - session.lives
-        )
-        self.screen.blit(
-            self.fonts.body.render(f"ライフ {life_text}", True, COLOR_TEXT),
-            (sx, sy),
-        )
-        sy += L.y(40)
-
-        score = self.fonts.body.render(
-            f"正解 {session.correct_count} / {CORRECT_TO_CLEAR}",
-            True,
-            COLOR_TEXT,
-        )
-        self.screen.blit(score, (sx, sy))
-        sy += L.y(44)
-
-        bomb = self.fonts.body.render(f"ボム × {session.bomb_stock}", True, COLOR_TEXT)
-        self.screen.blit(bomb, (sx, sy))
-        sy += L.y(48)
-
-        gauge_w = status_rect.width - L.x(32)
-        gauge_h = max(10, L.y(18))
-        if rules.has_timer and session.time_remaining is not None:
-            limit = rules.time_limit_seconds or 1.0
-            ratio = session.time_remaining / limit
-            draw_gauge(
-                self.screen,
-                pygame.Rect(sx, sy + L.y(18), gauge_w, gauge_h),
-                ratio,
-                COLOR_GAUGE_TIMER,
-                "タイマー",
-                self.fonts.small,
-            )
-            sy += L.y(52)
-        else:
-            self.screen.blit(
-                self.fonts.small.render("タイマー: 無制限", True, COLOR_TEXT_DIM),
-                (sx, sy),
-            )
-            sy += L.y(36)
-
-        draw_gauge(
+        draw_status_sidebar(
             self.screen,
-            pygame.Rect(sx, sy + L.y(18), gauge_w, gauge_h),
-            session.bonus_gauge / BONUS_GAUGE_MAX,
-            COLOR_GAUGE_BONUS,
-            "ボーナス",
+            status_rect,
+            session,
+            self.score_store.high_score(session.difficulty),
+            self._display_session_score(session),
+            L,
+            self.fonts.score_label,
+            self.fonts.score_value,
             self.fonts.small,
+            self.fonts.difficulty_mode,
         )
 
     def _draw_pause_overlay(self) -> None:
@@ -647,7 +862,7 @@ class KidgameApp:
         blit_centered(
             self.screen,
             self.fonts.body.render(
-                "Shift / X / Enter で 再開　Esc で終了確認", True, COLOR_TEXT_DIM
+                "Shift / X / Enter で 再開　Esc でメニュー", True, COLOR_TEXT_DIM
             ),
             L.width // 2,
             L.height // 2 + L.y(24),
@@ -657,6 +872,12 @@ class KidgameApp:
         session = self.session
         L = self.layout
         cx = L.width // 2
+        pts = session.score if session else 0
+        high = (
+            self.score_store.high_score(session.difficulty)
+            if session
+            else 0
+        )
         if session and session.phase is SessionPhase.WON:
             title = "クリア！"
             sub = f"{CORRECT_TO_CLEAR}問 正解 おめでとう！"
@@ -671,8 +892,20 @@ class KidgameApp:
             sub = f"正解 {session.correct_count if session else 0} 問 {reason}"
             color = COLOR_WRONG
 
-        blit_centered(self.screen, self.fonts.title.render(title, True, color), cx, L.y(200))
-        blit_centered(self.screen, self.fonts.body.render(sub, True, COLOR_TEXT), cx, L.y(280))
+        blit_centered(self.screen, self.fonts.title.render(title, True, color), cx, L.y(180))
+        blit_centered(self.screen, self.fonts.body.render(sub, True, COLOR_TEXT), cx, L.y(250))
+        blit_centered(
+            self.screen,
+            self.fonts.heading.render(f"得点 {pts:,}", True, COLOR_CURSOR),
+            cx,
+            L.y(310),
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.body.render(f"最高得点 {high:,}", True, COLOR_TEXT_DIM),
+            cx,
+            L.y(360),
+        )
         blit_centered(
             self.screen,
             self.fonts.small.render("X / Enter で タイトルへ", True, COLOR_TEXT_DIM),

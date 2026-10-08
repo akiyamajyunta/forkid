@@ -6,13 +6,18 @@ from pathlib import Path
 from typing import Any
 
 from kidgame.data.models import Difficulty, Question, QuestionBank
+from kidgame.data.review_csv import (
+    all_review_csvs_present,
+    load_question_bank_from_review_csvs,
+)
 
-DEFAULT_QUESTIONS_PATH = Path(__file__).resolve().parents[3] / "data" / "questions.json"
+DATA_DIR = Path(__file__).resolve().parents[3] / "data"
+DEFAULT_QUESTIONS_PATH = DATA_DIR / "questions.json"
 
 
-def load_questions_file(path: Path | str | None = None) -> QuestionBank:
-    """ローカル JSON ファイルから問題バンクを読み込む。"""
-    file_path = Path(path) if path is not None else DEFAULT_QUESTIONS_PATH
+def load_questions_file(path: Path | str) -> QuestionBank:
+    """単一 JSON ファイルから問題バンクを読み込む。"""
+    file_path = Path(path)
     if not file_path.is_file():
         raise FileNotFoundError(f"Questions file not found: {file_path}")
 
@@ -20,6 +25,24 @@ def load_questions_file(path: Path | str | None = None) -> QuestionBank:
         data: dict[str, Any] = json.load(f)
 
     return QuestionBank.from_dict(data)
+
+
+def load_questions_bank(
+    path: Path | str | None = None,
+    *,
+    data_dir: Path | str | None = None,
+) -> QuestionBank:
+    """
+    問題バンクを読み込む。
+    path 未指定時: data 内の難易度別 review CSV が揃っていればそちらを優先、なければ questions.json。
+    """
+    if path is not None:
+        return load_questions_file(path)
+
+    base = Path(data_dir) if data_dir is not None else DATA_DIR
+    if all_review_csvs_present(base):
+        return load_question_bank_from_review_csvs(base)
+    return load_questions_file(base / "questions.json")
 
 
 class QuestionRepository:
@@ -35,8 +58,13 @@ class QuestionRepository:
         }
 
     @classmethod
-    def from_file(cls, path: Path | str | None = None) -> QuestionRepository:
-        return cls(load_questions_file(path))
+    def from_file(
+        cls,
+        path: Path | str | None = None,
+        *,
+        data_dir: Path | str | None = None,
+    ) -> QuestionRepository:
+        return cls(load_questions_bank(path, data_dir=data_dir))
 
     def available_count(self, difficulty: Difficulty) -> int:
         return len(self._pools[difficulty])

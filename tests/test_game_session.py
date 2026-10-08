@@ -78,6 +78,22 @@ def test_time_up_triggers_loss() -> None:
     assert session.loss_reason is LossReason.TIME_UP
 
 
+def test_timer_resets_each_question() -> None:
+    questions = [_play(Difficulty.HARD, qid=f"q{i}") for i in range(3)]
+    session = GameSession.start(Difficulty.HARD, questions, seed=1)
+    assert session.time_remaining == 60.0
+    session.tick(25.0)
+    assert session.time_remaining == 35.0
+    assert session.current_question is not None
+    session.cursor = session.current_question.answer_index
+    session.confirm_answer()
+    session._feedback_until = 0.0
+    session.tick(0.0)
+    assert session.phase is SessionPhase.PLAYING
+    assert session.question_index == 1
+    assert session.time_remaining == 60.0
+
+
 def test_bonus_fills_and_grants_bomb() -> None:
     session = GameSession.start(Difficulty.EASY, [_play()], seed=1)
     session.bonus_gauge = 95.0

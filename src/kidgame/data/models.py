@@ -101,6 +101,7 @@ class Question:
     hint_ruby: tuple[RubySegment, ...] | None = None
 
     source: str = ""
+    source_no: int | None = None
     dev_explanation: str = ""
 
     @classmethod
@@ -157,6 +158,7 @@ class Question:
             hint_ruby=parse_ruby_list(raw.get("hint_ruby")),
 
             source=str(raw.get("source", "")),
+            source_no=int(raw["source_no"]) if raw.get("source_no") is not None else None,
             dev_explanation=str(raw.get("dev_explanation", "")),
         )
 

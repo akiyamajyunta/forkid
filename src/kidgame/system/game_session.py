@@ -7,6 +7,7 @@ from enum import StrEnum, auto
 
 from kidgame.data.models import Difficulty
 from kidgame.data.question_runtime import PlayQuestion
+from kidgame.system.scoring import points_for_correct_answer
 from kidgame.system.config import (
     BONUS_FILL_FAST,
     BONUS_FILL_MID,
@@ -48,6 +49,8 @@ class GameSession:
     questions: list[PlayQuestion]
     lives: int = INITIAL_LIVES
     correct_count: int = 0
+    score: int = 0
+    last_points_gained: int = 0
     bomb_stock: int = 0
     bonus_gauge: float = 0.0
     time_remaining: float | None = None
@@ -96,7 +99,7 @@ class GameSession:
 
     @property
     def show_playing_hint(self) -> bool:
-        """残り時間が制限時間の半分以下になったらヒントを表示（イージーは常に非表示）。"""
+        """その問題の残り時間が制限の半分以下でヒント表示（イージーは常に非表示）。"""
         if self.phase is not SessionPhase.PLAYING:
             return False
         limit = self.rules.time_limit_seconds
@@ -163,6 +166,10 @@ class GameSession:
 
         if was_correct:
             self.correct_count += 1
+            elapsed = time.monotonic() - self._question_started_at
+            gained = points_for_correct_answer(elapsed, self.difficulty)
+            self.score += gained
+            self.last_points_gained = gained
             self._add_bonus_for_speed()
             if self.correct_count >= CORRECT_TO_CLEAR:
                 self.phase = SessionPhase.WON
@@ -214,6 +221,7 @@ class GameSession:
         self.options_view = OptionsView.fresh(q)
         self.cursor = 0
         self._question_started_at = time.monotonic()
+        self.time_remaining = self.rules.time_limit_seconds
 
     def _lose(self, reason: LossReason) -> None:
         self.phase = SessionPhase.LOST

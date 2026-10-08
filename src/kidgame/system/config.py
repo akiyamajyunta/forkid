@@ -34,6 +34,12 @@ RULES_BY_DIFFICULTY: dict[Difficulty, DifficultyRules] = {
     Difficulty.HARD: DifficultyRules(time_limit_seconds=60.0, label="ハード"),
 }
 
+DIFFICULTY_LABEL_EN: dict[Difficulty, str] = {
+    Difficulty.EASY: "EASY",
+    Difficulty.NORMAL: "NORMAL",
+    Difficulty.HARD: "HARD",
+}
+
 
 def bomb_eliminate_count(option_count: int) -> int:
     """README_SYSTEM: 選択肢数の半分（切り捨て）だけ誤答を除外。"""
