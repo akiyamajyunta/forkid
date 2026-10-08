@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import random
 import time
+from datetime import datetime
 from enum import StrEnum, auto
 
 import pygame
@@ -9,7 +10,7 @@ import pygame
 from kidgame.data.loader import QuestionRepository
 from kidgame.data.models import Difficulty
 from kidgame.data.question_runtime import resolve_for_play
-from kidgame.system.config import CORRECT_TO_CLEAR, RULES_BY_DIFFICULTY
+from kidgame.system.config import CORRECT_TO_CLEAR, DIFFICULTY_LABEL_EN, RULES_BY_DIFFICULTY
 from kidgame.system.game_session import GameSession, LossReason, SessionPhase
 from kidgame.system.score_store import ScoreStore
 from kidgame.ui.display_config import DisplaySettings
@@ -21,8 +22,10 @@ from kidgame.ui.game_sfx import (
     score_burst_duration_sec,
 )
 from kidgame.data.furigana import RubySegment, segments_or_reading_line
+from kidgame.system.leaderboard import format_accuracy, format_score
 from kidgame.ui.draw_helpers import (
     blit_centered,
+    blit_outlined,
     draw_background_red_band,
     draw_game_container,
     draw_game_section,
@@ -32,6 +35,16 @@ from kidgame.ui.draw_helpers import (
     scale_cover,
 )
 from kidgame.ui.clear_credits import CREDIT_LINES, GAME_CLEAR_TITLE
+from kidgame.system.leaderboard import preview_after_insert
+from kidgame.ui.leaderboard_draw import draw_leaderboard_table
+from kidgame.ui.name_keyboard import (
+    NameKeyboard,
+    draw_name_entry_panel,
+    draw_name_keyboard,
+    format_name_slots,
+    name_entry_keyboard_rect,
+    name_entry_panel_rect,
+)
 from kidgame.ui.status_sidebar import draw_status_sidebar
 from kidgame.ui.fonts import FontSet
 from kidgame.ui.input import GameAction, InputState
@@ -61,6 +74,12 @@ class AppScreen(StrEnum):
     GAME = auto()
     PAUSE = auto()
     RESULT = auto()
+    SCORE_RANKING = auto()
+
+
+RESULT_MENU_ITEMS = ("タイトルへ戻る", "スコアを記録する")
+ENTRY_NAME_MAX_LEN = 12
+RESULT_PANEL_OVERLAY_RGBA = (16, 28, 44, 185)
 
 
 class KidgameApp:
@@ -81,8 +100,15 @@ class KidgameApp:
         self.repo = QuestionRepository.from_file()
 
         self.current = AppScreen.TITLE
-        self.title_menu = 0  # 0=start, 1=help
+        self.title_menu = 0
         self.mode_cursor = 0
+        self.ranking_difficulty_cursor = 0
+        self.result_view = "menu"
+        self.result_menu = 0
+        self.entry_name = ""
+        self.entry_played_at = ""
+        self.entry_preview_rank = 1
+        self.name_keyboard = NameKeyboard()
         self.modes = [Difficulty.EASY, Difficulty.NORMAL, Difficulty.HARD]
         self.session: GameSession | None = None
         self.running = True
@@ -167,7 +193,13 @@ class KidgameApp:
 
         actions, cancelled = self._split_cancel_actions(actions)
         if cancelled:
-            self._open_quit_modal()
+            if (
+                self.current is AppScreen.RESULT
+                and self.result_view in ("confirm", "entry")
+            ):
+                self._update_result([GameAction.CANCEL])
+            else:
+                self._open_quit_modal()
             self._tick_score_burst()
             self._tick_score_countup()
             return
@@ -184,6 +216,8 @@ class KidgameApp:
             self._update_pause(actions)
         elif self.current is AppScreen.RESULT:
             self._update_result(actions)
+        elif self.current is AppScreen.SCORE_RANKING:
+            self._update_score_ranking(actions)
 
         self._tick_score_burst()
         self._tick_score_countup()
@@ -251,15 +285,68 @@ class KidgameApp:
         if self._score_burst_hit >= SCORE_BURST_COUNT:
             self._score_burst_start = 0.0
 
+    def _reset_result_flow(self) -> None:
+        self.result_view = "menu"
+        self.result_menu = 0
+        self.entry_name = ""
+        self.entry_played_at = ""
+        self.name_keyboard = NameKeyboard()
+
+    def _begin_score_record(self) -> None:
+        session = self.session
+        if session is None:
+            return
+        self.entry_name = ""
+        self.entry_played_at = datetime.now().strftime("%Y/%m/%d %H:%M")
+        _, rank = preview_after_insert(
+            self.score_store.leaderboard(session.difficulty),
+            name="-",
+            score=session.score,
+            played_at=self.entry_played_at,
+            accuracy=session.answer_accuracy_percent,
+        )
+        self.entry_preview_rank = rank
+        self.name_keyboard = NameKeyboard()
+        self.result_view = "confirm"
+
+    def _submit_score_entry(self) -> None:
+        session = self.session
+        if session is not None:
+            self.score_store.add_leaderboard_entry(
+                session.difficulty,
+                self.entry_name,
+                session.score,
+                played_at=self.entry_played_at,
+                accuracy=session.answer_accuracy_percent,
+            )
+        self.entry_name = ""
+        self.result_view = "menu"
+
+    def _leaderboard_preview(self) -> tuple[list, int]:
+        session = self.session
+        if session is None:
+            return [], 1
+        name = self.entry_name.strip()
+        return preview_after_insert(
+            self.score_store.leaderboard(session.difficulty),
+            name=name,
+            score=session.score,
+            played_at=self.entry_played_at,
+            accuracy=session.answer_accuracy_percent,
+        )
+
     def _update_title(self, actions: list[GameAction]) -> None:
-        self.title_menu = self._nav_vertical(actions, self.title_menu, 2)
+        self.title_menu = self._nav_vertical(actions, self.title_menu, 3)
         for a in actions:
             if a is GameAction.CONFIRM:
                 if self.title_menu == 0:
                     self.current = AppScreen.MODE
                     self.mode_cursor = 0
-                else:
+                elif self.title_menu == 1:
                     self.current = AppScreen.HELP
+                else:
+                    self.current = AppScreen.SCORE_RANKING
+                    self.ranking_difficulty_cursor = 0
 
     def _update_help(self, actions: list[GameAction]) -> None:
         for a in actions:
@@ -304,6 +391,7 @@ class KidgameApp:
             if not self._result_score_saved:
                 self.score_store.record_session(session.difficulty, session.score)
                 self._result_score_saved = True
+            self._reset_result_flow()
             self.current = AppScreen.RESULT
             return
 
@@ -335,11 +423,66 @@ class KidgameApp:
                 self.current = AppScreen.GAME
 
     def _update_result(self, actions: list[GameAction]) -> None:
+        if self.result_view == "entry":
+            _, cancelled = self._split_cancel_actions(actions)
+            if cancelled:
+                self.result_view = "confirm"
+                return
+            for a in actions:
+                if a is GameAction.UP:
+                    self.name_keyboard.move(-1, 0)
+                elif a is GameAction.DOWN:
+                    self.name_keyboard.move(1, 0)
+                elif a is GameAction.LEFT:
+                    self.name_keyboard.move(0, -1)
+                elif a is GameAction.RIGHT:
+                    self.name_keyboard.move(0, 1)
+                elif a in (GameAction.BACKSPACE, GameAction.BOMB):
+                    self.entry_name = self.entry_name[:-1]
+                elif a is GameAction.CONFIRM:
+                    new_name, done = self.name_keyboard.apply_key(
+                        self.entry_name,
+                        ENTRY_NAME_MAX_LEN,
+                    )
+                    self.entry_name = new_name
+                    if done:
+                        self._submit_score_entry()
+            return
+
+        if self.result_view == "confirm":
+            _, cancelled = self._split_cancel_actions(actions)
+            if cancelled:
+                self.result_view = "menu"
+                return
+            for a in actions:
+                if a is GameAction.CONFIRM:
+                    self.name_keyboard = NameKeyboard()
+                    self.result_view = "entry"
+            return
+
+        self.result_menu = self._nav_vertical(actions, self.result_menu, len(RESULT_MENU_ITEMS))
         for a in actions:
             if a is GameAction.CONFIRM:
-                self.session = None
+                if self.result_menu == 0:
+                    self.session = None
+                    self._reset_result_flow()
+                    self.current = AppScreen.TITLE
+                    self.title_menu = 0
+                else:
+                    self._begin_score_record()
+
+    def _update_score_ranking(self, actions: list[GameAction]) -> None:
+        for a in actions:
+            if a in (GameAction.LEFT, GameAction.UP):
+                self.ranking_difficulty_cursor = (
+                    self.ranking_difficulty_cursor - 1
+                ) % len(self.modes)
+            elif a in (GameAction.RIGHT, GameAction.DOWN):
+                self.ranking_difficulty_cursor = (
+                    self.ranking_difficulty_cursor + 1
+                ) % len(self.modes)
+            elif a in (GameAction.MENU, GameAction.CANCEL):
                 self.current = AppScreen.TITLE
-                self.title_menu = 0
 
     def _draw(self) -> None:
         self.screen.fill(COLOR_BG)
@@ -357,7 +500,11 @@ class KidgameApp:
             self._draw_game()
             self._draw_pause_overlay()
         elif self.current is AppScreen.RESULT:
+            self._draw_screen_background()
+            self._draw_game()
             self._draw_result()
+        elif self.current is AppScreen.SCORE_RANKING:
+            self._draw_score_ranking()
         if self.quit_modal_open:
             self._draw_quit_modal()
 
@@ -427,7 +574,7 @@ class KidgameApp:
             cx,
             L.y(190),
         )
-        items = ["はじめる", "操作説明"]
+        items = ["はじめる", "操作説明", "RESULT"]
         for i, label in enumerate(items):
             color = COLOR_CURSOR if i == self.title_menu else COLOR_TEXT
             prefix = "▶ " if i == self.title_menu else "  "
@@ -435,7 +582,7 @@ class KidgameApp:
                 self.screen,
                 self.fonts.heading.render(prefix + label, True, color),
                 cx,
-                L.y(300 + i * 56),
+                L.y(280 + i * 52),
             )
         blit_centered(
             self.screen,
@@ -543,11 +690,7 @@ class KidgameApp:
             return ruby_font.get_height() + RUBY_MAIN_GAP + main_font.get_height()
         return main_font.get_height()
 
-    def _draw_game(self) -> None:
-        session = self.session
-        if session is None:
-            return
-
+    def _game_frame_rects(self) -> tuple[pygame.Rect, pygame.Rect, pygame.Rect]:
         L = self.layout
         pad = L.x(16)
         main_rect = pygame.Rect(pad, pad, L.main_w - L.x(32), L.height - L.y(32))
@@ -557,6 +700,27 @@ class KidgameApp:
             L.status_w - L.x(24),
             L.height - L.y(32),
         )
+        inner_pad = L.x(10)
+        container_rect = pygame.Rect(
+            main_rect.x + inner_pad,
+            main_rect.y + inner_pad,
+            main_rect.width - inner_pad * 2,
+            main_rect.height - inner_pad * 2,
+        )
+        return main_rect, status_rect, container_rect
+
+    def _fill_container_overlay(self, rect: pygame.Rect) -> None:
+        layer = pygame.Surface((rect.width, rect.height), pygame.SRCALPHA)
+        layer.fill(RESULT_PANEL_OVERLAY_RGBA)
+        self.screen.blit(layer, rect.topleft)
+
+    def _draw_game(self) -> None:
+        session = self.session
+        if session is None:
+            return
+
+        L = self.layout
+        main_rect, status_rect, container_rect = self._game_frame_rects()
         assets = self.ui_assets
         if assets.main_frame:
             assets.blit_stretched(assets.main_frame, self.screen, main_rect)
@@ -567,13 +731,6 @@ class KidgameApp:
 
         q = session.current_question
 
-        inner_pad = L.x(10)
-        container_rect = pygame.Rect(
-            main_rect.x + inner_pad,
-            main_rect.y + inner_pad,
-            main_rect.width - inner_pad * 2,
-            main_rect.height - inner_pad * 2,
-        )
         draw_game_container(self.screen, container_rect)
 
         section_pad = L.x(12)
@@ -873,17 +1030,20 @@ class KidgameApp:
             L.height // 2 + L.y(24),
         )
 
-    def _draw_game_clear_with_credits(self, session: GameSession) -> None:
+    def _draw_game_clear_with_credits(
+        self, session: GameSession, container: pygame.Rect
+    ) -> None:
         L = self.layout
-        cx = L.width // 2
+        cx = container.centerx
+        inner = container.inflate(-L.x(12), -L.y(12))
         pts = session.score
         high = self.score_store.high_score(session.difficulty)
 
         blit_centered(
             self.screen,
-            self.fonts.title.render(GAME_CLEAR_TITLE, True, COLOR_RIGHT),
+            self.fonts.heading.render(GAME_CLEAR_TITLE, True, COLOR_RIGHT),
             cx,
-            L.y(36),
+            inner.top + L.y(12),
         )
         blit_centered(
             self.screen,
@@ -893,23 +1053,23 @@ class KidgameApp:
                 COLOR_TEXT,
             ),
             cx,
-            L.y(96),
+            inner.top + L.y(48),
         )
         blit_centered(
             self.screen,
             self.fonts.heading.render(f"得点 {pts:,}", True, COLOR_CURSOR),
             cx,
-            L.y(138),
+            inner.top + L.y(82),
         )
         blit_centered(
             self.screen,
             self.fonts.small.render(f"最高得点 {high:,}", True, COLOR_TEXT_DIM),
             cx,
-            L.y(172),
+            inner.top + L.y(108),
         )
 
-        y = L.y(218)
-        line_h = L.y(22)
+        y = inner.top + L.y(132)
+        line_h = L.y(16)
         for line in CREDIT_LINES:
             if line:
                 blit_centered(
@@ -920,31 +1080,201 @@ class KidgameApp:
                 )
             y += line_h
 
+        self._draw_result_menu(L, container)
+
+    def _is_full_game_clear(self, session: GameSession | None) -> bool:
+        return (
+            session is not None
+            and session.phase is SessionPhase.WON
+            and session.correct_count >= CORRECT_TO_CLEAR
+            and session.lives > 0
+        )
+
+    def _draw_result_menu(self, L: ScreenLayout, container: pygame.Rect) -> None:
+        cx = container.centerx
+        start_y = container.bottom - L.y(118)
+        for i, label in enumerate(RESULT_MENU_ITEMS):
+            color = COLOR_CURSOR if i == self.result_menu else COLOR_TEXT
+            prefix = "▶ " if i == self.result_menu else "  "
+            blit_centered(
+                self.screen,
+                self.fonts.body.render(prefix + label, True, color),
+                cx,
+                start_y + i * L.y(36),
+            )
         blit_centered(
             self.screen,
-            self.fonts.small.render("X / Enter で タイトルへ", True, COLOR_TEXT_DIM),
+            self.fonts.small.render(
+                "↑↓ で選ぶ　X / Enter で決定", True, COLOR_TEXT_DIM
+            ),
             cx,
-            L.height - L.y(48),
+            container.bottom - L.y(20),
+        )
+
+    def _draw_score_confirm(self, container: pygame.Rect) -> None:
+        session = self.session
+        L = self.layout
+        cx = container.centerx
+        if session is None:
+            return
+        inner = container.inflate(-L.x(8), -L.y(8))
+        entries, rank = self._leaderboard_preview()
+        blit_centered(
+            self.screen,
+            self.fonts.body.render("スコア登録", True, COLOR_TEXT),
+            cx,
+            inner.top + L.y(4),
+        )
+        draw_leaderboard_table(
+            self.screen,
+            entries=entries,
+            top_y=inner.top + L.y(28),
+            bottom_y=inner.bottom - L.y(32),
+            L=L,
+            row_font=self.fonts.body,
+            rank_font=self.fonts.small,
+            highlight_rank=rank,
+            content_rect=inner,
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.small.render(
+                "Enter で名前入力　Esc で戻る", True, COLOR_TEXT_DIM
+            ),
+            cx,
+            inner.bottom - L.y(8),
+        )
+
+    def _draw_score_entry(self, container: pygame.Rect) -> None:
+        session = self.session
+        L = self.layout
+        cx = container.centerx
+        if session is None:
+            return
+        panel = name_entry_panel_rect(container, L)
+        draw_name_entry_panel(self.screen, panel)
+
+        rank = self.entry_preview_rank
+        name_field = format_name_slots(self.entry_name, ENTRY_NAME_MAX_LEN)
+        score_s = format_score(session.score)
+        date_s = self.entry_played_at or "----/--/-- --:--"
+        acc_s = format_accuracy(session.answer_accuracy_percent)
+        line = f"No.{rank:02d}  {name_field}  {score_s}  {date_s}  {acc_s}"
+        line_x = panel.left + L.x(10)
+        line_y = panel.top + L.y(12)
+        line_font = self.fonts.name_entry
+        blit_outlined(
+            self.screen,
+            line_font,
+            line,
+            line_x,
+            line_y,
+            COLOR_TEXT,
+        )
+        prefix = f"No.{rank:02d}  "
+        cursor_x = line_x + line_font.size(prefix + self.entry_name)[0]
+        char_w = max(line_font.size("A")[0], line_font.size("-")[0])
+        underline_y = line_y + line_font.get_height() + L.y(2)
+        pygame.draw.line(
+            self.screen,
+            COLOR_CURSOR,
+            (cursor_x, underline_y),
+            (cursor_x + char_w, underline_y),
+            3,
+        )
+
+        kb_rect = name_entry_keyboard_rect(panel, L)
+        draw_name_keyboard(
+            self.screen,
+            keyboard=self.name_keyboard,
+            rect=kb_rect,
+            key_font=self.fonts.keyboard,
+            jp_font=self.fonts.small,
+            L=L,
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.small.render(
+                "↑↓←→ で選択　Enter で決定　Backspace / Z で1文字消す　「戻」で登録　Esc で戻る",
+                True,
+                COLOR_TEXT_DIM,
+            ),
+            cx,
+            container.bottom - L.y(8),
+        )
+
+    def _draw_score_ranking(self) -> None:
+        L = self.layout
+        cx = L.width // 2
+        blit_centered(
+            self.screen,
+            self.fonts.heading.render("RESULT", True, COLOR_TEXT),
+            cx,
+            L.y(24),
+        )
+        tab_y = L.y(64)
+        tab_w = L.width // len(self.modes)
+        for i, diff in enumerate(self.modes):
+            rules = RULES_BY_DIFFICULTY[diff]
+            label = DIFFICULTY_LABEL_EN[diff]
+            color = COLOR_CURSOR if i == self.ranking_difficulty_cursor else COLOR_TEXT_DIM
+            tx = i * tab_w + tab_w // 2
+            blit_centered(
+                self.screen,
+                self.fonts.body.render(label, True, color),
+                tx,
+                tab_y,
+            )
+        picked = self.modes[self.ranking_difficulty_cursor]
+        draw_leaderboard_table(
+            self.screen,
+            entries=self.score_store.leaderboard(picked),
+            top_y=L.y(100),
+            bottom_y=L.height - L.y(48),
+            L=L,
+            row_font=self.fonts.heading,
+            rank_font=self.fonts.body,
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.small.render(
+                "←→ 難易度　↑↓　Shift / Esc で タイトルへ", True, COLOR_TEXT_DIM
+            ),
+            cx,
+            L.height - L.y(20),
         )
 
     def _draw_result(self) -> None:
-        session = self.session
         L = self.layout
-        cx = L.width // 2
+        _, _, container = self._game_frame_rects()
+        if self.session is not None:
+            self._fill_container_overlay(container)
+        clip_prev = self.screen.get_clip()
+        self.screen.set_clip(container)
+
+        if self.result_view == "confirm":
+            self._draw_score_confirm(container)
+            self.screen.set_clip(clip_prev)
+            return
+        if self.result_view == "entry":
+            self._draw_score_entry(container)
+            self.screen.set_clip(clip_prev)
+            return
+
+        session = self.session
+        cx = container.centerx
+        inner = container.inflate(-L.x(12), -L.y(12))
         pts = session.score if session else 0
         high = (
             self.score_store.high_score(session.difficulty)
             if session
             else 0
         )
-        if (
-            session
-            and session.phase is SessionPhase.WON
-            and session.correct_count >= CORRECT_TO_CLEAR
-            and session.lives > 0
-        ):
-            self._draw_game_clear_with_credits(session)
+        if self._is_full_game_clear(session):
+            self._draw_game_clear_with_credits(session, container)
+            self.screen.set_clip(clip_prev)
             return
+
         if session and session.phase is SessionPhase.WON:
             title = "クリア！"
             sub = f"{CORRECT_TO_CLEAR}問 正解 おめでとう！"
@@ -959,26 +1289,32 @@ class KidgameApp:
             sub = f"正解 {session.correct_count if session else 0} 問 {reason}"
             color = COLOR_WRONG
 
-        blit_centered(self.screen, self.fonts.title.render(title, True, color), cx, L.y(180))
-        blit_centered(self.screen, self.fonts.body.render(sub, True, COLOR_TEXT), cx, L.y(250))
+        blit_centered(
+            self.screen,
+            self.fonts.heading.render(title, True, color),
+            cx,
+            inner.top + L.y(36),
+        )
+        blit_centered(
+            self.screen,
+            self.fonts.body.render(sub, True, COLOR_TEXT),
+            cx,
+            inner.top + L.y(78),
+        )
         blit_centered(
             self.screen,
             self.fonts.heading.render(f"得点 {pts:,}", True, COLOR_CURSOR),
             cx,
-            L.y(310),
+            inner.top + L.y(118),
         )
         blit_centered(
             self.screen,
             self.fonts.body.render(f"最高得点 {high:,}", True, COLOR_TEXT_DIM),
             cx,
-            L.y(360),
+            inner.top + L.y(152),
         )
-        blit_centered(
-            self.screen,
-            self.fonts.small.render("X / Enter で タイトルへ", True, COLOR_TEXT_DIM),
-            cx,
-            L.height - L.y(80),
-        )
+        self._draw_result_menu(L, container)
+        self.screen.set_clip(clip_prev)
 
 
 def run_app(display: DisplaySettings) -> None:

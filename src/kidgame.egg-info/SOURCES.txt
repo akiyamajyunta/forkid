@@ -19,6 +19,7 @@ src/kidgame/data/review_csv.py
 src/kidgame/system/__init__.py
 src/kidgame/system/config.py
 src/kidgame/system/game_session.py
+src/kidgame/system/leaderboard.py
 src/kidgame/system/options_view.py
 src/kidgame/system/score_store.py
 src/kidgame/system/scoring.py
@@ -33,6 +34,8 @@ src/kidgame/ui/game_sfx.py
 src/kidgame/ui/input.py
 src/kidgame/ui/launcher.py
 src/kidgame/ui/layout.py
+src/kidgame/ui/leaderboard_draw.py
+src/kidgame/ui/name_keyboard.py
 src/kidgame/ui/option_labels.py
 src/kidgame/ui/ruby_draw.py
 src/kidgame/ui/status_sidebar.py
@@ -43,6 +46,8 @@ tests/test_distractors.py
 tests/test_furigana.py
 tests/test_game_session.py
 tests/test_kid_language.py
+tests/test_leaderboard.py
+tests/test_name_keyboard.py
 tests/test_nazoq_scraper.py
 tests/test_option_layout.py
 tests/test_question_runtime.py

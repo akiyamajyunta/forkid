@@ -14,6 +14,7 @@ class GameAction(StrEnum):
     BOMB = auto()
     MENU = auto()
     CANCEL = auto()
+    BACKSPACE = auto()
 
 
 class InputState:
@@ -84,6 +85,7 @@ def _key_down(key: int) -> list[GameAction]:
         pygame.K_LSHIFT: GameAction.MENU,
         pygame.K_RSHIFT: GameAction.MENU,
         pygame.K_ESCAPE: GameAction.CANCEL,
+        pygame.K_BACKSPACE: GameAction.BACKSPACE,
     }
     action = mapping.get(key)
     return [action] if action else []

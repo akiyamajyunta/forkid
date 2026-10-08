@@ -51,6 +51,7 @@ class GameSession:
     questions: list[PlayQuestion]
     lives: int = INITIAL_LIVES
     correct_count: int = 0
+    wrong_count: int = 0
     score: int = 0
     last_points_gained: int = 0
     bomb_stock: int = INITIAL_BOMB_STOCK
@@ -113,6 +114,13 @@ class GameSession:
     def current_hint(self) -> str:
         q = self.current_question
         return q.hint if q else ""
+
+    @property
+    def answer_accuracy_percent(self) -> float:
+        attempts = self.correct_count + self.wrong_count
+        if attempts <= 0:
+            return 0.0
+        return 100.0 * self.correct_count / attempts
 
     def tick(self, dt: float) -> None:
         if self.phase is SessionPhase.PLAYING and self.time_remaining is not None:
@@ -177,6 +185,7 @@ class GameSession:
                 self.phase = SessionPhase.WON
                 return feedback
         else:
+            self.wrong_count += 1
             self.lives -= 1
             if self.lives <= 0:
                 self.phase = SessionPhase.FEEDBACK

@@ -262,6 +262,35 @@ def blit_centered_outlined(
     surface.blit(surf, rect)
 
 
+def blit_centered_glow(
+    surface: pygame.Surface,
+    font: pygame.font.Font,
+    text: str,
+    center_x: int,
+    center_y: int,
+    *,
+    selected: bool,
+    color: tuple[int, int, int],
+    dim_color: tuple[int, int, int],
+) -> None:
+    """キーボード等：選択時は枠なしで光る太字、非選択は薄い縁取り。"""
+    if selected:
+        core = (255, 244, 120)
+        for outline_w, halo in (
+            (5, (255, 220, 40)),
+            (4, (255, 200, 30)),
+            (3, (255, 180, 20)),
+        ):
+            glow = render_outlined(font, text, core, halo, outline_width=outline_w)
+            rect = glow.get_rect(center=(center_x, center_y))
+            surface.blit(glow, rect)
+        surf = render_outlined(font, text, core, (50, 35, 10), outline_width=1)
+    else:
+        surf = render_outlined(font, text, dim_color, (0, 0, 0), outline_width=1)
+    rect = surf.get_rect(center=(center_x, center_y))
+    surface.blit(surf, rect)
+
+
 def blit_right_outlined(
     surface: pygame.Surface,
     font: pygame.font.Font,

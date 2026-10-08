@@ -23,6 +23,19 @@ _FONT_CANDIDATES = (
     "notosansjp",
 )
 
+_CENTURY_FONT_FILES = (
+    "CENSCBK.TTF",
+    "CENTURY.TTF",
+    "GARABD.TTF",
+    "GARA.TTF",
+)
+
+_CENTURY_SYS_NAMES = (
+    "centuryschoolbook",
+    "century",
+    "centurygothic",
+)
+
 
 def _pick_font_name() -> str | None:
     pygame.font.init()
@@ -41,6 +54,25 @@ def _find_hgs_pop_file() -> Path | None:
         for path in sorted(fonts_dir.glob(pattern)):
             return path
     return None
+
+
+def _load_century_font(size: int) -> pygame.font.Font:
+    pygame.font.init()
+    fonts_dir = Path(os.environ.get("WINDIR", r"C:\Windows")) / "Fonts"
+    for fname in _CENTURY_FONT_FILES:
+        path = fonts_dir / fname
+        if path.is_file():
+            try:
+                return pygame.font.Font(str(path), size)
+            except (OSError, pygame.error):
+                continue
+    names = {n.lower(): n for n in pygame.font.get_fonts()}
+    for candidate in _CENTURY_SYS_NAMES:
+        key = candidate.lower()
+        if key in names:
+            return pygame.font.SysFont(names[key], size, bold=True)
+    fallback = _pick_font_name()
+    return pygame.font.SysFont(fallback, size, bold=True)
 
 
 def _load_difficulty_font(size: int) -> pygame.font.Font:
@@ -72,6 +104,8 @@ class FontSet:
         self.heading = pygame.font.SysFont(name, sz(32), bold=True)
         self.body = pygame.font.SysFont(name, sz(26))
         self.small = pygame.font.SysFont(name, sz(20))
+        self.keyboard = _load_century_font(sz(21))
+        self.name_entry = _load_century_font(sz(23))
         self.option = pygame.font.SysFont(name, sz(28))
         self.status = pygame.font.SysFont(name, sz(22), bold=True)
         self.score_label = pygame.font.SysFont(name, sz(20), bold=True)
