@@ -34,7 +34,7 @@ from kidgame.ui.draw_helpers import (
     layout_option_row,
     scale_cover,
 )
-from kidgame.ui.clear_credits import CREDIT_LINES, GAME_CLEAR_TITLE
+from kidgame.ui.clear_credits import GAME_CLEAR_TITLE
 from kidgame.system.leaderboard import preview_after_insert
 from kidgame.ui.leaderboard_draw import draw_leaderboard_table
 from kidgame.ui.name_keyboard import (
@@ -78,7 +78,7 @@ class AppScreen(StrEnum):
 
 
 RESULT_MENU_ITEMS = ("タイトルへ戻る", "スコアを記録する")
-ENTRY_NAME_MAX_LEN = 12
+ENTRY_NAME_MAX_LEN = 10
 RESULT_PANEL_OVERLAY_RGBA = (16, 28, 44, 185)
 
 
@@ -1037,13 +1037,12 @@ class KidgameApp:
         cx = container.centerx
         inner = container.inflate(-L.x(12), -L.y(12))
         pts = session.score
-        high = self.score_store.high_score(session.difficulty)
 
         blit_centered(
             self.screen,
             self.fonts.heading.render(GAME_CLEAR_TITLE, True, COLOR_RIGHT),
             cx,
-            inner.top + L.y(12),
+            inner.top + L.y(36),
         )
         blit_centered(
             self.screen,
@@ -1053,32 +1052,14 @@ class KidgameApp:
                 COLOR_TEXT,
             ),
             cx,
-            inner.top + L.y(48),
+            inner.top + L.y(78),
         )
         blit_centered(
             self.screen,
             self.fonts.heading.render(f"得点 {pts:,}", True, COLOR_CURSOR),
             cx,
-            inner.top + L.y(82),
+            inner.top + L.y(118),
         )
-        blit_centered(
-            self.screen,
-            self.fonts.small.render(f"最高得点 {high:,}", True, COLOR_TEXT_DIM),
-            cx,
-            inner.top + L.y(108),
-        )
-
-        y = inner.top + L.y(132)
-        line_h = L.y(16)
-        for line in CREDIT_LINES:
-            if line:
-                blit_centered(
-                    self.screen,
-                    self.fonts.small.render(line, True, COLOR_TEXT_DIM),
-                    cx,
-                    y,
-                )
-            y += line_h
 
         self._draw_result_menu(L, container)
 
