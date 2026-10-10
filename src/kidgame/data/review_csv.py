@@ -95,8 +95,15 @@ def options_from_review_row(row: dict[str, str]) -> tuple[list[str], int]:
     return opts[:6], answer_index
 
 
+REVIEW_CSV_BY_DIFFICULTY: dict[Difficulty, str] = {
+    Difficulty.EASY: "questions_review_EASY.csv",
+    Difficulty.NORMAL: "questions_review_normal.csv",
+    Difficulty.HARD: "questions_review_HARD.csv",
+}
+
+
 def review_csv_path(data_dir: Path, difficulty: Difficulty) -> Path:
-    return data_dir / f"questions_review_{difficulty.value}.csv"
+    return data_dir / REVIEW_CSV_BY_DIFFICULTY[difficulty]
 
 
 def all_review_csvs_present(data_dir: Path) -> bool:

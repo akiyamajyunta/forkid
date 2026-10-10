@@ -605,7 +605,7 @@ class KidgameApp:
         lines = [
             "十字キー … 選択移動",
             "X / Enter キー … 決定",
-            "Z キー … ボム（間違い選択肢を半分消す）",
+            "Z キー … 技能（間違い選択肢を半分消す）",
             "Shift … 一時停止",
             "Esc … メニュー（タイトルへ／終了）",
             "",
@@ -1007,6 +1007,7 @@ class KidgameApp:
             self.fonts.small,
             self.fonts.difficulty_mode,
             star_filled=self.ui_assets.star_filled,
+            star_half=self.ui_assets.star_half,
             star_empty=self.ui_assets.star_empty,
         )
 

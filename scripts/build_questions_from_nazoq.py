@@ -24,6 +24,7 @@ from kidgame.data.review_csv import (
     review_csv_path,
 )
 from nazoq_scraper import (
+    ENTRY_ID_RE,
     collect_entry_urls,
     fetch_html,
     iter_items,
@@ -38,8 +39,37 @@ SOURCE_NOTE = "nazoq.com"
 GAME_LEVEL_SOURCES: dict[str, tuple[str, ...]] = {
     "easy": ("easy",),  # https://nazoq.com/easy/all/
     "normal": ("normal",),
-    "hard": ("hard", "hardest"),
+    "hard": ("hard",),  # https://nazoq.com/hard/all/
 }
+
+
+def _qid_from_url(url: str) -> str | None:
+    m = ENTRY_ID_RE.search(url)
+    return f"nazoq_{m.group(1)}" if m else None
+
+
+def _load_review_csv_ids(path: Path) -> set[str]:
+    if not path.is_file():
+        return set()
+    ids: set[str] = set()
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            qid = (row.get("ID") or "").strip()
+            if qid:
+                ids.add(qid)
+    return ids
+
+
+def _filter_urls_skip_ids(urls: list[str], skip_ids: set[str]) -> list[str]:
+    if not skip_ids:
+        return urls
+    out: list[str] = []
+    for url in urls:
+        qid = _qid_from_url(url)
+        if qid and qid not in skip_ids:
+            out.append(url)
+    return out
 
 
 def _collect_urls(site_levels: tuple[str, ...]) -> list[str]:
@@ -74,6 +104,18 @@ def main() -> None:
     parser.add_argument("--max", type=int, default=300)
     parser.add_argument("--delay", type=float, default=0.35)
     parser.add_argument("--only", choices=tuple(GAME_LEVEL_SOURCES.keys()))
+    parser.add_argument(
+        "--output",
+        type=Path,
+        help="出力 CSV（例: data/questions_review_easy_no2.csv）",
+    )
+    parser.add_argument(
+        "--skip-ids-from",
+        type=Path,
+        action="append",
+        default=[],
+        help="この review CSV に含まれる ID は取得しない（複数指定可）",
+    )
     parser.add_argument("--seed", type=int, default=20261008)
     args = parser.parse_args()
 
@@ -83,10 +125,24 @@ def main() -> None:
         else GAME_LEVEL_SOURCES
     )
 
+    if args.output and len(targets) != 1:
+        parser.error("--output は --only と併用してください")
+    out_csv = args.output
+    if out_csv and not out_csv.is_absolute():
+        out_csv = DATA_DIR / out_csv
+
+    skip_ids: set[str] = set()
+    for p in args.skip_ids_from:
+        path = p if p.is_absolute() else DATA_DIR / p
+        skip_ids |= _load_review_csv_ids(path)
+
     by_level: dict[str, list[dict]] = {}
     for game_level, site_levels in targets.items():
         print(f"=== {game_level} ===")
         urls = _collect_urls(site_levels)
+        if skip_ids:
+            urls = _filter_urls_skip_ids(urls, skip_ids)
+            print(f"  candidate URLs after skip: {len(urls)}")
         items = iter_items(urls, delay=args.delay, max_count=args.max)
         print(f"  fetched {len(items)}")
         by_level[game_level] = [
@@ -100,11 +156,9 @@ def main() -> None:
             }
             for it in items
         ]
-        _write_sparse_csv(
-            review_csv_path(DATA_DIR, Difficulty(game_level)),
-            by_level[game_level],
-        )
-        print(f"  CSV -> {review_csv_path(DATA_DIR, Difficulty(game_level))}")
+        dest = out_csv or review_csv_path(DATA_DIR, Difficulty(game_level))
+        _write_sparse_csv(dest, by_level[game_level])
+        print(f"  CSV -> {dest}")
 
     if args.only:
         print("import: python scripts/import_review_csv.py")

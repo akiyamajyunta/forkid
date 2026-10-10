@@ -37,6 +37,7 @@ def draw_status_sidebar(
     small_font: pygame.font.Font,
     mode_font: pygame.font.Font,
     star_filled: pygame.Surface | None = None,
+    star_half: pygame.Surface | None = None,
     star_empty: pygame.Surface | None = None,
 ) -> None:
     mode_en = DIFFICULTY_LABEL_EN[session.difficulty]
@@ -109,7 +110,12 @@ def draw_status_sidebar(
                 break
             star_height -= 1
 
-    def _draw_stars(filled: int) -> None:
+    def _draw_stars(
+        filled: int,
+        *,
+        half: bool = False,
+        use_half_sprite: bool = False,
+    ) -> None:
         if use_sprites and star_filled is not None and star_empty is not None:
             draw_star_row_right_sprites(
                 surface,
@@ -121,13 +127,15 @@ def draw_status_sidebar(
                 star_on=star_filled,
                 star_off=star_empty,
                 gap=star_gap,
+                half_after_filled=half and use_half_sprite,
+                star_half=star_half if use_half_sprite else None,
             )
         else:
             draw_star_row_right(
                 surface,
                 right_x,
                 y + L.y(2),
-                filled=filled,
+                filled=filled + (1 if half else 0),
                 total=STAR_GAUGE_MAX,
                 size=star_height,
                 gap=star_gap,
@@ -137,8 +145,14 @@ def draw_status_sidebar(
     _draw_stars(min(session.lives, STAR_GAUGE_MAX))
     y += line + L.y(4)
 
+    skill_full = min(session.bomb_halves // 2, STAR_GAUGE_MAX)
+    skill_half = (session.bomb_halves % 2) == 1 and skill_full < STAR_GAUGE_MAX
     blit_outlined(surface, label_font, "技能 :", x, y, COLOR_TEXT)
-    _draw_stars(min(session.bomb_stock, STAR_GAUGE_MAX))
+    _draw_stars(
+        skill_full,
+        half=skill_half,
+        use_half_sprite=star_half is not None,
+    )
     y += line + L.y(12)
 
     blit_outlined(surface, label_font, "時間", x, y, COLOR_TEXT)

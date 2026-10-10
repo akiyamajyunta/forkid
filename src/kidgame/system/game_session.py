@@ -9,17 +9,13 @@ from kidgame.data.models import Difficulty
 from kidgame.data.question_runtime import PlayQuestion
 from kidgame.system.scoring import points_for_correct_answer
 from kidgame.system.config import (
-    BONUS_FILL_FAST,
-    BONUS_FILL_MID,
-    BONUS_FILL_SLOW,
-    BONUS_FAST_SEC,
-    BONUS_GAUGE_MAX,
-    BONUS_MID_SEC,
     CORRECT_TO_CLEAR,
     FEEDBACK_DURATION_SEC,
     INITIAL_BOMB_STOCK,
     INITIAL_LIVES,
     RULES_BY_DIFFICULTY,
+    SKILL_GAIN_HALF_STARS,
+    SKILL_GAIN_TIME_SEC,
     STAR_GAUGE_MAX,
 )
 from kidgame.system.options_view import OptionsView
@@ -54,8 +50,7 @@ class GameSession:
     wrong_count: int = 0
     score: int = 0
     last_points_gained: int = 0
-    bomb_stock: int = INITIAL_BOMB_STOCK
-    bonus_gauge: float = 0.0
+    bomb_halves: int = INITIAL_BOMB_STOCK * 2
     time_remaining: float | None = None
     question_index: int = 0
     phase: SessionPhase = SessionPhase.PLAYING
@@ -151,12 +146,12 @@ class GameSession:
     def use_bomb(self) -> bool:
         if self.phase is not SessionPhase.PLAYING or self.options_view is None:
             return False
-        if self.bomb_stock <= 0:
+        if self.bomb_halves < 2:
             return False
         removed = self.options_view.apply_bomb(rng=self._rng)
         if removed <= 0:
             return False
-        self.bomb_stock -= 1
+        self.bomb_halves -= 2
         entries = self.options_view.visible_entries()
         if entries:
             self.cursor = min(self.cursor, len(entries) - 1)
@@ -180,7 +175,7 @@ class GameSession:
             gained = points_for_correct_answer(elapsed, self.difficulty)
             self.score += gained
             self.last_points_gained = gained
-            self._add_bonus_for_speed()
+            self._add_skill_on_fast_answer()
             if self.correct_count >= CORRECT_TO_CLEAR:
                 self.phase = SessionPhase.WON
                 return feedback
@@ -196,18 +191,12 @@ class GameSession:
         self._feedback_until = time.monotonic() + FEEDBACK_DURATION_SEC
         return feedback
 
-    def _add_bonus_for_speed(self) -> None:
+    def _add_skill_on_fast_answer(self) -> None:
         elapsed = time.monotonic() - self._question_started_at
-        if elapsed <= BONUS_FAST_SEC:
-            fill = BONUS_FILL_FAST
-        elif elapsed <= BONUS_MID_SEC:
-            fill = BONUS_FILL_MID
-        else:
-            fill = BONUS_FILL_SLOW
-        self.bonus_gauge = min(BONUS_GAUGE_MAX, self.bonus_gauge + fill)
-        if self.bonus_gauge >= BONUS_GAUGE_MAX:
-            self.bonus_gauge = 0.0
-            self.bomb_stock = min(STAR_GAUGE_MAX, self.bomb_stock + 1)
+        if elapsed > SKILL_GAIN_TIME_SEC:
+            return
+        cap = STAR_GAUGE_MAX * 2
+        self.bomb_halves = min(cap, self.bomb_halves + SKILL_GAIN_HALF_STARS)
 
     def _advance_after_feedback(self) -> None:
         if self.lives <= 0 and self.phase is SessionPhase.FEEDBACK:
