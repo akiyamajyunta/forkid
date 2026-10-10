@@ -398,14 +398,17 @@ def draw_star_row_right_sprites(
     star_on: pygame.Surface,
     star_off: pygame.Surface,
     gap: int | None = None,
-    half_after_filled: bool = False,
-    star_half: pygame.Surface | None = None,
+    partial_after_filled: pygame.Surface | None = None,
 ) -> None:
     if gap is None:
         gap = STAR_ROW_GAP_OVERLAP
     on = scale_star_sprite(star_on, height)
     off = scale_star_sprite(star_off, height)
-    half = scale_star_sprite(star_half, height) if star_half is not None else None
+    partial = (
+        scale_star_sprite(partial_after_filled, height)
+        if partial_after_filled is not None
+        else None
+    )
     sw = on.get_width()
     pitch = sw + gap
     row_w = (total - 1) * pitch + sw
@@ -413,8 +416,8 @@ def draw_star_row_right_sprites(
     for i in range(total):
         if i < filled:
             surface.blit(on, (x + i * pitch, y))
-        elif half_after_filled and i == filled and half is not None:
-            surface.blit(half, (x + i * pitch, y))
+        elif partial is not None and i == filled:
+            surface.blit(partial, (x + i * pitch, y))
         else:
             surface.blit(off, (x + i * pitch, y))
 

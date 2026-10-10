@@ -7,6 +7,7 @@ import pygame
 from kidgame.system.config import (
     CORRECT_TO_CLEAR,
     DIFFICULTY_LABEL_EN,
+    QUARTERS_PER_BOMB_USE,
     STAR_GAUGE_MAX,
 )
 from kidgame.system.game_session import GameSession
@@ -38,6 +39,8 @@ def draw_status_sidebar(
     mode_font: pygame.font.Font,
     star_filled: pygame.Surface | None = None,
     star_half: pygame.Surface | None = None,
+    star_quarter: pygame.Surface | None = None,
+    star_three_quarter: pygame.Surface | None = None,
     star_empty: pygame.Surface | None = None,
 ) -> None:
     mode_en = DIFFICULTY_LABEL_EN[session.difficulty]
@@ -113,8 +116,7 @@ def draw_status_sidebar(
     def _draw_stars(
         filled: int,
         *,
-        half: bool = False,
-        use_half_sprite: bool = False,
+        partial: pygame.Surface | None = None,
     ) -> None:
         if use_sprites and star_filled is not None and star_empty is not None:
             draw_star_row_right_sprites(
@@ -127,15 +129,14 @@ def draw_status_sidebar(
                 star_on=star_filled,
                 star_off=star_empty,
                 gap=star_gap,
-                half_after_filled=half and use_half_sprite,
-                star_half=star_half if use_half_sprite else None,
+                partial_after_filled=partial,
             )
         else:
             draw_star_row_right(
                 surface,
                 right_x,
                 y + L.y(2),
-                filled=filled + (1 if half else 0),
+                filled=filled + (1 if partial is not None else 0),
                 total=STAR_GAUGE_MAX,
                 size=star_height,
                 gap=star_gap,
@@ -145,14 +146,19 @@ def draw_status_sidebar(
     _draw_stars(min(session.lives, STAR_GAUGE_MAX))
     y += line + L.y(4)
 
-    skill_full = min(session.bomb_halves // 2, STAR_GAUGE_MAX)
-    skill_half = (session.bomb_halves % 2) == 1 and skill_full < STAR_GAUGE_MAX
+    skill_q = session.bomb_quarters
+    skill_full = min(skill_q // QUARTERS_PER_BOMB_USE, STAR_GAUGE_MAX)
+    skill_partial: pygame.Surface | None = None
+    rem = skill_q % QUARTERS_PER_BOMB_USE
+    if rem and skill_full < STAR_GAUGE_MAX:
+        if rem == 1:
+            skill_partial = star_quarter
+        elif rem == 2:
+            skill_partial = star_half
+        elif rem == 3:
+            skill_partial = star_three_quarter
     blit_outlined(surface, label_font, "技能 :", x, y, COLOR_TEXT)
-    _draw_stars(
-        skill_full,
-        half=skill_half,
-        use_half_sprite=star_half is not None,
-    )
+    _draw_stars(skill_full, partial=skill_partial)
     y += line + L.y(12)
 
     blit_outlined(surface, label_font, "時間", x, y, COLOR_TEXT)

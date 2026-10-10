@@ -36,7 +36,10 @@ from kidgame.ui.draw_helpers import (
 )
 from kidgame.ui.clear_credits import GAME_CLEAR_TITLE
 from kidgame.system.leaderboard import preview_after_insert
-from kidgame.ui.leaderboard_draw import draw_leaderboard_table
+from kidgame.ui.leaderboard_draw import (
+    draw_leaderboard_table,
+    leaderboard_table_bottom_y,
+)
 from kidgame.ui.name_keyboard import (
     NameKeyboard,
     draw_name_entry_panel,
@@ -617,17 +620,28 @@ class KidgameApp:
             "ミスでライフ減少 / 1問あたり ノーマル3分・ハード1分",
             "ノーマル・ハードはその問題の残り時間が半分でヒント表示",
         ]
+        footer_y = L.height - L.y(40)
         y = L.y(120)
+        line_step = L.y(26)
+        blank_step = L.y(12)
         for line in lines:
-            blit_centered(self.screen, self.fonts.body.render(line, True, COLOR_TEXT_DIM), cx, y)
-            y += L.y(36)
+            if line:
+                blit_centered(
+                    self.screen,
+                    self.fonts.body.render(line, True, COLOR_TEXT_DIM),
+                    cx,
+                    y,
+                )
+                y += line_step
+            else:
+                y += blank_step
         blit_centered(
             self.screen,
             self.fonts.small.render(
                 "X / Enter / Shift で タイトルへ", True, COLOR_CURSOR
             ),
             cx,
-            L.height - L.y(40),
+            footer_y,
         )
 
     def _draw_mode(self) -> None:
@@ -1008,6 +1022,8 @@ class KidgameApp:
             self.fonts.difficulty_mode,
             star_filled=self.ui_assets.star_filled,
             star_half=self.ui_assets.star_half,
+            star_quarter=self.ui_assets.star_quarter,
+            star_three_quarter=self.ui_assets.star_three_quarter,
             star_empty=self.ui_assets.star_empty,
         )
 
@@ -1093,6 +1109,16 @@ class KidgameApp:
             container.bottom - L.y(20),
         )
 
+    def _score_register_hint_y(self, container: pygame.Rect) -> int:
+        L = self.layout
+        inner = container.inflate(-L.x(8), -L.y(8))
+        table_bottom = leaderboard_table_bottom_y(
+            inner.top + L.y(28),
+            inner.bottom - L.y(56),
+            L,
+        )
+        return table_bottom + L.y(14)
+
     def _draw_score_confirm(self, container: pygame.Rect) -> None:
         session = self.session
         L = self.layout
@@ -1111,7 +1137,7 @@ class KidgameApp:
             self.screen,
             entries=entries,
             top_y=inner.top + L.y(28),
-            bottom_y=inner.bottom - L.y(32),
+            bottom_y=inner.bottom - L.y(56),
             L=L,
             row_font=self.fonts.body,
             rank_font=self.fonts.small,
@@ -1124,7 +1150,7 @@ class KidgameApp:
                 "Enter で名前入力　Esc で戻る", True, COLOR_TEXT_DIM
             ),
             cx,
-            inner.bottom - L.y(8),
+            self._score_register_hint_y(container),
         )
 
     def _draw_score_entry(self, container: pygame.Rect) -> None:
@@ -1165,7 +1191,20 @@ class KidgameApp:
             3,
         )
 
+        hint_y = self._score_register_hint_y(container)
+        hint_font = self.fonts.small
+        hint_line_h = hint_font.get_height()
+        hint_gap = L.y(4)
+        hint_center_y = hint_y + hint_line_h // 2
+        hint_lines = (
+            "↑↓←→ で選択　Enter で決定　Backspace / Z で1文字消す　「戻」で登録",
+            "Esc で戻る",
+        )
         kb_rect = name_entry_keyboard_rect(panel, L)
+        first_hint_center = hint_center_y - (hint_line_h + hint_gap) // 2
+        kb_max_bottom = int(first_hint_center - hint_line_h // 2 - L.y(6))
+        if kb_rect.bottom > kb_max_bottom:
+            kb_rect.height = max(L.y(48), kb_max_bottom - kb_rect.top)
         draw_name_keyboard(
             self.screen,
             keyboard=self.name_keyboard,
@@ -1174,16 +1213,14 @@ class KidgameApp:
             jp_font=self.fonts.small,
             L=L,
         )
-        blit_centered(
-            self.screen,
-            self.fonts.small.render(
-                "↑↓←→ で選択　Enter で決定　Backspace / Z で1文字消す　「戻」で登録　Esc で戻る",
-                True,
-                COLOR_TEXT_DIM,
-            ),
-            cx,
-            container.bottom - L.y(8),
-        )
+        for i, hint_line in enumerate(hint_lines):
+            line_center = hint_center_y + (i - 0.5) * (hint_line_h + hint_gap)
+            blit_centered(
+                self.screen,
+                hint_font.render(hint_line, True, COLOR_TEXT_DIM),
+                cx,
+                int(line_center - hint_line_h // 2),
+            )
 
     def _draw_score_ranking(self) -> None:
         L = self.layout

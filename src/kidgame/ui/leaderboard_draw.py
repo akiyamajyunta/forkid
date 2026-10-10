@@ -36,6 +36,13 @@ def _column_x(
     return rank_x, name_x, score_x, date_x, acc_right
 
 
+def leaderboard_table_bottom_y(top_y: int, bottom_y: int, L: ScreenLayout) -> int:
+    """draw_leaderboard_table と同じ行配置での下端 y。"""
+    usable_h = max(L.y(200), bottom_y - top_y)
+    row_h = max(L.y(28), usable_h // LEADERBOARD_SIZE)
+    return top_y + row_h * LEADERBOARD_SIZE
+
+
 def draw_leaderboard_table(
     surface: pygame.Surface,
     *,

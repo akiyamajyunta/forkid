@@ -61,7 +61,7 @@ def test_wrong_answer_costs_life() -> None:
 def test_bomb_removals_persist_after_wrong_retry() -> None:
     pq = _play(Difficulty.EASY)
     session = GameSession.start(Difficulty.EASY, [pq], seed=1)
-    session.bomb_halves = 2
+    session.bomb_quarters = 4
     assert session.use_bomb()
     hidden = set(session.options_view.hidden_indices if session.options_view else ())
     assert hidden
@@ -151,13 +151,13 @@ def test_timer_resets_each_question() -> None:
     assert session.time_remaining == 60.0
 
 
-def test_skill_gain_half_within_10s() -> None:
+def test_skill_gain_quarter_within_10s() -> None:
     session = GameSession.start(Difficulty.EASY, [_play()], seed=1)
-    assert session.bomb_halves == 2
+    assert session.bomb_quarters == 4
     session._question_started_at = 0.0
     with patch("kidgame.system.game_session.time.monotonic", return_value=5.0):
         session._add_skill_on_fast_answer()
-    assert session.bomb_halves == 3
+    assert session.bomb_quarters == 5
 
 
 def test_skill_no_gain_over_10s() -> None:
@@ -165,13 +165,13 @@ def test_skill_no_gain_over_10s() -> None:
     session._question_started_at = 0.0
     with patch("kidgame.system.game_session.time.monotonic", return_value=11.0):
         session._add_skill_on_fast_answer()
-    assert session.bomb_halves == 2
+    assert session.bomb_quarters == 4
 
 
 def test_session_initial_star_stats() -> None:
     session = GameSession.start(Difficulty.EASY, [_play()], seed=1)
     assert session.lives == 3
-    assert session.bomb_halves == 2
+    assert session.bomb_quarters == 4
 
 
 def test_resolve_for_play_option_counts() -> None:

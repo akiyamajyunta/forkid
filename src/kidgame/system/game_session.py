@@ -14,7 +14,8 @@ from kidgame.system.config import (
     INITIAL_BOMB_STOCK,
     INITIAL_LIVES,
     RULES_BY_DIFFICULTY,
-    SKILL_GAIN_HALF_STARS,
+    QUARTERS_PER_BOMB_USE,
+    SKILL_GAIN_QUARTERS,
     SKILL_GAIN_TIME_SEC,
     STAR_GAUGE_MAX,
 )
@@ -50,7 +51,7 @@ class GameSession:
     wrong_count: int = 0
     score: int = 0
     last_points_gained: int = 0
-    bomb_halves: int = INITIAL_BOMB_STOCK * 2
+    bomb_quarters: int = INITIAL_BOMB_STOCK * QUARTERS_PER_BOMB_USE
     time_remaining: float | None = None
     question_index: int = 0
     phase: SessionPhase = SessionPhase.PLAYING
@@ -146,12 +147,12 @@ class GameSession:
     def use_bomb(self) -> bool:
         if self.phase is not SessionPhase.PLAYING or self.options_view is None:
             return False
-        if self.bomb_halves < 2:
+        if self.bomb_quarters < QUARTERS_PER_BOMB_USE:
             return False
         removed = self.options_view.apply_bomb(rng=self._rng)
         if removed <= 0:
             return False
-        self.bomb_halves -= 2
+        self.bomb_quarters -= QUARTERS_PER_BOMB_USE
         entries = self.options_view.visible_entries()
         if entries:
             self.cursor = min(self.cursor, len(entries) - 1)
@@ -195,8 +196,8 @@ class GameSession:
         elapsed = time.monotonic() - self._question_started_at
         if elapsed > SKILL_GAIN_TIME_SEC:
             return
-        cap = STAR_GAUGE_MAX * 2
-        self.bomb_halves = min(cap, self.bomb_halves + SKILL_GAIN_HALF_STARS)
+        cap = STAR_GAUGE_MAX * QUARTERS_PER_BOMB_USE
+        self.bomb_quarters = min(cap, self.bomb_quarters + SKILL_GAIN_QUARTERS)
 
     def _advance_after_feedback(self) -> None:
         if self.lives <= 0 and self.phase is SessionPhase.FEEDBACK:

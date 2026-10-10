@@ -142,6 +142,8 @@ class GameUiAssets:
     status_panel: pygame.Surface | None
     star_filled: pygame.Surface | None
     star_half: pygame.Surface | None
+    star_quarter: pygame.Surface | None
+    star_three_quarter: pygame.Surface | None
     star_empty: pygame.Surface | None
 
     def blit_stretched(
@@ -171,5 +173,7 @@ def load_game_ui_assets() -> GameUiAssets:
         status_panel=_load_image(base / "status_panel.png"),
         star_filled=_load_star_sprite(base / "star_filled.png"),
         star_half=_load_star_sprite(base / "star_half.png"),
-        star_empty=_load_star_outline(base / "star_filled.png"),
+        star_quarter=_load_star_sprite(base / "star_quarter.png"),
+        star_three_quarter=_load_star_sprite(base / "star_three_quarter.png"),
+        star_empty=_load_star_sprite(base / "star_empty.png"),
     )
